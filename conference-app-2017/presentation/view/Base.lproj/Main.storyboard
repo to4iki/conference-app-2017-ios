@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="64" y="106"/>
         </scene>
-        <!--Setting-->
+        <!--Information-->
         <scene sceneID="eMQ-ip-azr">
             <objects>
-                <viewControllerPlaceholder storyboardName="Setting" id="asK-dJ-lrE" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Information" id="asK-dJ-lrE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="BNA-C1-nLm"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1A-hA-SaP" userLabel="First Responder" sceneMemberID="firstResponder"/>

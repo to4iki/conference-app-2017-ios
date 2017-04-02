@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E25C0A41E87AF47008C4C65 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */; };
+		1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */; };
+		1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */; };
 		1E6ACB8E1E87B5FD0083D43E /* MySession.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB8D1E87B5FD0083D43E /* MySession.storyboard */; };
 		1E6ACB901E87B6760083D43E /* MySessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */; };
 		1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB911E87B7950083D43E /* Information.storyboard */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
+		1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		1E6ACB8D1E87B5FD0083D43E /* MySession.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySession.storyboard; sourceTree = "<group>"; };
 		1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySessionViewController.swift; sourceTree = "<group>"; };
 		1E6ACB911E87B7950083D43E /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
@@ -98,6 +102,25 @@
 			path = viewController;
 			sourceTree = "<group>";
 		};
+		1E26F7C71E90D2AB00DF056B /* data */ = {
+			isa = PBXGroup;
+			children = (
+				1E26F7C81E90D2AF00DF056B /* extension */,
+			);
+			name = data;
+			path = data;
+			sourceTree = "<group>";
+		};
+		1E26F7C81E90D2AF00DF056B /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */,
+				1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */,
+			);
+			name = extension;
+			path = extension;
+			sourceTree = "<group>";
+		};
 		1EEAE4E01E7063E800299809 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +142,7 @@
 		1EEAE4EB1E7063E900299809 /* conference-app-2017 */ = {
 			isa = PBXGroup;
 			children = (
+				1E26F7C71E90D2AB00DF056B /* data */,
 				1E25C0A01E87AB88008C4C65 /* presentation */,
 				1EEAE4EC1E7063E900299809 /* AppDelegate.swift */,
 				1EEAE4F81E7063E900299809 /* Info.plist */,
@@ -259,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimelineViewController.swift in Sources */,
 				1E6ACB901E87B6760083D43E /* MySessionViewController.swift in Sources */,
+				1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */,
 				1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */,
 				1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */,
 			);
