@@ -1,0 +1,20 @@
+disabled_rules:
+  - trailing_whitespace
+  - type_name
+  - force_cast
+  - force_try
+excluded:
+  - Carthage
+line_length: 128
+type_body_length:
+  - 100 # warning
+  - 200 # error
+function_body_length:
+  - 30 # warning
+  - 50 # error
+variable_name:
+  max_length:
+    warning: 60
+    error: 80
+  min_length:
+    warning: 1
