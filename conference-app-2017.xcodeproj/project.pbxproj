@@ -14,12 +14,15 @@
 		1E6ACB901E87B6760083D43E /* MySessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */; };
 		1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB911E87B7950083D43E /* Information.storyboard */; };
 		1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */; };
+		1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */; };
 		1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EC1E7063E900299809 /* AppDelegate.swift */; };
 		1EEAE4EF1E7063E900299809 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EE1E7063E900299809 /* TimelineViewController.swift */; };
 		1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEAE4F01E7063E900299809 /* Main.storyboard */; };
 		1EEAE4F41E7063E900299809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEAE4F31E7063E900299809 /* Assets.xcassets */; };
 		1EEAE4F71E7063E900299809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEAE4F51E7063E900299809 /* LaunchScreen.storyboard */; };
 		1EEAE5021E7063E900299809 /* conference_app_2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE5011E7063E900299809 /* conference_app_2017Tests.swift */; };
+		1EED32B31E90F49C0033FA18 /* Session.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EED32B21E90F49C0033FA18 /* Session.storyboard */; };
+		1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EED32B41E90F4A60033FA18 /* SessionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,7 @@
 		1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySessionViewController.swift; sourceTree = "<group>"; };
 		1E6ACB911E87B7950083D43E /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
 		1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformationV\U0010iewController.swift"; sourceTree = "<group>"; };
+		1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1EEAE4E91E7063E900299809 /* conference-app-2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "conference-app-2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEAE4EC1E7063E900299809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EEAE4EE1E7063E900299809 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 		1EEAE4FD1E7063E900299809 /* conference-app-2017Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "conference-app-2017Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEAE5011E7063E900299809 /* conference_app_2017Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conference_app_2017Tests.swift; sourceTree = "<group>"; };
 		1EEAE5031E7063E900299809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EED32B21E90F49C0033FA18 /* Session.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Session.storyboard; sourceTree = "<group>"; };
+		1EED32B41E90F4A60033FA18 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 				1EEAE4F51E7063E900299809 /* LaunchScreen.storyboard */,
 				1EEAE4F01E7063E900299809 /* Main.storyboard */,
 				1E6ACB8D1E87B5FD0083D43E /* MySession.storyboard */,
+				1EED32B21E90F49C0033FA18 /* Session.storyboard */,
 				1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */,
 			);
 			path = view;
@@ -97,6 +104,7 @@
 			children = (
 				1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */,
 				1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */,
+				1EED32B41E90F4A60033FA18 /* SessionViewController.swift */,
 				1EEAE4EE1E7063E900299809 /* TimelineViewController.swift */,
 			);
 			path = viewController;
@@ -107,7 +115,6 @@
 			children = (
 				1E26F7C81E90D2AF00DF056B /* extension */,
 			);
-			name = data;
 			path = data;
 			sourceTree = "<group>";
 		};
@@ -116,8 +123,8 @@
 			children = (
 				1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */,
 				1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */,
+				1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */,
 			);
-			name = extension;
 			path = extension;
 			sourceTree = "<group>";
 		};
@@ -245,6 +252,7 @@
 			files = (
 				1EEAE4F71E7063E900299809 /* LaunchScreen.storyboard in Resources */,
 				1E6ACB8E1E87B5FD0083D43E /* MySession.storyboard in Resources */,
+				1EED32B31E90F49C0033FA18 /* Session.storyboard in Resources */,
 				1E25C0A41E87AF47008C4C65 /* Timeline.storyboard in Resources */,
 				1EEAE4F41E7063E900299809 /* Assets.xcassets in Resources */,
 				1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */,
@@ -284,8 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
+				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimelineViewController.swift in Sources */,
 				1E6ACB901E87B6760083D43E /* MySessionViewController.swift in Sources */,
+				1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */,
 				1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */,
 				1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */,
 				1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */,

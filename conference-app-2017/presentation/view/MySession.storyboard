@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dCZ-IS-qNp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jLX-qc-fcW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,9 +10,27 @@
     </dependencies>
     <scenes>
         <!--MySession-->
+        <scene sceneID="dqS-SD-3af">
+            <objects>
+                <navigationController id="jLX-qc-fcW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="MySession" id="yjd-Rc-7jv"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tIR-ay-VTj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dCZ-IS-qNp" kind="relationship" relationship="rootViewController" id="qRM-De-jJq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxC-LN-TJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-857" y="151"/>
+        </scene>
+        <!--My Session View Controller-->
         <scene sceneID="hne-am-jIr">
             <objects>
-                <viewController id="dCZ-IS-qNp" customClass="MySessionViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dCZ-IS-qNp" customClass="MySessionViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gME-fm-Zpp"/>
                         <viewControllerLayoutGuide type="bottom" id="CpC-FU-D2h"/>
@@ -22,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J4m-Lr-G5g">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SessionCell" id="0gt-HZ-bbJ">
@@ -44,7 +62,7 @@
                             <constraint firstAttribute="trailing" secondItem="J4m-Lr-G5g" secondAttribute="trailing" id="pHt-0V-LIx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MySession" id="yjd-Rc-7jv"/>
+                    <navigationItem key="navigationItem" id="xGx-lk-nsb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="J4m-Lr-G5g" id="fKZ-l6-7Mh"/>

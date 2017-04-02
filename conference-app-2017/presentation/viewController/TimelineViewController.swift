@@ -10,6 +10,7 @@ final class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
@@ -24,5 +25,15 @@ extension TimelineViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineCell", for: indexPath)
         cell.textLabel?.text = texts[indexPath.row]
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension TimelineViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let text = texts[indexPath.row]
+        let destination = SessionViewController.instantiate(text: text)
+        navigationController?.pushViewController(destination, animated: true)
     }
 }
