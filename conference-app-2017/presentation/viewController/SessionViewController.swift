@@ -1,13 +1,14 @@
 import UIKit
+import Then
 
 final class SessionViewController: UIViewController {
 
     var text: String = ""
 
     static func instantiate(text: String) -> SessionViewController {
-        let viewController = SessionViewController.instantiate(withStoryboard: "Session")
-        viewController.text = text
-        return viewController
+        return SessionViewController.instantiate(withStoryboard: "Session").then {
+            $0.text = text
+        }
     }
 
     override func viewDidLoad() {

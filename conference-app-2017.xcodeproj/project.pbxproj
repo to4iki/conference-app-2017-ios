@@ -10,6 +10,7 @@
 		1E25C0A41E87AF47008C4C65 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */; };
 		1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */; };
 		1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */; };
+		1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5B94E81E92A84B0013BB8A /* Then.framework */; };
 		1E6ACB8E1E87B5FD0083D43E /* MySession.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB8D1E87B5FD0083D43E /* MySession.storyboard */; };
 		1E6ACB901E87B6760083D43E /* MySessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */; };
 		1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB911E87B7950083D43E /* Information.storyboard */; };
@@ -39,6 +40,7 @@
 		1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
 		1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		1E5B94E81E92A84B0013BB8A /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
 		1E6ACB8D1E87B5FD0083D43E /* MySession.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySession.storyboard; sourceTree = "<group>"; };
 		1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySessionViewController.swift; sourceTree = "<group>"; };
 		1E6ACB911E87B7950083D43E /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,9 +131,18 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
+		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E5B94E81E92A84B0013BB8A /* Then.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1EEAE4E01E7063E800299809 = {
 			isa = PBXGroup;
 			children = (
+				1E5B94E71E92A84B0013BB8A /* Frameworks */,
 				1EEAE4EA1E7063E900299809 /* Products */,
 				1EEAE4EB1E7063E900299809 /* conference-app-2017 */,
 				1EEAE5001E7063E900299809 /* conference-app-2017Tests */,
@@ -176,6 +188,7 @@
 				1EEAE4E51E7063E900299809 /* Sources */,
 				1EEAE4E61E7063E900299809 /* Frameworks */,
 				1EEAE4E71E7063E900299809 /* Resources */,
+				1E5B94EB1E92A8730013BB8A /* Carthage Run Script */,
 				1ECB116C1E90C70600731159 /* SwiftLint Run Script */,
 			);
 			buildRules = (
@@ -270,6 +283,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E5B94EB1E92A8730013BB8A /* Carthage Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Then.framework",
+			);
+			name = "Carthage Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		1ECB116C1E90C70600731159 /* SwiftLint Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,6 +465,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "conference-app-2017/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.builderscon.conference-app-2017";
@@ -449,6 +481,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "conference-app-2017/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.builderscon.conference-app-2017";
