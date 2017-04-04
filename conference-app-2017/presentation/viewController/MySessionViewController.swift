@@ -10,6 +10,7 @@ final class MySessionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.register(cellType: SessionTableViewCell.self)
     }
 }
 
@@ -21,7 +22,7 @@ extension MySessionViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SessionCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(with: SessionTableViewCell.self, for: indexPath)
         cell.textLabel?.text = texts[indexPath.row]
         return cell
     }

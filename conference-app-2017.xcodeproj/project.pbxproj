@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E08E36A1E94040700A2EBC6 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08E3681E94040700A2EBC6 /* SessionTableViewCell.swift */; };
+		1E08E36B1E94040700A2EBC6 /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E08E3691E94040700A2EBC6 /* SessionTableViewCell.xib */; };
 		1E25C0A41E87AF47008C4C65 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */; };
 		1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */; };
 		1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E08E3681E94040700A2EBC6 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		1E08E3691E94040700A2EBC6 /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
 		1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
 		1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 				1EEAE4F01E7063E900299809 /* Main.storyboard */,
 				1E6ACB8D1E87B5FD0083D43E /* MySession.storyboard */,
 				1EED32B21E90F49C0033FA18 /* Session.storyboard */,
+				1E08E3681E94040700A2EBC6 /* SessionTableViewCell.swift */,
+				1E08E3691E94040700A2EBC6 /* SessionTableViewCell.xib */,
 				1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */,
 			);
 			path = view;
@@ -263,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E08E36B1E94040700A2EBC6 /* SessionTableViewCell.xib in Resources */,
 				1EEAE4F71E7063E900299809 /* LaunchScreen.storyboard in Resources */,
 				1E6ACB8E1E87B5FD0083D43E /* MySession.storyboard in Resources */,
 				1EED32B31E90F49C0033FA18 /* Session.storyboard in Resources */,
@@ -319,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E08E36A1E94040700A2EBC6 /* SessionTableViewCell.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimelineViewController.swift in Sources */,
