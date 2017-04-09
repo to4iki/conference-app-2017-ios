@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-457" y="-159"/>
         </scene>
-        <!--Timeline View Controller-->
+        <!--Timetable View Controller-->
         <scene sceneID="sT9-Vj-wmf">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" customClass="TimelineViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" customClass="TimetableViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vWl-zM-LnP"/>
                         <viewControllerLayoutGuide type="bottom" id="mdp-Xz-tgG"/>
@@ -43,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineCell" id="ga8-lp-Wpu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SessionTableViewCell" id="ga8-lp-Wpu" customClass="SessionTableViewCell" customModule="conference_app_2017" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ga8-lp-Wpu" id="mbk-Ue-mY4">

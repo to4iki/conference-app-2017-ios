@@ -1,6 +1,6 @@
 import UIKit
 
-final class TimelineViewController: UIViewController {
+final class TimetableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -15,21 +15,21 @@ final class TimelineViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension TimelineViewController: UITableViewDataSource {
+extension TimetableViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return texts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(with: SessionTableViewCell.self, for: indexPath)
         cell.textLabel?.text = texts[indexPath.row]
         return cell
     }
 }
 
 // MARK: - UITableViewDelegate
-extension TimelineViewController: UITableViewDelegate {
+extension TimetableViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let text = texts[indexPath.row]

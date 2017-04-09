@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="-610" y="107"/>
         </scene>
-        <!--Timeline-->
+        <!--Timetable-->
         <scene sceneID="TCw-Ex-jsR">
             <objects>
-                <viewControllerPlaceholder storyboardName="Timeline" id="PfJ-1I-FCA" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Timetable" id="PfJ-1I-FCA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="OOE-1L-Uwy"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJW-pa-8UZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

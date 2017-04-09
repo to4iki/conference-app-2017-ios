@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E08E36A1E94040700A2EBC6 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08E3681E94040700A2EBC6 /* SessionTableViewCell.swift */; };
 		1E08E36B1E94040700A2EBC6 /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E08E3691E94040700A2EBC6 /* SessionTableViewCell.xib */; };
-		1E25C0A41E87AF47008C4C65 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */; };
+		1E25C0A41E87AF47008C4C65 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Timetable.storyboard */; };
 		1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */; };
 		1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */; };
 		1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5B94E81E92A84B0013BB8A /* Then.framework */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		1E08E3681E94040700A2EBC6 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		1E08E3691E94040700A2EBC6 /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
-		1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
+		1E25C0A31E87AF47008C4C65 /* Timetable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timetable.storyboard; sourceTree = "<group>"; };
 		1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		1E5B94E81E92A84B0013BB8A /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 				1EED32B21E90F49C0033FA18 /* Session.storyboard */,
 				1E08E3681E94040700A2EBC6 /* SessionTableViewCell.swift */,
 				1E08E3691E94040700A2EBC6 /* SessionTableViewCell.xib */,
-				1E25C0A31E87AF47008C4C65 /* Timeline.storyboard */,
+				1E25C0A31E87AF47008C4C65 /* Timetable.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 				1EEAE4F71E7063E900299809 /* LaunchScreen.storyboard in Resources */,
 				1E6ACB8E1E87B5FD0083D43E /* MySession.storyboard in Resources */,
 				1EED32B31E90F49C0033FA18 /* Session.storyboard in Resources */,
-				1E25C0A41E87AF47008C4C65 /* Timeline.storyboard in Resources */,
+				1E25C0A41E87AF47008C4C65 /* Timetable.storyboard in Resources */,
 				1EEAE4F41E7063E900299809 /* Assets.xcassets in Resources */,
 				1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */,
 				1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */,
