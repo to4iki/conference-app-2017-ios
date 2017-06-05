@@ -18,6 +18,9 @@
 		1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB911E87B7950083D43E /* Information.storyboard */; };
 		1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */; };
 		1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */; };
+		1ECE1F231EE5AD320037D149 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F221EE5AD320037D149 /* XCGLogger.framework */; };
+		1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECE1F251EE5AD910037D149 /* Logger.swift */; };
+		1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */; };
 		1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EC1E7063E900299809 /* AppDelegate.swift */; };
 		1EEAE4EF1E7063E900299809 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EE1E7063E900299809 /* TimelineViewController.swift */; };
 		1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEAE4F01E7063E900299809 /* Main.storyboard */; };
@@ -50,6 +53,10 @@
 		1E6ACB911E87B7950083D43E /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
 		1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformationV\U0010iewController.swift"; sourceTree = "<group>"; };
 		1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		1ECE1F221EE5AD320037D149 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
+		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		1ECE1F271EE5B0D80037D149 /* ObjcExceptionBridging.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ObjcExceptionBridging.framework.dSYM; path = Carthage/Build/iOS/ObjcExceptionBridging.framework.dSYM; sourceTree = "<group>"; };
+		1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
 		1EEAE4E91E7063E900299809 /* conference-app-2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "conference-app-2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEAE4EC1E7063E900299809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EEAE4EE1E7063E900299809 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */,
+				1ECE1F231EE5AD320037D149 /* XCGLogger.framework in Frameworks */,
 				1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				1E26F7C81E90D2AF00DF056B /* extension */,
+				1ECE1F241EE5AD7A0037D149 /* util */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -140,9 +150,21 @@
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */,
+				1ECE1F271EE5B0D80037D149 /* ObjcExceptionBridging.framework.dSYM */,
+				1ECE1F221EE5AD320037D149 /* XCGLogger.framework */,
 				1E5B94E81E92A84B0013BB8A /* Then.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1ECE1F241EE5AD7A0037D149 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				1ECE1F251EE5AD910037D149 /* Logger.swift */,
+			);
+			name = util;
+			path = util;
 			sourceTree = "<group>";
 		};
 		1EEAE4E01E7063E800299809 = {
@@ -297,6 +319,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Then.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/XCGLogger.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjcExceptionBridging.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (
@@ -331,6 +355,7 @@
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimelineViewController.swift in Sources */,
 				1E6ACB901E87B6760083D43E /* MySessionViewController.swift in Sources */,
+				1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */,
 				1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */,
 				1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */,
 				1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */,
