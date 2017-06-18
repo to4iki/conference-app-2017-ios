@@ -18,6 +18,7 @@
 		1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB911E87B7950083D43E /* Information.storyboard */; };
 		1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */; };
 		1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */; };
+		1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */; };
 		1ECE1F231EE5AD320037D149 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F221EE5AD320037D149 /* XCGLogger.framework */; };
 		1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECE1F251EE5AD910037D149 /* Logger.swift */; };
 		1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */; };
@@ -54,6 +55,7 @@
 		1E6ACB911E87B7950083D43E /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
 		1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformationV\U0010iewController.swift"; sourceTree = "<group>"; };
 		1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1ECE1F221EE5AD320037D149 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1ECE1F271EE5B0D80037D149 /* ObjcExceptionBridging.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ObjcExceptionBridging.framework.dSYM; path = Carthage/Build/iOS/ObjcExceptionBridging.framework.dSYM; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */,
+				1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */,
 				1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */,
 				1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */,
 			);
@@ -362,6 +365,7 @@
 				1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */,
 				1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */,
 				1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */,
+				1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */,
 				1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */,
 				1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */,
 			);
