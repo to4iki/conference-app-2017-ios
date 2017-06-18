@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LrK-kl-c8S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LrK-kl-c8S">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Timeline-->
+        <!--Timetable-->
         <scene sceneID="oju-f2-rtJ">
             <objects>
                 <navigationController id="LrK-kl-c8S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Timeline" id="URp-kT-Wnl"/>
+                    <tabBarItem key="tabBarItem" title="Timetable" id="URp-kT-Wnl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J8N-Tg-Ww4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-457" y="-159"/>
         </scene>
-        <!--Timetable View Controller-->
+        <!--Timetables View Controller-->
         <scene sceneID="sT9-Vj-wmf">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" customClass="TimetableViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" customClass="TimetablesViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vWl-zM-LnP"/>
                         <viewControllerLayoutGuide type="bottom" id="mdp-Xz-tgG"/>
@@ -38,39 +38,48 @@
                     <view key="view" contentMode="scaleToFill" id="BI9-4d-gZn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sPr-ut-9bf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SessionTableViewCell" id="ga8-lp-Wpu" customClass="SessionTableViewCell" customModule="conference_app_2017" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ga8-lp-Wpu" id="mbk-Ue-mY4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="sPr-ut-9bf" firstAttribute="leading" secondItem="BI9-4d-gZn" secondAttribute="leading" id="DiH-fX-WgH"/>
-                            <constraint firstAttribute="trailing" secondItem="sPr-ut-9bf" secondAttribute="trailing" id="LCf-BB-Czh"/>
-                            <constraint firstItem="mdp-Xz-tgG" firstAttribute="top" secondItem="sPr-ut-9bf" secondAttribute="bottom" id="Ry7-xh-dFd"/>
-                            <constraint firstItem="sPr-ut-9bf" firstAttribute="top" secondItem="vWl-zM-LnP" secondAttribute="bottom" id="oKE-pf-ufG"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HwK-Hd-Jgb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="tableView" destination="sPr-ut-9bf" id="FYf-oP-GBj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nz-aK-w5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="248" y="-158"/>
+        </scene>
+        <!--Timetable View Controller-->
+        <scene sceneID="d24-9h-pu8">
+            <objects>
+                <viewController storyboardIdentifier="TimetableViewController" id="GDN-nH-Oal" customClass="TimetableViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="znY-x4-F6n"/>
+                        <viewControllerLayoutGuide type="bottom" id="ba2-rw-Mur"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X1n-03-EHb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9NL-bB-R2E" customClass="SpreadsheetView" customModule="SpreadsheetView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9NL-bB-R2E" secondAttribute="trailing" id="9F8-Ix-AwB"/>
+                            <constraint firstItem="9NL-bB-R2E" firstAttribute="leading" secondItem="X1n-03-EHb" secondAttribute="leading" id="Eie-rQ-RmB"/>
+                            <constraint firstItem="ba2-rw-Mur" firstAttribute="top" secondItem="9NL-bB-R2E" secondAttribute="bottom" id="Mw9-2k-VEE"/>
+                            <constraint firstItem="9NL-bB-R2E" firstAttribute="top" secondItem="znY-x4-F6n" secondAttribute="bottom" id="lXj-yu-7ac"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="spreadsheetView" destination="9NL-bB-R2E" id="WUV-n5-3n0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRj-5u-kZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="548"/>
         </scene>
     </scenes>
 </document>

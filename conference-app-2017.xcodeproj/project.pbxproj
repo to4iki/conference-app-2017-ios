@@ -20,12 +20,13 @@
 		1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */; };
 		1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */; };
 		1E9CCA901EF6CFF00012AFA9 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9CCA8F1EF6CFF00012AFA9 /* XLPagerTabStrip.framework */; };
+		1E9CCA921EF6D2CA0012AFA9 /* TimetablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CCA911EF6D2CA0012AFA9 /* TimetablesViewController.swift */; };
 		1ECE1F231EE5AD320037D149 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F221EE5AD320037D149 /* XCGLogger.framework */; };
 		1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECE1F251EE5AD910037D149 /* Logger.swift */; };
 		1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */; };
 		1EE0B9DD1EF6497400377DE7 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */; };
 		1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EC1E7063E900299809 /* AppDelegate.swift */; };
-		1EEAE4EF1E7063E900299809 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EE1E7063E900299809 /* TimelineViewController.swift */; };
+		1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */; };
 		1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEAE4F01E7063E900299809 /* Main.storyboard */; };
 		1EEAE4F41E7063E900299809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEAE4F31E7063E900299809 /* Assets.xcassets */; };
 		1EEAE4F71E7063E900299809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEAE4F51E7063E900299809 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 		1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1E9CCA8F1EF6CFF00012AFA9 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
+		1E9CCA911EF6D2CA0012AFA9 /* TimetablesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetablesViewController.swift; sourceTree = "<group>"; };
 		1ECE1F221EE5AD320037D149 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1ECE1F271EE5B0D80037D149 /* ObjcExceptionBridging.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ObjcExceptionBridging.framework.dSYM; path = Carthage/Build/iOS/ObjcExceptionBridging.framework.dSYM; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
 		1EEAE4E91E7063E900299809 /* conference-app-2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "conference-app-2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEAE4EC1E7063E900299809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1EEAE4EE1E7063E900299809 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		1EEAE4F11E7063E900299809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EEAE4F31E7063E900299809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EEAE4F61E7063E900299809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,7 +133,8 @@
 				1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */,
 				1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */,
 				1EED32B41E90F4A60033FA18 /* SessionViewController.swift */,
-				1EEAE4EE1E7063E900299809 /* TimelineViewController.swift */,
+				1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */,
+				1E9CCA911EF6D2CA0012AFA9 /* TimetablesViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -363,9 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E08E36A1E94040700A2EBC6 /* SessionTableViewCell.swift in Sources */,
+				1E9CCA921EF6D2CA0012AFA9 /* TimetablesViewController.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
-				1EEAE4EF1E7063E900299809 /* TimelineViewController.swift in Sources */,
+				1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */,
 				1E6ACB901E87B6760083D43E /* MySessionViewController.swift in Sources */,
 				1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */,
 				1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */,
