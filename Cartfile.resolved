@@ -1,4 +1,8 @@
 github "DaveWoodCom/XCGLogger" "5.0.1"
+github "antitypical/Result" "3.2.3"
 github "devxoul/Then" "2.1.0"
+github "ikesyo/Himotoki" "3.1.0"
 github "kishikawakatsumi/SpreadsheetView" "v0.7.2"
+github "malcommac/SwiftDate" "4.1.6"
+github "to4iki/OctavKit" "0.0.3"
 github "xmartlabs/XLPagerTabStrip" "7.0.0"

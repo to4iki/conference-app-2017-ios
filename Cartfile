@@ -1,4 +1,6 @@
 github "DaveWoodCom/XCGLogger"
 github "devxoul/Then"
 github "kishikawakatsumi/SpreadsheetView"
+github "malcommac/SwiftDate"
+github "to4iki/OctavKit"
 github "xmartlabs/XLPagerTabStrip"
