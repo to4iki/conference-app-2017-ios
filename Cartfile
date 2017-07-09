@@ -4,3 +4,4 @@ github "kishikawakatsumi/SpreadsheetView"
 github "malcommac/SwiftDate"
 github "to4iki/OctavKit"
 github "xmartlabs/XLPagerTabStrip"
+github "onevcat/Kingfisher" ~> 3.0

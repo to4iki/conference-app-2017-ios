@@ -13,6 +13,8 @@
 		1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */; };
 		1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */; };
 		1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5B94E81E92A84B0013BB8A /* Then.framework */; };
+		1E5C14E51F12291300AEB4F7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E5C14E41F12291300AEB4F7 /* Settings.bundle */; };
+		1E5C14E81F12389E00AEB4F7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */; };
 		1E6ACB8E1E87B5FD0083D43E /* MySession.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB8D1E87B5FD0083D43E /* MySession.storyboard */; };
 		1E6ACB901E87B6760083D43E /* MySessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */; };
 		1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB911E87B7950083D43E /* Information.storyboard */; };
@@ -56,6 +58,8 @@
 		1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		1E5B94E81E92A84B0013BB8A /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
+		1E5C14E41F12291300AEB4F7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../../../Downloads/Settings.bundle; sourceTree = "<group>"; };
+		1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		1E6ACB8D1E87B5FD0083D43E /* MySession.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySession.storyboard; sourceTree = "<group>"; };
 		1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySessionViewController.swift; sourceTree = "<group>"; };
 		1E6ACB911E87B7950083D43E /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5C14E81F12389E00AEB4F7 /* Kingfisher.framework in Frameworks */,
 				44C4F7091F11E91D00AD6C0D /* SwiftDate.framework in Frameworks */,
 				44C740601F0CFAAC00C1B7C4 /* Himotoki.framework in Frameworks */,
 				44C740621F0CFAAC00C1B7C4 /* Result.framework in Frameworks */,
@@ -173,6 +178,7 @@
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */,
 				44C4F7081F11E91D00AD6C0D /* SwiftDate.framework */,
 				44C7405D1F0CFAAC00C1B7C4 /* Himotoki.framework */,
 				44C7405E1F0CFAAC00C1B7C4 /* OctavKit.framework */,
@@ -220,6 +226,7 @@
 				1E25C0A01E87AB88008C4C65 /* presentation */,
 				1EEAE4EC1E7063E900299809 /* AppDelegate.swift */,
 				1EEAE4F81E7063E900299809 /* Info.plist */,
+				1E5C14E41F12291300AEB4F7 /* Settings.bundle */,
 			);
 			path = "conference-app-2017";
 			sourceTree = "<group>";
@@ -325,6 +332,7 @@
 				1E25C0A41E87AF47008C4C65 /* Timetable.storyboard in Resources */,
 				1EEAE4F41E7063E900299809 /* Assets.xcassets in Resources */,
 				1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */,
+				1E5C14E51F12291300AEB4F7 /* Settings.bundle in Resources */,
 				1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +362,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (
