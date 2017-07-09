@@ -2,8 +2,9 @@ import UIKit
 import XLPagerTabStrip
 
 final class TimetablesViewController: ButtonBarPagerTabStripViewController {
+    // TODO: fetch real datas
     /// dummy
-    private let navigationTitles = ["8/3", "8/4", "8/5"]
+    private let timetables = DummyDataFactory.sessions().groping()
 
     override func viewDidLoad() {
         setupNavigationItemStyle()
@@ -14,14 +15,11 @@ final class TimetablesViewController: ButtonBarPagerTabStripViewController {
     }
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return navigationTitles.map {
-            TimetableViewController.instantiate(navigationTitle: $0)
-        }
+        return timetables.map(TimetableViewController.instantiate)
     }
 }
 
 extension TimetablesViewController {
-
     fileprivate func setupNavigationItemStyle() {
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.buttonBarBackgroundColor = .clear

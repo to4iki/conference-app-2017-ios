@@ -1,1 +1,1 @@
-# builderscon tokyo 2017 official iOS app
+# builderscon tokyo 2017 iOS app
