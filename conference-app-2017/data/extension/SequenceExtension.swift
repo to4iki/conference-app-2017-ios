@@ -18,7 +18,7 @@ extension Sequence where Iterator.Element == Session {
     }
 
     private func groping() -> [Track] {
-        var result: [Room: [Iterator.Element]] = [:]
+        var result: [Conference.Track.Room: [Iterator.Element]] = [:]
         for element in self {
             if result[element.room] == nil {
                 result[element.room] = [element]

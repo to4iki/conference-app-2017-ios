@@ -3,7 +3,7 @@ import OctavKit
 import SwiftDate
 
 struct Track: CustomStringConvertible {
-    let room: Room
+    let room: Conference.Track.Room
     let sessions: [Session]
 
     var description: String {
@@ -17,8 +17,8 @@ struct Timetable: CustomStringConvertible {
 
     var startToEnd: (start: Date, end: Date) {
         let sessions = tracks.flatMap({ $0.sessions })
-        let min = sessions.min(by: { (before, after) in before.startsOn < after.startsOn })!
-        let max = sessions.max(by: { (before, after) in before.startsOn < after.startsOn })!
+        let min = sessions.min()!
+        let max = sessions.max()!
         return (start: min.startsOn, end: max.startsOn + Int(max.duration).second)
     }
 

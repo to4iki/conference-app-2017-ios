@@ -42,7 +42,6 @@
 		445913AA1F11EA6B001083D7 /* sessions.json in Resources */ = {isa = PBXBuildFile; fileRef = 445913A91F11EA6B001083D7 /* sessions.json */; };
 		445913AC1F11EAB6001083D7 /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913AB1F11EAB6001083D7 /* Timetable.swift */; };
 		445913AE1F11ECEF001083D7 /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913AD1F11ECEF001083D7 /* SequenceExtension.swift */; };
-		445913B01F1205F5001083D7 /* OctavKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913AF1F1205F5001083D7 /* OctavKitExtension.swift */; };
 		445913B31F121CAB001083D7 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913B21F121CAB001083D7 /* SessionCell.swift */; };
 		445913B51F121CCD001083D7 /* RoomTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913B41F121CCD001083D7 /* RoomTitleCell.swift */; };
 		445913B71F121D43001083D7 /* DateTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913B61F121D43001083D7 /* DateTitleCell.swift */; };
@@ -103,7 +102,6 @@
 		445913A91F11EA6B001083D7 /* sessions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessions.json; sourceTree = "<group>"; };
 		445913AB1F11EAB6001083D7 /* Timetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timetable.swift; sourceTree = "<group>"; };
 		445913AD1F11ECEF001083D7 /* SequenceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
-		445913AF1F1205F5001083D7 /* OctavKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctavKitExtension.swift; sourceTree = "<group>"; };
 		445913B21F121CAB001083D7 /* SessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
 		445913B41F121CCD001083D7 /* RoomTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTitleCell.swift; sourceTree = "<group>"; };
 		445913B61F121D43001083D7 /* DateTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTitleCell.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */,
-				445913AF1F1205F5001083D7 /* OctavKitExtension.swift */,
 				445913AD1F11ECEF001083D7 /* SequenceExtension.swift */,
 				445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */,
 				1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */,
@@ -461,7 +458,6 @@
 				1E9CCA921EF6D2CA0012AFA9 /* TimetablesViewController.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				445913B31F121CAB001083D7 /* SessionCell.swift in Sources */,
-				445913B01F1205F5001083D7 /* OctavKitExtension.swift in Sources */,
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */,
 				1E6ACB901E87B6760083D43E /* MySessionViewController.swift in Sources */,

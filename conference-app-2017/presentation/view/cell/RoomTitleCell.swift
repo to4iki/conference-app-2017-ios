@@ -29,7 +29,7 @@ final class RoomTitleCell: Cell {
 }
 
 extension RoomTitleCell {
-    func setup(room: Room) {
+    func setup(room: Conference.Track.Room) {
         label.text = room.name
     }
 }

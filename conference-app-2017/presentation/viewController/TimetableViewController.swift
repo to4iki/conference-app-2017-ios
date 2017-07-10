@@ -83,7 +83,7 @@ extension TimetableViewController: SpreadsheetViewDataSource {
                     }
                 }
 
-                let frame = Int(track.sessions[i].duration) / DateTitleCell.IntervalMinutes
+                let frame = track.sessions[i].duration / DateTitleCell.IntervalMinutes
                 let cellRange = CellRange(
                     from: (row: rowIndex + 1, column: columnIndex),
                     to: (row: rowIndex + frame, column: columnIndex)
