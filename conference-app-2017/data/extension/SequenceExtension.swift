@@ -1,9 +1,8 @@
 import Foundation
 import OctavKit
-import SwiftDate
 
 extension Sequence where Iterator.Element == Session {
-    func groping() -> [Timetable] {
+    func groping() -> [Date: [Iterator.Element]] {
         var result: [Date: [Iterator.Element]] = [:]
         for element in self {
             if result[element.startsOn.startOfDay] == nil {
@@ -12,20 +11,18 @@ extension Sequence where Iterator.Element == Session {
                 result[element.startsOn.startOfDay]!.append(element)
             }
         }
-        return result.map { (key: Date, value: [Iterator.Element]) -> Timetable in
-            Timetable(date: key, tracks: value.groping())
-        }
+        return result
     }
 
-    private func groping() -> [Track] {
-        var result: [Conference.Track.Room: [Iterator.Element]] = [:]
+    func groping() -> [Id<Conference.Track.Room>: [Iterator.Element]] {
+        var result: [Id<Conference.Track.Room>: [Iterator.Element]] = [:]
         for element in self {
-            if result[element.room] == nil {
-                result[element.room] = [element]
+            if result[element.room.id] == nil {
+                result[element.room.id] = [element]
             } else {
-                result[element.room]!.append(element)
+                result[element.room.id]!.append(element)
             }
         }
-        return result.map(Track.init)
+        return result
     }
 }

@@ -1,33 +1,28 @@
 import Foundation
 import OctavKit
-import SwiftDate
 
-struct Track: CustomStringConvertible {
-    let room: Conference.Track.Room
-    let sessions: [Session]
+struct Timetable {
+    let schedule: Conference.Schedule
+    let tracks: [Track]
 
-    var description: String {
-        return "Track(room: \(room), sessions: \(sessions))"
+    init(schedule: Conference.Schedule, tracks: [Conference.Track], grouped: [Date: [Session]]) {
+        self.schedule = schedule
+        let grouped = grouped[schedule.open.startOfDay] ?? []
+        self.tracks = tracks.map({ Track(track: $0, grouped: grouped.groping()) })
     }
 }
 
-struct Timetable: CustomStringConvertible {
-    let date: Date
-    let tracks: [Track]
-
-    var startToEnd: (start: Date, end: Date) {
-        let sessions = tracks.flatMap({ $0.sessions })
-        let min = sessions.min()!
-        let max = sessions.max()!
-        return (start: min.startsOn, end: max.startsOn + Int(max.duration).second)
-    }
-
-    var duration: Int {
-        let (start, end) = startToEnd
-        return Int(end - start)
-    }
-
+extension Timetable: CustomStringConvertible {
     var description: String {
-        return "Timetable(date: \(date), tracks: \(tracks))"
+        return "Timetable(schedule: \(schedule), tracks: \(tracks))"
+    }
+}
+
+// TODO: dummy
+struct TimetableFactory {
+    static func create(conference: Conference, sessions: [Session]) -> [Timetable] {
+        return conference.schedules.map { (schedule: Conference.Schedule) -> Timetable in
+            Timetable(schedule: schedule, tracks: conference.tracks, grouped: sessions.groping())
+        }
     }
 }

@@ -1,8 +1,7 @@
 import UIKit
 import SpreadsheetView
-import OctavKit
 
-final class RoomTitleCell: Cell {
+final class TrackTitleCell: Cell {
     fileprivate let label = UILabel()
 
     override init(frame: CGRect) {
@@ -18,8 +17,10 @@ final class RoomTitleCell: Cell {
     private func commonInit() {
         label.frame = bounds
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont.boldSystemFont(ofSize: 10)
         label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.8
         gridlines.top = .solid(width: 1, color: .black)
         gridlines.bottom = gridlines.top
         gridlines.right = .solid(width: 1, color: .black)
@@ -28,8 +29,8 @@ final class RoomTitleCell: Cell {
     }
 }
 
-extension RoomTitleCell {
-    func setup(room: Conference.Track.Room) {
-        label.text = room.name
+extension TrackTitleCell {
+    func setup(name: String) {
+        label.text = name
     }
 }

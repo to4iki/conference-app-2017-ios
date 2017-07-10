@@ -4,11 +4,6 @@ import OctavKit
 
 final class DateTitleCell: Cell {
     fileprivate let label = UILabel()
-    fileprivate lazy var hourFormatter: DateFormatter = {
-        var formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        return formatter
-    }()
 
     static let IntervalMinutes: Int = 5 * 60
 
@@ -37,6 +32,6 @@ final class DateTitleCell: Cell {
 
 extension DateTitleCell {
     func setup(date: Date) {
-        label.text = hourFormatter.string(from: date)
+        label.text = DateFormatter.hour.string(from: date)
     }
 }

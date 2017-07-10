@@ -4,7 +4,12 @@ import XLPagerTabStrip
 final class TimetablesViewController: ButtonBarPagerTabStripViewController {
     // TODO: fetch real datas
     /// dummy
-    private let timetables = DummyDataFactory.sessions().groping()
+    private let conference = DummyDataFactory.conference()
+    private let sessions = DummyDataFactory.sessions()
+    private lazy var timetables: [Timetable] = TimetableFactory.create(
+        conference: self.conference,
+        sessions: self.sessions
+    )
 
     override func viewDidLoad() {
         setupNavigationItemStyle()

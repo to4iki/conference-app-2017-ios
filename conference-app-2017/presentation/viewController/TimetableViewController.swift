@@ -8,16 +8,14 @@ final class TimetableViewController: UIViewController {
     @IBOutlet fileprivate weak var spreadsheetView: SpreadsheetView!
 
     fileprivate(set) var timetable: Timetable!
-    fileprivate lazy var startDate: Date = self.timetable.startToEnd.start
-    fileprivate lazy var endDate: Date = self.timetable.startToEnd.end
-    var holder: [IndexPath: Session] = [:]
+    fileprivate(set) var sessionHolder: [IndexPath: Session] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         spreadsheetView.dataSource = self
         spreadsheetView.delegate = self
         spreadsheetView.registerNib(type: SessionCell.self)
-        spreadsheetView.register(types: [BlankCell.self, RoomTitleCell.self, DateTitleCell.self])
+        spreadsheetView.register(types: [BlankCell.self, TrackTitleCell.self, DateTitleCell.self])
     }
 }
 
@@ -32,7 +30,7 @@ extension TimetableViewController {
 // MARK: - IndicatorInfoProvider
 extension TimetableViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        let title = "\(timetable.date.month)/\(timetable.date.day)"
+        let title = DateFormatter.day.string(from: timetable.schedule.open)
         return IndicatorInfo(title: title)
     }
 }
@@ -44,7 +42,7 @@ extension TimetableViewController: SpreadsheetViewDataSource {
     }
 
     func numberOfRows(in spreadsheetView: SpreadsheetView) -> Int {
-        return (timetable.duration / DateTitleCell.IntervalMinutes) + CellSetting.Header.numberOfRows
+        return (Int(timetable.schedule.duration) / DateTitleCell.IntervalMinutes) + CellSetting.Header.numberOfRows
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, widthForColumn column: Int) -> CGFloat {
@@ -63,16 +61,16 @@ extension TimetableViewController: SpreadsheetViewDataSource {
         return CellSetting.Header.numberOfRows
     }
 
+    // TODO: refactoring
     func mergedCells(in spreadsheetView: SpreadsheetView) -> [CellRange] {
         var mergedCells: [CellRange] = []
         for (index, track) in timetable.tracks.enumerated() {
             let columnIndex = index + 1
 
             var rowIndex = 0
-
             for i in (0..<track.sessions.count) {
                 if i == 0 {
-                    let blankFrame = Int(track.sessions[i].startsOn - startDate) / DateTitleCell.IntervalMinutes
+                    let blankFrame = Int(track.sessions[i].startsOn - timetable.schedule.open) / DateTitleCell.IntervalMinutes
                     if blankFrame != 0 {
                         let blankCellRange = CellRange(
                             from: (row: rowIndex + 1, column: columnIndex),
@@ -90,24 +88,24 @@ extension TimetableViewController: SpreadsheetViewDataSource {
                 )
                 rowIndex += frame
                 mergedCells.append(cellRange)
-                holder[IndexPath(row: cellRange.from.row, column: cellRange.from.column)] = track.sessions[i]
+                sessionHolder[IndexPath(row: cellRange.from.row, column: cellRange.from.column)] = track.sessions[i]
 
                 var nextDate: Date!
                 if i == track.sessions.count - 1 {
-                    nextDate = endDate // TODO: timetable end date
+                    nextDate = timetable.schedule.close
                 } else {
                     nextDate = track.sessions[i + 1].startsOn
                 }
 
                 let blankFrame = Int(nextDate - track.sessions[i].endsOn) / DateTitleCell.IntervalMinutes
-                guard blankFrame != 0 else { continue }
-
-                let blankCellRange = CellRange(
-                    from: (row: rowIndex + 1, column: columnIndex),
-                    to: (row: rowIndex + blankFrame, column: columnIndex)
-                )
-                rowIndex += blankFrame
-                mergedCells.append(blankCellRange)
+                if blankFrame != 0 {
+                    let blankCellRange = CellRange(
+                        from: (row: rowIndex + 1, column: columnIndex),
+                        to: (row: rowIndex + blankFrame, column: columnIndex)
+                    )
+                    rowIndex += blankFrame
+                    mergedCells.append(blankCellRange)
+                }
             }
         }
 
@@ -120,17 +118,17 @@ extension TimetableViewController: SpreadsheetViewDataSource {
             return nil
         case (true, false):
             let elapsedSecond = (DateTitleCell.IntervalMinutes * (indexPath.row - CellSetting.Header.numberOfRows)).second
-            let date = startDate + elapsedSecond
+            let date = timetable.schedule.open + elapsedSecond
             return spreadsheetView.dequeueReusableCell(with: DateTitleCell.self, for: indexPath).then {
                 $0.setup(date: date)
             }
         case (false, true):
             let track = timetable.tracks[indexPath.column - CellSetting.Header.numberOfColumns]
-            return spreadsheetView.dequeueReusableCell(with: RoomTitleCell.self, for: indexPath).then {
-                $0.setup(room: track.room)
+            return spreadsheetView.dequeueReusableCell(with: TrackTitleCell.self, for: indexPath).then {
+                $0.setup(name: track.name)
             }
         case (false, false):
-            if let session = holder[indexPath] {
+            if let session = sessionHolder[indexPath] {
                 return spreadsheetView.dequeueReusableCell(with: SessionCell.self, for: indexPath).then {
                     $0.setup(session: session)
                 }
@@ -144,7 +142,10 @@ extension TimetableViewController: SpreadsheetViewDataSource {
 // MARK: - SpreadsheetViewDelegate
 extension TimetableViewController: SpreadsheetViewDelegate {
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, didSelectItemAt indexPath: IndexPath) {
-        guard let session = holder[indexPath] else { return }
-        log.debug("Selected: (session: \(session))")
+        guard let session = sessionHolder[indexPath] else { return }
+        let alertController = UIAlertController(title: "\(session.speaker.nickname)", message: "\(session.title)", preferredStyle: .alert)
+        let doneAction = UIAlertAction(title: "done", style: UIAlertActionStyle.default, handler: nil)
+        alertController.addAction(doneAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
