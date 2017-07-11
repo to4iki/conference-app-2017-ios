@@ -12,7 +12,7 @@
 		1E1A39651F1287A1005456A3 /* SessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1A39641F1287A1005456A3 /* SessionCell.xib */; };
 		1E1A39671F128DF5005456A3 /* BlankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39661F128DF5005456A3 /* BlankCell.swift */; };
 		1E1A39691F129D9D005456A3 /* CellSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39681F129D9D005456A3 /* CellSetting.swift */; };
-		1E25C0A41E87AF47008C4C65 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Timetable.storyboard */; };
+		1E25C0A41E87AF47008C4C65 /* Conference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Conference.storyboard */; };
 		1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */; };
 		1E26F7CC1E90D2D500DF056B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */; };
 		1E360B4B1F13F1DF00508135 /* conference.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E360B4A1F13F1DF00508135 /* conference.json */; };
@@ -29,7 +29,7 @@
 		1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */; };
 		1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */; };
 		1E9CCA901EF6CFF00012AFA9 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9CCA8F1EF6CFF00012AFA9 /* XLPagerTabStrip.framework */; };
-		1E9CCA921EF6D2CA0012AFA9 /* TimetablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CCA911EF6D2CA0012AFA9 /* TimetablesViewController.swift */; };
+		1E9CCA921EF6D2CA0012AFA9 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CCA911EF6D2CA0012AFA9 /* ConferenceViewController.swift */; };
 		1ECE1F231EE5AD320037D149 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F221EE5AD320037D149 /* XCGLogger.framework */; };
 		1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECE1F251EE5AD910037D149 /* Logger.swift */; };
 		1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */; };
@@ -71,7 +71,7 @@
 		1E1A39641F1287A1005456A3 /* SessionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionCell.xib; sourceTree = "<group>"; };
 		1E1A39661F128DF5005456A3 /* BlankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankCell.swift; sourceTree = "<group>"; };
 		1E1A39681F129D9D005456A3 /* CellSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSetting.swift; sourceTree = "<group>"; };
-		1E25C0A31E87AF47008C4C65 /* Timetable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timetable.storyboard; sourceTree = "<group>"; };
+		1E25C0A31E87AF47008C4C65 /* Conference.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conference.storyboard; sourceTree = "<group>"; };
 		1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		1E26F7CB1E90D2D500DF056B /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		1E360B4A1F13F1DF00508135 /* conference.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conference.json; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1E9CCA8F1EF6CFF00012AFA9 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
-		1E9CCA911EF6D2CA0012AFA9 /* TimetablesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetablesViewController.swift; sourceTree = "<group>"; };
+		1E9CCA911EF6D2CA0012AFA9 /* ConferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
 		1ECE1F221EE5AD320037D149 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
@@ -160,6 +160,7 @@
 			children = (
 				445913B11F121C94001083D7 /* cell */,
 				1EEAE4F31E7063E900299809 /* Assets.xcassets */,
+				1E25C0A31E87AF47008C4C65 /* Conference.storyboard */,
 				1E6ACB911E87B7950083D43E /* Information.storyboard */,
 				1EEAE4F51E7063E900299809 /* LaunchScreen.storyboard */,
 				1EEAE4F01E7063E900299809 /* Main.storyboard */,
@@ -167,7 +168,6 @@
 				1EED32B21E90F49C0033FA18 /* Session.storyboard */,
 				1E08E3681E94040700A2EBC6 /* SessionTableViewCell.swift */,
 				1E08E3691E94040700A2EBC6 /* SessionTableViewCell.xib */,
-				1E25C0A31E87AF47008C4C65 /* Timetable.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -175,11 +175,11 @@
 		1E25C0A21E87AE11008C4C65 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				1E9CCA911EF6D2CA0012AFA9 /* ConferenceViewController.swift */,
 				1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */,
 				1E6ACB8F1E87B6760083D43E /* MySessionViewController.swift */,
 				1EED32B41E90F4A60033FA18 /* SessionViewController.swift */,
 				1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */,
-				1E9CCA911EF6D2CA0012AFA9 /* TimetablesViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -395,7 +395,7 @@
 				1EEAE4F71E7063E900299809 /* LaunchScreen.storyboard in Resources */,
 				1E6ACB8E1E87B5FD0083D43E /* MySession.storyboard in Resources */,
 				1EED32B31E90F49C0033FA18 /* Session.storyboard in Resources */,
-				1E25C0A41E87AF47008C4C65 /* Timetable.storyboard in Resources */,
+				1E25C0A41E87AF47008C4C65 /* Conference.storyboard in Resources */,
 				1E360B4B1F13F1DF00508135 /* conference.json in Resources */,
 				1E1A39651F1287A1005456A3 /* SessionCell.xib in Resources */,
 				445913AA1F11EA6B001083D7 /* sessions.json in Resources */,
@@ -465,7 +465,7 @@
 				445913B91F1222E0001083D7 /* SpreadsheetViewExtension.swift in Sources */,
 				1E1A39691F129D9D005456A3 /* CellSetting.swift in Sources */,
 				1E08E36A1E94040700A2EBC6 /* SessionTableViewCell.swift in Sources */,
-				1E9CCA921EF6D2CA0012AFA9 /* TimetablesViewController.swift in Sources */,
+				1E9CCA921EF6D2CA0012AFA9 /* ConferenceViewController.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				445913B31F121CAB001083D7 /* SessionCell.swift in Sources */,
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,

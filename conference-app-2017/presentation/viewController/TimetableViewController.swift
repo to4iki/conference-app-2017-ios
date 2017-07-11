@@ -21,7 +21,7 @@ final class TimetableViewController: UIViewController {
 
 extension TimetableViewController {
     static func instantiate(timetable: Timetable) -> TimetableViewController {
-        return instantiate(withStoryboard: "Timetable").then {
+        return instantiate(withStoryboard: "Conference").then {
             $0.timetable = timetable
         }
     }

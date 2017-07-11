@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-457" y="-159"/>
         </scene>
-        <!--Timetables View Controller-->
+        <!--Conference View Controller-->
         <scene sceneID="sT9-Vj-wmf">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" customClass="TimetablesViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" customClass="ConferenceViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vWl-zM-LnP"/>
                         <viewControllerLayoutGuide type="bottom" id="mdp-Xz-tgG"/>

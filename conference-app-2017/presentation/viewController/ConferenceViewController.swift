@@ -1,7 +1,7 @@
 import UIKit
 import XLPagerTabStrip
 
-final class TimetablesViewController: ButtonBarPagerTabStripViewController {
+final class ConferenceViewController: ButtonBarPagerTabStripViewController {
     // TODO: fetch real datas
     /// dummy
     private let conference = DummyDataFactory.conference()
@@ -24,7 +24,7 @@ final class TimetablesViewController: ButtonBarPagerTabStripViewController {
     }
 }
 
-extension TimetablesViewController {
+extension ConferenceViewController {
     fileprivate func setupNavigationItemStyle() {
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.buttonBarBackgroundColor = .clear
