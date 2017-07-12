@@ -1,7 +1,8 @@
 github "DaveWoodCom/XCGLogger"
 github "devxoul/Then"
+github "keitaoouchi/MarkdownView"
 github "kishikawakatsumi/SpreadsheetView"
 github "malcommac/SwiftDate"
+github "onevcat/Kingfisher"
 github "to4iki/OctavKit"
 github "xmartlabs/XLPagerTabStrip"
-github "onevcat/Kingfisher" ~> 3.0

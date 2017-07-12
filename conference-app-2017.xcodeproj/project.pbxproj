@@ -44,6 +44,7 @@
 		445913B51F121CCD001083D7 /* TrackTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913B41F121CCD001083D7 /* TrackTitleCell.swift */; };
 		445913B71F121D43001083D7 /* DateTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913B61F121D43001083D7 /* DateTitleCell.swift */; };
 		445913B91F1222E0001083D7 /* SpreadsheetViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */; };
+		4487EC821F163B0E005ACF36 /* MarkdownView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4487EC811F163B0E005ACF36 /* MarkdownView.framework */; };
 		44C4F7091F11E91D00AD6C0D /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C4F7081F11E91D00AD6C0D /* SwiftDate.framework */; };
 		44C740601F0CFAAC00C1B7C4 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C7405D1F0CFAAC00C1B7C4 /* Himotoki.framework */; };
 		44C740611F0CFAAC00C1B7C4 /* OctavKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C7405E1F0CFAAC00C1B7C4 /* OctavKit.framework */; };
@@ -102,6 +103,7 @@
 		445913B41F121CCD001083D7 /* TrackTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTitleCell.swift; sourceTree = "<group>"; };
 		445913B61F121D43001083D7 /* DateTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTitleCell.swift; sourceTree = "<group>"; };
 		445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetViewExtension.swift; sourceTree = "<group>"; };
+		4487EC811F163B0E005ACF36 /* MarkdownView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarkdownView.framework; path = Carthage/Build/iOS/MarkdownView.framework; sourceTree = "<group>"; };
 		44C4F7081F11E91D00AD6C0D /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
 		44C7405D1F0CFAAC00C1B7C4 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		44C7405E1F0CFAAC00C1B7C4 /* OctavKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OctavKit.framework; path = Carthage/Build/iOS/OctavKit.framework; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4487EC821F163B0E005ACF36 /* MarkdownView.framework in Frameworks */,
 				1E5C14E81F12389E00AEB4F7 /* Kingfisher.framework in Frameworks */,
 				44C4F7091F11E91D00AD6C0D /* SwiftDate.framework in Frameworks */,
 				44C740601F0CFAAC00C1B7C4 /* Himotoki.framework in Frameworks */,
@@ -195,6 +198,7 @@
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4487EC811F163B0E005ACF36 /* MarkdownView.framework */,
 				1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */,
 				44C4F7081F11E91D00AD6C0D /* SwiftDate.framework */,
 				44C7405D1F0CFAAC00C1B7C4 /* Himotoki.framework */,
@@ -415,6 +419,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MarkdownView.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (
