@@ -12,11 +12,9 @@ final class ConferenceViewController: ButtonBarPagerTabStripViewController {
     )
 
     override func viewDidLoad() {
-        setupNavigationItemStyle()
         super.viewDidLoad()
         containerView.isScrollEnabled = false
-        buttonBarView.removeFromSuperview()
-        navigationController?.navigationBar.addSubview(buttonBarView)
+        setupNavigationItemStyle()
     }
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -26,9 +24,9 @@ final class ConferenceViewController: ButtonBarPagerTabStripViewController {
 
 extension ConferenceViewController {
     fileprivate func setupNavigationItemStyle() {
-        settings.style.buttonBarItemBackgroundColor = .clear
-        settings.style.buttonBarBackgroundColor = .clear
+        buttonBarView.backgroundColor = .white
+        buttonBarView.selectedBar.backgroundColor = UIColor.Builderscon.themeBlue
+        settings.style.buttonBarItemBackgroundColor = .white
         settings.style.buttonBarItemTitleColor = .black
-        settings.style.selectedBarBackgroundColor = UIColor.Builderscon.themeBlue
     }
 }

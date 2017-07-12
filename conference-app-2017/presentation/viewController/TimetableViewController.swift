@@ -152,9 +152,7 @@ extension TimetableViewController: SpreadsheetViewDataSource {
 extension TimetableViewController: SpreadsheetViewDelegate {
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, didSelectItemAt indexPath: IndexPath) {
         guard let session = sessionHolder[indexPath] else { return }
-        let alertController = UIAlertController(title: "\(session.speaker.nickname)", message: "\(session.title)", preferredStyle: .alert)
-        let doneAction = UIAlertAction(title: "done", style: UIAlertActionStyle.default, handler: nil)
-        alertController.addAction(doneAction)
-        present(alertController, animated: true, completion: nil)
+        let viewController = SessionViewController.instantiate(session: session)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

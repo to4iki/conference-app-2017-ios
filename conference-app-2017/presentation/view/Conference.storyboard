@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-457" y="-159"/>
         </scene>
-        <!--Conference View Controller-->
+        <!--View Controller-->
         <scene sceneID="sT9-Vj-wmf">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" customClass="ConferenceViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vWl-zM-LnP"/>
                         <viewControllerLayoutGuide type="bottom" id="mdp-Xz-tgG"/>
@@ -38,14 +38,28 @@
                     <view key="view" contentMode="scaleToFill" id="BI9-4d-gZn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zix-pZ-YkV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <connections>
+                                    <segue destination="B7m-Z6-Ezf" kind="embed" id="bCe-Kp-Jjg"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zix-pZ-YkV" secondAttribute="trailing" id="5BP-T7-FLC"/>
+                            <constraint firstItem="mdp-Xz-tgG" firstAttribute="top" secondItem="Zix-pZ-YkV" secondAttribute="bottom" id="72x-MW-fBW"/>
+                            <constraint firstItem="Zix-pZ-YkV" firstAttribute="top" secondItem="vWl-zM-LnP" secondAttribute="bottom" id="t66-K3-LuQ"/>
+                            <constraint firstItem="Zix-pZ-YkV" firstAttribute="leading" secondItem="BI9-4d-gZn" secondAttribute="leading" id="tIy-Ul-Mgl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HwK-Hd-Jgb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nz-aK-w5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="-158"/>
+            <point key="canvasLocation" x="266" y="-160"/>
         </scene>
         <!--Timetable View Controller-->
         <scene sceneID="d24-9h-pu8">
@@ -79,7 +93,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRj-5u-kZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="247" y="548"/>
+            <point key="canvasLocation" x="964" y="521"/>
+        </scene>
+        <!--Conference View Controller-->
+        <scene sceneID="6G7-Z7-v64">
+            <objects>
+                <viewController id="B7m-Z6-Ezf" customClass="ConferenceViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Ge-uj-J3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TFy-tr-aKl" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3sj-to-Zlg"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4P5-sy-5Le">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qil-1t-Uf8">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7e-I1-TaN">
+                                <rect key="frame" x="0.0" y="44" width="375" height="510"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TFy-tr-aKl" secondAttribute="trailing" id="0x8-gE-VFs"/>
+                            <constraint firstItem="TFy-tr-aKl" firstAttribute="top" secondItem="1Ge-uj-J3Z" secondAttribute="top" id="5oU-sq-BqG"/>
+                            <constraint firstAttribute="trailing" secondItem="l7e-I1-TaN" secondAttribute="trailing" id="Bir-3V-MEE"/>
+                            <constraint firstAttribute="bottom" secondItem="l7e-I1-TaN" secondAttribute="bottom" id="BnR-y1-zbm"/>
+                            <constraint firstItem="l7e-I1-TaN" firstAttribute="leading" secondItem="1Ge-uj-J3Z" secondAttribute="leading" id="KdT-yk-H4K"/>
+                            <constraint firstItem="TFy-tr-aKl" firstAttribute="leading" secondItem="1Ge-uj-J3Z" secondAttribute="leading" id="UOc-9U-cjB"/>
+                            <constraint firstItem="l7e-I1-TaN" firstAttribute="top" secondItem="1Ge-uj-J3Z" secondAttribute="top" constant="44" id="UjB-oj-hOa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdq-7v-o5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="-160"/>
         </scene>
     </scenes>
 </document>
