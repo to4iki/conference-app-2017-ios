@@ -13,6 +13,9 @@
 		1E25C0A41E87AF47008C4C65 /* Conference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Conference.storyboard */; };
 		1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */; };
 		1E360B4B1F13F1DF00508135 /* conference.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E360B4A1F13F1DF00508135 /* conference.json */; };
+		1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BC1D31F1930380010FCC1 /* TagCollectionViewCell.swift */; };
+		1E3BC1D61F1931390010FCC1 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BC1D51F1931390010FCC1 /* UICollectionViewExtension.swift */; };
+		1E3BC1D81F1935880010FCC1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BC1D71F1935880010FCC1 /* UIViewExtension.swift */; };
 		1E3D99F41F124CF6003035F8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E3D99F31F124CF6003035F8 /* Settings.bundle */; };
 		1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5B94E81E92A84B0013BB8A /* Then.framework */; };
 		1E5C14E81F12389E00AEB4F7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */; };
@@ -45,6 +48,7 @@
 		445913B71F121D43001083D7 /* DateTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913B61F121D43001083D7 /* DateTitleCell.swift */; };
 		445913B91F1222E0001083D7 /* SpreadsheetViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */; };
 		4487EC821F163B0E005ACF36 /* MarkdownView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4487EC811F163B0E005ACF36 /* MarkdownView.framework */; };
+		448DC8F41F19E18400F39A6D /* Session+Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DC8F31F19E18400F39A6D /* Session+Tag.swift */; };
 		44C4F7091F11E91D00AD6C0D /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C4F7081F11E91D00AD6C0D /* SwiftDate.framework */; };
 		44C740601F0CFAAC00C1B7C4 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C7405D1F0CFAAC00C1B7C4 /* Himotoki.framework */; };
 		44C740611F0CFAAC00C1B7C4 /* OctavKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C7405E1F0CFAAC00C1B7C4 /* OctavKit.framework */; };
@@ -68,6 +72,9 @@
 		1E25C0A31E87AF47008C4C65 /* Conference.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conference.storyboard; sourceTree = "<group>"; };
 		1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		1E360B4A1F13F1DF00508135 /* conference.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conference.json; sourceTree = "<group>"; };
+		1E3BC1D31F1930380010FCC1 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		1E3BC1D51F1931390010FCC1 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		1E3BC1D71F1935880010FCC1 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		1E3D99F31F124CF6003035F8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1E5B94E81E92A84B0013BB8A /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
 		1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -104,6 +111,7 @@
 		445913B61F121D43001083D7 /* DateTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTitleCell.swift; sourceTree = "<group>"; };
 		445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetViewExtension.swift; sourceTree = "<group>"; };
 		4487EC811F163B0E005ACF36 /* MarkdownView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarkdownView.framework; path = Carthage/Build/iOS/MarkdownView.framework; sourceTree = "<group>"; };
+		448DC8F31F19E18400F39A6D /* Session+Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+Tag.swift"; sourceTree = "<group>"; };
 		44C4F7081F11E91D00AD6C0D /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
 		44C7405D1F0CFAAC00C1B7C4 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		44C7405E1F0CFAAC00C1B7C4 /* OctavKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OctavKit.framework; path = Carthage/Build/iOS/OctavKit.framework; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				445913B11F121C94001083D7 /* cell */,
+				1E3BC1D21F192FF00010FCC1 /* tag */,
 				1EEAE4F31E7063E900299809 /* Assets.xcassets */,
 				1E25C0A31E87AF47008C4C65 /* Conference.storyboard */,
 				1E6ACB911E87B7950083D43E /* Information.storyboard */,
@@ -189,10 +198,20 @@
 				1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */,
 				1E6949E41F140E1B0060697A /* SequenceExtension.swift */,
 				445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */,
+				1E3BC1D51F1931390010FCC1 /* UICollectionViewExtension.swift */,
 				1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */,
 				1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */,
+				1E3BC1D71F1935880010FCC1 /* UIViewExtension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		1E3BC1D21F192FF00010FCC1 /* tag */ = {
+			isa = PBXGroup;
+			children = (
+				1E3BC1D31F1930380010FCC1 /* TagCollectionViewCell.swift */,
+			);
+			path = tag;
 			sourceTree = "<group>";
 		};
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
@@ -266,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				445913A51F11EA3D001083D7 /* dummy */,
+				448DC8F31F19E18400F39A6D /* Session+Tag.swift */,
 				445913AB1F11EAB6001083D7 /* Timetable.swift */,
 				1E6949E21F140DB00060697A /* Track.swift */,
 			);
@@ -449,11 +469,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3BC1D61F1931390010FCC1 /* UICollectionViewExtension.swift in Sources */,
 				445913A71F11EA5B001083D7 /* DummyDataFactory.swift in Sources */,
 				445913B91F1222E0001083D7 /* SpreadsheetViewExtension.swift in Sources */,
 				1E1A39691F129D9D005456A3 /* CellSetting.swift in Sources */,
+				1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */,
 				1E9CCA921EF6D2CA0012AFA9 /* ConferenceViewController.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
+				448DC8F41F19E18400F39A6D /* Session+Tag.swift in Sources */,
 				445913B31F121CAB001083D7 /* SessionCell.swift in Sources */,
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */,
@@ -466,6 +489,7 @@
 				445913B71F121D43001083D7 /* DateTitleCell.swift in Sources */,
 				1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */,
 				1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */,
+				1E3BC1D81F1935880010FCC1 /* UIViewExtension.swift in Sources */,
 				1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */,
 				445913AC1F11EAB6001083D7 /* Timetable.swift in Sources */,
 				1E6949E31F140DB00060697A /* Track.swift in Sources */,

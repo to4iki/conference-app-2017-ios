@@ -9,6 +9,7 @@ final class SessionViewController: UIViewController {
     @IBOutlet fileprivate weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet fileprivate weak var titleLabel: UILabel!
     @IBOutlet fileprivate weak var startToEndLabel: UILabel!
+    @IBOutlet fileprivate weak var tagCollectionView: UICollectionView!
     @IBOutlet fileprivate weak var avatarImageView: UIImageView!
     @IBOutlet fileprivate weak var nicknameLabel: UILabel!
     @IBOutlet fileprivate weak var abstractMarkdownView: MarkdownView!
@@ -18,6 +19,8 @@ final class SessionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tagCollectionView.dataSource = self
+        tagCollectionView.delegate = self
         setupLayout(session: session)
     }
 }
@@ -57,5 +60,25 @@ extension SessionViewController {
         indicatorView.startAnimating()
         indicatorView.isHidden = false
         contentView.isHidden = true
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension SessionViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return session.tags.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(with: TagCollectionViewCell.self, for: indexPath).then {
+            $0.setup(name: session.tags[indexPath.row].rawValue)
+        }
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension SessionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return TagCollectionViewCell.cellSize(by: session.tags[indexPath.row].rawValue)
     }
 }
