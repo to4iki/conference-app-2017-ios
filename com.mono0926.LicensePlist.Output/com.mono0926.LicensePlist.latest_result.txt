@@ -1,0 +1,23 @@
+name: XCGLogger, nameSpecified: , owner: DaveWoodCom, version: 5.0.1
+
+name: Result, nameSpecified: , owner: antitypical, version: 3.2.3
+
+name: Then, nameSpecified: , owner: devxoul, version: 2.1.0
+
+name: Himotoki, nameSpecified: , owner: ikesyo, version: 3.1.0
+
+name: MarkdownView, nameSpecified: , owner: keitaoouchi, version: 1.0.3
+
+name: SpreadsheetView, nameSpecified: , owner: kishikawakatsumi, version: v0.7.2
+
+name: SwiftDate, nameSpecified: , owner: malcommac, version: 4.1.6
+
+name: Kingfisher, nameSpecified: , owner: onevcat, version: 3.10.3
+
+name: OctavKit, nameSpecified: , owner: to4iki, version: 0.0.5
+
+name: XLPagerTabStrip, nameSpecified: , owner: xmartlabs, version: 7.0.0
+
+add-version-numbers: false
+
+LicensePlist Version: 1.4.5

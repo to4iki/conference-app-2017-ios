@@ -91,7 +91,7 @@
 		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
 		1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
-		1EEAE4E91E7063E900299809 /* conference-app-2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "conference-app-2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EEAE4E91E7063E900299809 /* Builderscon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Builderscon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEAE4EC1E7063E900299809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		1EEAE4F11E7063E900299809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -253,7 +253,7 @@
 		1EEAE4EA1E7063E900299809 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EEAE4E91E7063E900299809 /* conference-app-2017.app */,
+				1EEAE4E91E7063E900299809 /* Builderscon.app */,
 				1EEAE4FD1E7063E900299809 /* conference-app-2017Tests.xctest */,
 			);
 			name = Products;
@@ -334,7 +334,7 @@
 			);
 			name = "conference-app-2017";
 			productName = "conference-app-2017";
-			productReference = 1EEAE4E91E7063E900299809 /* conference-app-2017.app */;
+			productReference = 1EEAE4E91E7063E900299809 /* Builderscon.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1EEAE4FC1E7063E900299809 /* conference-app-2017Tests */ = {
@@ -639,7 +639,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.builderscon.conference-app-2017";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Builderscon;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -656,7 +656,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.builderscon.conference-app-2017";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Builderscon;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
