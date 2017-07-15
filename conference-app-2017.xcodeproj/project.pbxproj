@@ -23,7 +23,7 @@
 		1E6949E51F140E1B0060697A /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6949E41F140E1B0060697A /* SequenceExtension.swift */; };
 		1E6949E71F1410320060697A /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6949E61F1410320060697A /* DateFormatterExtension.swift */; };
 		1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB911E87B7950083D43E /* Information.storyboard */; };
-		1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */; };
+		1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */; };
 		1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */; };
 		1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */; };
 		1E9CCA901EF6CFF00012AFA9 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9CCA8F1EF6CFF00012AFA9 /* XLPagerTabStrip.framework */; };
@@ -32,6 +32,8 @@
 		1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECE1F251EE5AD910037D149 /* Logger.swift */; };
 		1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */; };
 		1EE0B9DD1EF6497400377DE7 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */; };
+		1EE3480F1F19FB3300B86751 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */; };
+		1EE348111F19FB7600B86751 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE348101F19FB7600B86751 /* QRReaderViewController.swift */; };
 		1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EC1E7063E900299809 /* AppDelegate.swift */; };
 		1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */; };
 		1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEAE4F01E7063E900299809 /* Main.storyboard */; };
@@ -82,7 +84,7 @@
 		1E6949E41F140E1B0060697A /* SequenceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
 		1E6949E61F1410320060697A /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		1E6ACB911E87B7950083D43E /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
-		1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformationV\U0010iewController.swift"; sourceTree = "<group>"; };
+		1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; "; };\n\t\t1EEAE4E91E7063E900299809 /* Builderscon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Builderscon.app; sourceTree = BUILT_PRODUCTS_DIR; };\n\t\t1EEAE4EC1E7063E900299809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = " = group; ";\n\t\t};\n\t\t1EEAE4EA1E7063E900299809 /* Products */ = {\n\t\t\tisa = PBXGroup;\n\t\t\tchildren = (\n\t\t\t\t1EEAE4E91E7063E900299809 /* Builderscon.app */,\n\t\t\t\t1EEAE4FD1E7063E900299809 /* conference-app-2017Tests.xctest */,\n\t\t\t);\n\t\t\tname = Products;\n\t\t\tsourceTree = " = group; ";\n\t\t\tproductReference = 1EEAE4E91E7063E900299809 /* Builderscon.app */;\n\t\t\tproductType = " = "com.apple.product-type.application"; sourceTree = "<group>"; };
 		1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1E9CCA8F1EF6CFF00012AFA9 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
@@ -91,7 +93,9 @@
 		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
 		1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
-		1EEAE4E91E7063E900299809 /* Builderscon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Builderscon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
+		1EE348101F19FB7600B86751 /* QRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
+		1EEAE4E91E7063E900299809 /* conference-app-2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "conference-app-2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEAE4EC1E7063E900299809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		1EEAE4F11E7063E900299809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,8 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				1E9CCA911EF6D2CA0012AFA9 /* ConferenceViewController.swift */,
-				1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */,
+				1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */,
+				1EE348101F19FB7600B86751 /* QRReaderViewController.swift */,
 				1EED32B41E90F4A60033FA18 /* SessionViewController.swift */,
+				1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */,
 				1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */,
 			);
 			path = viewController;
@@ -253,7 +259,7 @@
 		1EEAE4EA1E7063E900299809 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EEAE4E91E7063E900299809 /* Builderscon.app */,
+				1EEAE4E91E7063E900299809 /* conference-app-2017.app */,
 				1EEAE4FD1E7063E900299809 /* conference-app-2017Tests.xctest */,
 			);
 			name = Products;
@@ -334,7 +340,7 @@
 			);
 			name = "conference-app-2017";
 			productName = "conference-app-2017";
-			productReference = 1EEAE4E91E7063E900299809 /* Builderscon.app */;
+			productReference = 1EEAE4E91E7063E900299809 /* conference-app-2017.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1EEAE4FC1E7063E900299809 /* conference-app-2017Tests */ = {
@@ -481,8 +487,10 @@
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */,
 				1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */,
+				1EE3480F1F19FB3300B86751 /* SponsorViewController.swift in Sources */,
 				1E1A39671F128DF5005456A3 /* BlankCell.swift in Sources */,
 				1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */,
+				1EE348111F19FB7600B86751 /* QRReaderViewController.swift in Sources */,
 				445913B51F121CCD001083D7 /* TrackTitleCell.swift in Sources */,
 				1E6949E51F140E1B0060697A /* SequenceExtension.swift in Sources */,
 				1E6949E71F1410320060697A /* DateFormatterExtension.swift in Sources */,
@@ -490,7 +498,7 @@
 				1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */,
 				1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */,
 				1E3BC1D81F1935880010FCC1 /* UIViewExtension.swift in Sources */,
-				1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */,
+				1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */,
 				445913AC1F11EAB6001083D7 /* Timetable.swift in Sources */,
 				1E6949E31F140DB00060697A /* Track.swift in Sources */,
 			);

@@ -1,7 +1,7 @@
 import UIKit
 
-final class InformationViewController: UIViewController {
-
+final class SponsorViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
