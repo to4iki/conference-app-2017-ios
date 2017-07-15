@@ -1,7 +1,7 @@
 import UIKit
 
-final class InformationViewController: UIViewController {
-
+final class QRReaderViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

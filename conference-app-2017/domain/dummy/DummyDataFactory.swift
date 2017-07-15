@@ -3,7 +3,16 @@ import OctavKit
 import Himotoki
 
 // TODO: deleted
-struct DummyDataFactory {
+struct DummyData {
+    static let shared = DummyData()
+    private init() {}
+
+    let sessions: [Session] = DummyDataFactory.sessions()
+    let conference: Conference = DummyDataFactory.conference()
+}
+
+
+private struct DummyDataFactory {
     private static let sessionsJsonPath = Bundle.main.path(forResource: "sessions", ofType:"json")!
     private static let conferenceJsonPath = Bundle.main.path(forResource: "conference", ofType:"json")!
 

@@ -4,11 +4,9 @@ import XLPagerTabStrip
 final class ConferenceViewController: ButtonBarPagerTabStripViewController {
     // TODO: fetch real datas
     /// dummy
-    private let conference = DummyDataFactory.conference()
-    private let sessions = DummyDataFactory.sessions()
-    private lazy var timetables: [Timetable] = TimetableFactory.create(
-        conference: self.conference,
-        sessions: self.sessions
+    private let timetables: [Timetable] = TimetableFactory.create(
+        conference: DummyData.shared.conference,
+        sessions: DummyData.shared.sessions
     )
 
     override func viewDidLoad() {
