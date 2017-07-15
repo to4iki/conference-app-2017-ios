@@ -12,13 +12,10 @@ struct Track {
         return max.endsOn - min.startsOn
     }
 
-    var hasSession: Bool {
-        return !sessions.isEmpty
-    }
-
-    init(track: Conference.Track, grouped: [Id<Conference.Track.Room>: [Session]]) {
+    init?(track: Conference.Track, grouped: [Id<Conference.Track.Room>: [Session]]) {
+        guard let sessions = grouped[track.roomId] else { return nil }
         self.name = track.name
-        self.sessions = grouped[track.roomId] ?? []
+        self.sessions = sessions
     }
 }
 

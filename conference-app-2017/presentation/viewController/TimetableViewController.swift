@@ -46,7 +46,11 @@ extension TimetableViewController: SpreadsheetViewDataSource {
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, widthForColumn column: Int) -> CGFloat {
-        return CellSetting.Width(for: column).rawValue
+        if column != CellSetting.Header.columnIndex && timetable.tracks.count == CellSetting.requiredAdjustmentTrackCount {
+            return UIScreen.main.bounds.width - CellSetting.Width.header.rawValue
+        } else {
+            return CellSetting.Width(for: column).rawValue
+        }
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, heightForRow row: Int) -> CGFloat {
@@ -67,37 +71,9 @@ extension TimetableViewController: SpreadsheetViewDataSource {
         for (index, track) in timetable.tracks.enumerated() {
             let columnIndex = index + 1
             var rowIndex = 0
-            if track.hasSession {
-                for i in (0..<track.sessions.count) {
-                    if i == 0 {
-                        let blankFrame = Int(track.sessions[i].startsOn - timetable.schedule.open) / DateTitleCell.IntervalMinutes
-                        if blankFrame != 0 {
-                            let blankCellRange = CellRange(
-                                from: (row: rowIndex + 1, column: columnIndex),
-                                to: (row: rowIndex + blankFrame, column: columnIndex)
-                            )
-                            rowIndex += blankFrame
-                            mergedCells.append(blankCellRange)
-                        }
-                    }
-
-                    let frame = track.sessions[i].duration / DateTitleCell.IntervalMinutes
-                    let cellRange = CellRange(
-                        from: (row: rowIndex + 1, column: columnIndex),
-                        to: (row: rowIndex + frame, column: columnIndex)
-                    )
-                    rowIndex += frame
-                    mergedCells.append(cellRange)
-                    sessionHolder[IndexPath(row: cellRange.from.row, column: cellRange.from.column)] = track.sessions[i]
-
-                    var nextDate: Date!
-                    if i == track.sessions.count - 1 {
-                        nextDate = timetable.schedule.close
-                    } else {
-                        nextDate = track.sessions[i + 1].startsOn
-                    }
-
-                    let blankFrame = Int(nextDate - track.sessions[i].endsOn) / DateTitleCell.IntervalMinutes
+            for i in (0..<track.sessions.count) {
+                if i == 0 {
+                    let blankFrame = Int(track.sessions[i].startsOn - timetable.schedule.open) / DateTitleCell.IntervalMinutes
                     if blankFrame != 0 {
                         let blankCellRange = CellRange(
                             from: (row: rowIndex + 1, column: columnIndex),
@@ -107,14 +83,32 @@ extension TimetableViewController: SpreadsheetViewDataSource {
                         mergedCells.append(blankCellRange)
                     }
                 }
-            } else {
-                let blankFrame = Int(timetable.schedule.duration) / DateTitleCell.IntervalMinutes
-                let blankCellRange = CellRange(
+
+                let frame = track.sessions[i].duration / DateTitleCell.IntervalMinutes
+                let cellRange = CellRange(
                     from: (row: rowIndex + 1, column: columnIndex),
-                    to: (row: rowIndex + blankFrame, column: columnIndex)
+                    to: (row: rowIndex + frame, column: columnIndex)
                 )
-                rowIndex += blankFrame
-                mergedCells.append(blankCellRange)
+                rowIndex += frame
+                mergedCells.append(cellRange)
+                sessionHolder[IndexPath(row: cellRange.from.row, column: cellRange.from.column)] = track.sessions[i]
+
+                var nextDate: Date!
+                if i == track.sessions.count - 1 {
+                    nextDate = timetable.schedule.close
+                } else {
+                    nextDate = track.sessions[i + 1].startsOn
+                }
+
+                let blankFrame = Int(nextDate - track.sessions[i].endsOn) / DateTitleCell.IntervalMinutes
+                if blankFrame != 0 {
+                    let blankCellRange = CellRange(
+                        from: (row: rowIndex + 1, column: columnIndex),
+                        to: (row: rowIndex + blankFrame, column: columnIndex)
+                    )
+                    rowIndex += blankFrame
+                    mergedCells.append(blankCellRange)
+                }
             }
         }
 

@@ -33,4 +33,6 @@ struct CellSetting {
         static let numberOfColumns = 1
         static let numberOfRows = 1
     }
+
+    static let requiredAdjustmentTrackCount = 1
 }
