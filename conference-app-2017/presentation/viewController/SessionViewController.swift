@@ -1,4 +1,5 @@
 import UIKit
+import SafariServices
 import Kingfisher
 import MarkdownView
 import OctavKit
@@ -48,6 +49,18 @@ extension SessionViewController {
             strongSelf.abstractMarkdownViewHeight.constant = height
             strongSelf.view.setNeedsLayout()
         }
+        abstractMarkdownView.onTouchLink = { [weak self] (request: URLRequest) -> Bool in
+            guard let url = request.url, let scheme = url.scheme else { return false }
+            switch scheme {
+            case "file":
+                return true
+            case "http", "https":
+                self?.open(url: url)
+                return false
+            default:
+                return false
+            }
+        }
     }
 
     private func showLayout() {
@@ -60,6 +73,11 @@ extension SessionViewController {
         indicatorView.startAnimating()
         indicatorView.isHidden = false
         contentView.isHidden = true
+    }
+
+    private func open(url: URL) {
+        let safariViewController = SFSafariViewController(url: url)
+        present(safariViewController, animated: true, completion: nil)
     }
 }
 
