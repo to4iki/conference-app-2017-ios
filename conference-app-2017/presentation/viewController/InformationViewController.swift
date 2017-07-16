@@ -1,20 +1,18 @@
 import UIKit
 import AVFoundation
+import Then
 import QRCodeReader
 
 final class InformationViewController: UITableViewController {
-    let readerViewController: QRCodeReaderViewController = {
+    lazy var readerViewController: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
             $0.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode], captureDevicePosition: .back)
             $0.showTorchButton = true
         }
-        return QRCodeReaderViewController(builder: builder)
+        return QRCodeReaderViewController(builder: builder).then {
+            $0.delegate = self
+        }
     }()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        readerViewController.delegate = self
-    }
 }
 
 extension InformationViewController {
