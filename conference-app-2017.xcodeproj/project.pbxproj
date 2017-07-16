@@ -28,12 +28,14 @@
 		1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */; };
 		1E9CCA901EF6CFF00012AFA9 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9CCA8F1EF6CFF00012AFA9 /* XLPagerTabStrip.framework */; };
 		1E9CCA921EF6D2CA0012AFA9 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CCA911EF6D2CA0012AFA9 /* ConferenceViewController.swift */; };
+		1E9EB6FD1F1BD93B004216E5 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9EB6FC1F1BD93B004216E5 /* UIApplicationExtension.swift */; };
+		1E9EB7001F1BD95F004216E5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9EB6FF1F1BD95F004216E5 /* Alert.swift */; };
 		1ECE1F231EE5AD320037D149 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F221EE5AD320037D149 /* XCGLogger.framework */; };
 		1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECE1F251EE5AD910037D149 /* Logger.swift */; };
 		1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */; };
 		1EE0B9DD1EF6497400377DE7 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */; };
 		1EE3480F1F19FB3300B86751 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */; };
-		1EE348111F19FB7600B86751 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE348101F19FB7600B86751 /* QRReaderViewController.swift */; };
+		1EE930E51F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */; };
 		1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EC1E7063E900299809 /* AppDelegate.swift */; };
 		1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */; };
 		1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEAE4F01E7063E900299809 /* Main.storyboard */; };
@@ -92,13 +94,15 @@
 		1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1E9CCA8F1EF6CFF00012AFA9 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
 		1E9CCA911EF6D2CA0012AFA9 /* ConferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
+		1E9EB6FC1F1BD93B004216E5 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		1E9EB6FF1F1BD95F004216E5 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		1ECE1F221EE5AD320037D149 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
 		1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
 		1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
-		1EE348101F19FB7600B86751 /* QRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
-		1EEAE4E91E7063E900299809 /* conference-app-2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "conference-app-2017.app"; path = Builderscon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformationViewController+QRCodeReader.swift"; sourceTree = "<group>"; };
+		1EEAE4E91E7063E900299809 /* Builderscon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Builderscon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEAE4EC1E7063E900299809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		1EEAE4F11E7063E900299809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		1E25C0A11E87AE03008C4C65 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1E9EB6FE1F1BD957004216E5 /* common */,
 				1E3BC1D21F192FF00010FCC1 /* session */,
 				44C18FD21F1A08170057FB5A /* sponsor */,
 				445913B11F121C94001083D7 /* timetable */,
@@ -187,8 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				1E9CCA911EF6D2CA0012AFA9 /* ConferenceViewController.swift */,
+				1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */,
 				1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */,
-				1EE348101F19FB7600B86751 /* QRReaderViewController.swift */,
 				1EED32B41E90F4A60033FA18 /* SessionViewController.swift */,
 				1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */,
 				1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */,
@@ -212,6 +217,7 @@
 				1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */,
 				1E6949E41F140E1B0060697A /* SequenceExtension.swift */,
 				445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */,
+				1E9EB6FC1F1BD93B004216E5 /* UIApplicationExtension.swift */,
 				1E3BC1D51F1931390010FCC1 /* UICollectionViewExtension.swift */,
 				1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */,
 				1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */,
@@ -247,6 +253,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1E9EB6FE1F1BD957004216E5 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				1E9EB6FF1F1BD95F004216E5 /* Alert.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		1ECE1F241EE5AD7A0037D149 /* util */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +282,7 @@
 		1EEAE4EA1E7063E900299809 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EEAE4E91E7063E900299809 /* conference-app-2017.app */,
+				1EEAE4E91E7063E900299809 /* Builderscon.app */,
 				1EEAE4FD1E7063E900299809 /* conference-app-2017Tests.xctest */,
 			);
 			name = Products;
@@ -358,7 +372,7 @@
 			);
 			name = "conference-app-2017";
 			productName = "conference-app-2017";
-			productReference = 1EEAE4E91E7063E900299809 /* conference-app-2017.app */;
+			productReference = 1EEAE4E91E7063E900299809 /* Builderscon.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1EEAE4FC1E7063E900299809 /* conference-app-2017Tests */ = {
@@ -499,6 +513,7 @@
 				445913B91F1222E0001083D7 /* SpreadsheetViewExtension.swift in Sources */,
 				1E1A39691F129D9D005456A3 /* CellSetting.swift in Sources */,
 				1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */,
+				1EE930E51F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift in Sources */,
 				1E9CCA921EF6D2CA0012AFA9 /* ConferenceViewController.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				448DC8F41F19E18400F39A6D /* Session+Tag.swift in Sources */,
@@ -508,9 +523,10 @@
 				1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */,
 				1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */,
 				1EE3480F1F19FB3300B86751 /* SponsorViewController.swift in Sources */,
+				1E9EB6FD1F1BD93B004216E5 /* UIApplicationExtension.swift in Sources */,
 				1E1A39671F128DF5005456A3 /* BlankCell.swift in Sources */,
 				1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */,
-				1EE348111F19FB7600B86751 /* QRReaderViewController.swift in Sources */,
+				1E9EB7001F1BD95F004216E5 /* Alert.swift in Sources */,
 				445913B51F121CCD001083D7 /* TrackTitleCell.swift in Sources */,
 				1E6949E51F140E1B0060697A /* SequenceExtension.swift in Sources */,
 				1E6949E71F1410320060697A /* DateFormatterExtension.swift in Sources */,
@@ -660,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -677,6 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
