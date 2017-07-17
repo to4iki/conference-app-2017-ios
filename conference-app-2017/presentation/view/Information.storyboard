@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-892" y="160"/>
         </scene>
-        <!--Information View Controller-->
+        <!--Information-->
         <scene sceneID="QAt-eh-gBe">
             <objects>
                 <tableViewController id="aah-oA-C0b" customClass="InformationViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                             <outlet property="delegate" destination="aah-oA-C0b" id="kFg-vr-cgI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BJE-KZ-AB9"/>
+                    <navigationItem key="navigationItem" title="Information" id="BJE-KZ-AB9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yx-3u-qvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
