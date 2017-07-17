@@ -11,7 +11,7 @@ protocol SessionCellLayoutable {
 
 extension SessionCellLayoutable {
     func setup(session: Session) {
-        imageView.kf.setImage(with: session.speaker.avatarURL)
+        imageView.kf.setImage(with: session.speaker.avatarURL.secure)
         titleLabel.text = session.title
     }
 }
