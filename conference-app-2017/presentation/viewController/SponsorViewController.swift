@@ -9,6 +9,7 @@ final class SponsorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNoTitleBackButton()
         collectionView.dataSource = self
         collectionView.delegate = self
     }

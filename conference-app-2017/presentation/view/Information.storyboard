@@ -47,7 +47,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="スポンサー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1As-rQ-gXa">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sponsor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1As-rQ-gXa">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -71,7 +71,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="QRコードリーダー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yK3-wd-p72">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="QRCodeReader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yK3-wd-p72">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -80,6 +80,30 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="8Hq-pV-Xvi">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="spc-ea-LgE" style="IBUITableViewCellStyleDefault" id="QlG-cr-0z7">
+                                        <rect key="frame" x="0.0" y="195" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QlG-cr-0z7" id="hN0-hH-SLP">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="FloorMap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="spc-ea-LgE">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Y9D-Wl-PmU" kind="show" id="rvy-zu-Nbe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -95,10 +119,18 @@
             </objects>
             <point key="canvasLocation" x="-183" y="151"/>
         </scene>
-        <!--スポンサー-->
+        <!--FloorMap-->
+        <scene sceneID="oOa-EC-hNB">
+            <objects>
+                <viewController title="FloorMap" id="Y9D-Wl-PmU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUx-Cv-f3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597.12230215827344" y="601.07913669064749"/>
+        </scene>
+        <!--Sponsor-->
         <scene sceneID="0dY-do-HnD">
             <objects>
-                <viewController title="スポンサー" automaticallyAdjustsScrollViewInsets="NO" id="0It-Q4-qRZ" customClass="SponsorViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sponsor" automaticallyAdjustsScrollViewInsets="NO" id="0It-Q4-qRZ" customClass="SponsorViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zLY-HL-vt1"/>
                         <viewControllerLayoutGuide type="bottom" id="Cmd-Wx-VGJ"/>

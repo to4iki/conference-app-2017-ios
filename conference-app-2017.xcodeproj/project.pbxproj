@@ -48,6 +48,7 @@
 		1EEAE5021E7063E900299809 /* conference_app_2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE5011E7063E900299809 /* conference_app_2017Tests.swift */; };
 		1EED32B31E90F49C0033FA18 /* Session.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EED32B21E90F49C0033FA18 /* Session.storyboard */; };
 		1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EED32B41E90F4A60033FA18 /* SessionViewController.swift */; };
+		37BBF31C1F1D0BAC00AB9F24 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BBF31B1F1D0BAC00AB9F24 /* FloorMapViewController.swift */; };
 		37C87A131F1B171B003AF90E /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C87A121F1B171B003AF90E /* QRCodeReader.framework */; };
 		445913A71F11EA5B001083D7 /* DummyDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913A61F11EA5B001083D7 /* DummyDataFactory.swift */; };
 		445913AA1F11EA6B001083D7 /* sessions.json in Resources */ = {isa = PBXBuildFile; fileRef = 445913A91F11EA6B001083D7 /* sessions.json */; };
@@ -122,6 +123,7 @@
 		1EEAE5031E7063E900299809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EED32B21E90F49C0033FA18 /* Session.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Session.storyboard; sourceTree = "<group>"; };
 		1EED32B41E90F4A60033FA18 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		37BBF31B1F1D0BAC00AB9F24 /* FloorMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
 		37C87A121F1B171B003AF90E /* QRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCodeReader.framework; path = Carthage/Build/iOS/QRCodeReader.framework; sourceTree = "<group>"; };
 		445913A61F11EA5B001083D7 /* DummyDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyDataFactory.swift; sourceTree = "<group>"; };
 		445913A91F11EA6B001083D7 /* sessions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessions.json; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				1E9CCA911EF6D2CA0012AFA9 /* ConferenceViewController.swift */,
+				37BBF31B1F1D0BAC00AB9F24 /* FloorMapViewController.swift */,
 				1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */,
 				1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */,
 				1EED32B41E90F4A60033FA18 /* SessionViewController.swift */,
@@ -551,6 +554,7 @@
 				1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */,
 				1E3BC1D81F1935880010FCC1 /* UIViewExtension.swift in Sources */,
 				1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */,
+				37BBF31C1F1D0BAC00AB9F24 /* FloorMapViewController.swift in Sources */,
 				44C18FD41F1A08470057FB5A /* SponsorCollectionViewCell.swift in Sources */,
 				445913AC1F11EAB6001083D7 /* Timetable.swift in Sources */,
 				1E6949E31F140DB00060697A /* Track.swift in Sources */,
