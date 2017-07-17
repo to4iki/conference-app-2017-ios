@@ -11,7 +11,7 @@ final class SessionViewController: UIViewController {
     @IBOutlet fileprivate weak var titleLabel: UILabel!
     @IBOutlet fileprivate weak var startToEndLabel: UILabel!
     @IBOutlet fileprivate weak var tagCollectionView: UICollectionView!
-    @IBOutlet fileprivate weak var avatarImageView: UIImageView!
+    @IBOutlet fileprivate weak var avatarImageView: CircleImageView!
     @IBOutlet fileprivate weak var nicknameLabel: UILabel!
     @IBOutlet fileprivate weak var abstractMarkdownView: MarkdownView!
     @IBOutlet fileprivate weak var abstractMarkdownViewHeight: NSLayoutConstraint!

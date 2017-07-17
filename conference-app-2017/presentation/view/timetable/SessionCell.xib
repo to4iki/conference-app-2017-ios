@@ -19,12 +19,20 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bnl-Fq-47l">
                     <rect key="frame" x="4" y="4" width="124" height="212"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bP1-cK-giZ">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bP1-cK-giZ" customClass="CircleImageView" customModule="Builderscon" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="36" id="2uo-9W-Vq7"/>
                                 <constraint firstAttribute="width" secondItem="bP1-cK-giZ" secondAttribute="height" multiplier="1:1" id="cp2-Sh-JjJ"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lAe-m9-0ZR">
                             <rect key="frame" x="0.0" y="36" width="124" height="176"/>

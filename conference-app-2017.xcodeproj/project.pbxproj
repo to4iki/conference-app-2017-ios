@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E08D4381F1CBB6A0076A67A /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08D4371F1CBB6A0076A67A /* CircleImageView.swift */; };
 		1E1556B41F1CB403005271AC /* ShortSessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1556B31F1CB403005271AC /* ShortSessionCell.xib */; };
 		1E1A39651F1287A1005456A3 /* SessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1A39641F1287A1005456A3 /* SessionCell.xib */; };
 		1E1A39671F128DF5005456A3 /* BlankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39661F128DF5005456A3 /* BlankCell.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E08D4371F1CBB6A0076A67A /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		1E1556B31F1CB403005271AC /* ShortSessionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortSessionCell.xib; sourceTree = "<group>"; };
 		1E1A39641F1287A1005456A3 /* SessionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionCell.xib; sourceTree = "<group>"; };
 		1E1A39661F128DF5005456A3 /* BlankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankCell.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				1E9EB6FF1F1BD95F004216E5 /* Alert.swift */,
+				1E08D4371F1CBB6A0076A67A /* CircleImageView.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				1E9EB6FD1F1BD93B004216E5 /* UIApplicationExtension.swift in Sources */,
 				1E1A39671F128DF5005456A3 /* BlankCell.swift in Sources */,
 				1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */,
+				1E08D4381F1CBB6A0076A67A /* CircleImageView.swift in Sources */,
 				1E9EB7001F1BD95F004216E5 /* Alert.swift in Sources */,
 				445913B51F121CCD001083D7 /* TrackTitleCell.swift in Sources */,
 				1E6949E51F140E1B0060697A /* SequenceExtension.swift in Sources */,
