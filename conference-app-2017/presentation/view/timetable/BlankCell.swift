@@ -13,7 +13,7 @@ final class BlankCell: Cell {
     }
 
     private func commonInit() {
-        backgroundColor = UIColor.Builderscon.lightGray
+        backgroundColor = .lightGray
         gridlines.top = .solid(width: 0.5, color: .black)
         gridlines.bottom = gridlines.top
         gridlines.right = .solid(width: 0.5, color: .black)

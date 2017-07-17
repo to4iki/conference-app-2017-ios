@@ -18,6 +18,8 @@ final class DateTitleCell: Cell {
     }
 
     private func commonInit() {
+        backgroundColor = UIColor.Builderscon.lightGray
+        label.textColor = .black
         label.frame = bounds
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.font = UIFont.systemFont(ofSize: 12)
