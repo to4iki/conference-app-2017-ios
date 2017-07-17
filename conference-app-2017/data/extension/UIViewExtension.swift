@@ -1,5 +1,6 @@
 import UIKit
 
+// TODO: override drawRect used UIBezierPath
 extension UIView {
     @IBInspectable var borderColor: UIColor? {
         get {

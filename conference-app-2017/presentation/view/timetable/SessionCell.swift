@@ -4,7 +4,7 @@ import OctavKit
 import SpreadsheetView
 
 protocol SessionCellLayoutable {
-    weak var imageView: UIImageView! { get }
+    weak var imageView: CircleImageView! { get }
     weak var titleLabel: UILabel! { get }
     func setup(session: Session)
 }
@@ -18,11 +18,11 @@ extension SessionCellLayoutable {
 
 final class ShortSessionCell: Cell, SessionCellLayoutable {
     static let requiredDuration = 600
-    @IBOutlet fileprivate(set) weak var imageView: UIImageView!
+    @IBOutlet fileprivate(set) weak var imageView: CircleImageView!
     @IBOutlet fileprivate(set) weak var titleLabel: UILabel!
 }
 
 final class SessionCell: Cell, SessionCellLayoutable {
-    @IBOutlet fileprivate(set) weak var imageView: UIImageView!
+    @IBOutlet fileprivate(set) weak var imageView: CircleImageView!
     @IBOutlet fileprivate(set) weak var titleLabel: UILabel!
 }
