@@ -13,6 +13,8 @@
 		1E1A39671F128DF5005456A3 /* BlankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39661F128DF5005456A3 /* BlankCell.swift */; };
 		1E1A39691F129D9D005456A3 /* CellSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39681F129D9D005456A3 /* CellSetting.swift */; };
 		1E25C0A41E87AF47008C4C65 /* Conference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Conference.storyboard */; };
+		1E26E4A71F1CEE8B00A94A75 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26E4A61F1CEE8B00A94A75 /* Regex.swift */; };
+		1E26E4A91F1CEF3D00A94A75 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26E4A81F1CEF3D00A94A75 /* URLExtension.swift */; };
 		1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */; };
 		1E360B4B1F13F1DF00508135 /* conference.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E360B4A1F13F1DF00508135 /* conference.json */; };
 		1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BC1D31F1930380010FCC1 /* TagCollectionViewCell.swift */; };
@@ -81,6 +83,8 @@
 		1E1A39661F128DF5005456A3 /* BlankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankCell.swift; sourceTree = "<group>"; };
 		1E1A39681F129D9D005456A3 /* CellSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSetting.swift; sourceTree = "<group>"; };
 		1E25C0A31E87AF47008C4C65 /* Conference.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conference.storyboard; sourceTree = "<group>"; };
+		1E26E4A61F1CEE8B00A94A75 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		1E26E4A81F1CEF3D00A94A75 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		1E360B4A1F13F1DF00508135 /* conference.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conference.json; sourceTree = "<group>"; };
 		1E3BC1D31F1930380010FCC1 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 				1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */,
 				1E806FF91E913A9700ED6BD7 /* UIViewControllerExtension.swift */,
 				1E3BC1D71F1935880010FCC1 /* UIViewExtension.swift */,
+				1E26E4A81F1CEF3D00A94A75 /* URLExtension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				1ECE1F251EE5AD910037D149 /* Logger.swift */,
+				1E26E4A61F1CEE8B00A94A75 /* Regex.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -520,11 +526,13 @@
 				445913B91F1222E0001083D7 /* SpreadsheetViewExtension.swift in Sources */,
 				1E1A39691F129D9D005456A3 /* CellSetting.swift in Sources */,
 				1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */,
+				1E26E4A71F1CEE8B00A94A75 /* Regex.swift in Sources */,
 				1EE930E51F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift in Sources */,
 				1E9CCA921EF6D2CA0012AFA9 /* ConferenceViewController.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				448DC8F41F19E18400F39A6D /* Session+Tag.swift in Sources */,
 				44C18FD11F1A073E0057FB5A /* Sponsor+Group.swift in Sources */,
+				1E26E4A91F1CEF3D00A94A75 /* URLExtension.swift in Sources */,
 				445913B31F121CAB001083D7 /* SessionCell.swift in Sources */,
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */,
