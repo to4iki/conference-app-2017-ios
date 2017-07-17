@@ -36,6 +36,7 @@ extension SessionViewController {
 
 extension SessionViewController {
     fileprivate func setupLayout(session: Session) {
+        setNoTitleBackButton()
         hideLayout()
         titleLabel.text = session.title
         startToEndLabel.text = "\(DateFormatter.year.string(from: session.startsOn))"

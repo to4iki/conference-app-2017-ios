@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-457" y="-159"/>
         </scene>
-        <!--View Controller-->
+        <!--Timetable-->
         <scene sceneID="sT9-Vj-wmf">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                             <constraint firstItem="Zix-pZ-YkV" firstAttribute="leading" secondItem="BI9-4d-gZn" secondAttribute="leading" id="tIy-Ul-Mgl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HwK-Hd-Jgb"/>
+                    <navigationItem key="navigationItem" title="Timetable" id="HwK-Hd-Jgb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nz-aK-w5r" userLabel="First Responder" sceneMemberID="firstResponder"/>

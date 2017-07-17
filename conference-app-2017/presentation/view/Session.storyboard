@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1103" y="152"/>
         </scene>
-        <!--Session View Controller-->
+        <!--Session-->
         <scene sceneID="ugZ-RB-0b9">
             <objects>
-                <viewController storyboardIdentifier="SessionViewController" automaticallyAdjustsScrollViewInsets="NO" id="LML-hW-7iL" customClass="SessionViewController" customModule="Builderscon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SessionViewController" automaticallyAdjustsScrollViewInsets="NO" id="LML-hW-7iL" customClass="SessionViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="baB-YL-DFY"/>
                         <viewControllerLayoutGuide type="bottom" id="ZoB-Rt-O7A"/>
@@ -83,7 +83,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCollectionViewCell" id="BBZ-9K-Mei" customClass="TagCollectionViewCell" customModule="Builderscon" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCollectionViewCell" id="BBZ-9K-Mei" customClass="TagCollectionViewCell" customModule="builderscon" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="22"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -123,7 +123,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zwz-rm-v73">
                                                         <rect key="frame" x="0.0" y="38" width="130.5" height="44"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sxg-gH-MOY" customClass="CircleImageView" customModule="Builderscon" customModuleProvider="target">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sxg-gH-MOY" customClass="CircleImageView" customModule="builderscon" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="44" id="I3w-lA-ELt"/>
@@ -193,7 +193,7 @@
                             <constraint firstAttribute="trailing" secondItem="OSO-m1-Ubi" secondAttribute="trailing" id="oQ6-Cl-Yi1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="B5z-5m-V7r"/>
+                    <navigationItem key="navigationItem" title="Session" id="B5z-5m-V7r"/>
                     <connections>
                         <outlet property="abstractMarkdownView" destination="Ta0-vu-bm3" id="Oxi-cy-t9u"/>
                         <outlet property="abstractMarkdownViewHeight" destination="T6N-kh-ZKy" id="peW-9D-uZs"/>

@@ -16,3 +16,9 @@ extension StoryBoardInstantiatable where Self: UIViewController {
 }
 
 extension UIViewController: StoryBoardInstantiatable {}
+
+extension UIViewController {
+    func setNoTitleBackButton() {
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+}
