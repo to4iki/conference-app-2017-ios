@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1556B41F1CB403005271AC /* ShortSessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1556B31F1CB403005271AC /* ShortSessionCell.xib */; };
 		1E1A39651F1287A1005456A3 /* SessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1A39641F1287A1005456A3 /* SessionCell.xib */; };
 		1E1A39671F128DF5005456A3 /* BlankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39661F128DF5005456A3 /* BlankCell.swift */; };
 		1E1A39691F129D9D005456A3 /* CellSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39681F129D9D005456A3 /* CellSetting.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E1556B31F1CB403005271AC /* ShortSessionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortSessionCell.xib; sourceTree = "<group>"; };
 		1E1A39641F1287A1005456A3 /* SessionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionCell.xib; sourceTree = "<group>"; };
 		1E1A39661F128DF5005456A3 /* BlankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankCell.swift; sourceTree = "<group>"; };
 		1E1A39681F129D9D005456A3 /* CellSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSetting.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				445913B61F121D43001083D7 /* DateTitleCell.swift */,
 				445913B21F121CAB001083D7 /* SessionCell.swift */,
 				1E1A39641F1287A1005456A3 /* SessionCell.xib */,
+				1E1556B31F1CB403005271AC /* ShortSessionCell.xib */,
 				445913B41F121CCD001083D7 /* TrackTitleCell.swift */,
 			);
 			path = timetable;
@@ -438,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1556B41F1CB403005271AC /* ShortSessionCell.xib in Resources */,
 				1EEAE4F71E7063E900299809 /* LaunchScreen.storyboard in Resources */,
 				1EED32B31E90F49C0033FA18 /* Session.storyboard in Resources */,
 				1E25C0A41E87AF47008C4C65 /* Conference.storyboard in Resources */,
