@@ -9,13 +9,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Timetable-->
+        <!--Navigation Controller-->
         <scene sceneID="oju-f2-rtJ">
             <objects>
                 <navigationController id="LrK-kl-c8S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Timetable" id="URp-kT-Wnl"/>
+                    <tabBarItem key="tabBarItem" title="" image="Timetable" id="URp-kT-Wnl">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J8N-Tg-Ww4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J8N-Tg-Ww4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -64,7 +66,7 @@
         <!--Timetable View Controller-->
         <scene sceneID="d24-9h-pu8">
             <objects>
-                <viewController storyboardIdentifier="TimetableViewController" id="GDN-nH-Oal" customClass="TimetableViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimetableViewController" id="GDN-nH-Oal" customClass="TimetableViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="znY-x4-F6n"/>
                         <viewControllerLayoutGuide type="bottom" id="ba2-rw-Mur"/>
@@ -98,7 +100,11 @@
         <!--Conference View Controller-->
         <scene sceneID="6G7-Z7-v64">
             <objects>
-                <viewController id="B7m-Z6-Ezf" customClass="ConferenceViewController" customModule="conference_app_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B7m-Z6-Ezf" customClass="ConferenceViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nio-Vh-FX9"/>
+                        <viewControllerLayoutGuide type="bottom" id="A7Q-Na-aZV"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1Ge-uj-J3Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,4 +153,7 @@
             <point key="canvasLocation" x="964" y="-160"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Timetable" width="30" height="30"/>
+    </resources>
 </document>

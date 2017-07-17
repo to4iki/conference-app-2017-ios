@@ -9,11 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Information-->
+        <!--Navigation Controller-->
         <scene sceneID="Qx0-dM-9Cr">
             <objects>
                 <navigationController id="w6b-xN-egd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Information" id="uaP-9s-y3r"/>
+                    <tabBarItem key="tabBarItem" title="" image="Information" id="uaP-9s-y3r">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5kw-8q-Yle">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -30,7 +32,7 @@
         <!--Information View Controller-->
         <scene sceneID="QAt-eh-gBe">
             <objects>
-                <tableViewController id="aah-oA-C0b" customClass="InformationViewController" customModule="Builderscon" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aah-oA-C0b" customClass="InformationViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="B3q-qs-KdV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +98,7 @@
         <!--スポンサー-->
         <scene sceneID="0dY-do-HnD">
             <objects>
-                <viewController title="スポンサー" automaticallyAdjustsScrollViewInsets="NO" id="0It-Q4-qRZ" customClass="SponsorViewController" customModule="Builderscon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="スポンサー" automaticallyAdjustsScrollViewInsets="NO" id="0It-Q4-qRZ" customClass="SponsorViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zLY-HL-vt1"/>
                         <viewControllerLayoutGuide type="bottom" id="Cmd-Wx-VGJ"/>
@@ -115,7 +117,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SponsorCollectionViewCell" id="fPh-1O-g5V" customClass="SponsorCollectionViewCell" customModule="Builderscon" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SponsorCollectionViewCell" id="fPh-1O-g5V" customClass="SponsorCollectionViewCell" customModule="builderscon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="8" width="88" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -165,4 +167,7 @@
             <point key="canvasLocation" x="598" y="-174"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Information" width="30" height="30"/>
+    </resources>
 </document>
