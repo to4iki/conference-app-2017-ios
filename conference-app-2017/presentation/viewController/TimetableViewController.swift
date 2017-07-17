@@ -14,7 +14,7 @@ final class TimetableViewController: UIViewController {
         super.viewDidLoad()
         spreadsheetView.dataSource = self
         spreadsheetView.delegate = self
-        spreadsheetView.registerNib(type: SessionCell.self)
+        spreadsheetView.registerNib(types: [SessionCell.self, ShortSessionCell.self])
         spreadsheetView.register(types: [BlankCell.self, TrackTitleCell.self, DateTitleCell.self])
     }
 }
@@ -131,11 +131,16 @@ extension TimetableViewController: SpreadsheetViewDataSource {
                 $0.setup(name: track.name)
             }
         case (false, false):
-            if let session = sessionHolder[indexPath] {
+            switch sessionHolder[indexPath] {
+            case .some(let session) where session.duration == ShortSessionCell.requiredDuration:
+                return spreadsheetView.dequeueReusableCell(with: ShortSessionCell.self, for: indexPath).then {
+                    $0.setup(session: session)
+                }
+            case .some(let session):
                 return spreadsheetView.dequeueReusableCell(with: SessionCell.self, for: indexPath).then {
                     $0.setup(session: session)
                 }
-            } else {
+            case .none:
                 return spreadsheetView.dequeueReusableCell(with: BlankCell.self, for: indexPath)
             }
         }
