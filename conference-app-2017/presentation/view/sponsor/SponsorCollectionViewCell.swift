@@ -4,17 +4,12 @@ import OctavKit
 
 final class SponsorCollectionViewCell: UICollectionViewCell {
     @IBOutlet fileprivate weak var imageView: UIImageView!
-
-    // TODO: fill whitespace
+    
     static func size(by sponsor: Sponsor) -> CGSize {
-        let space: Int = {
-            let spaceWidth = 4
-            let boarderWidth = 1
-            let parentMargin = 8
-            return spaceWidth + boarderWidth + parentMargin
-        }()
-        let width = Int(UIScreen.main.bounds.width / CGFloat(sponsor.tier.countPerRow)) - space
-        return CGSize(width: width, height: width)
+        let margin = 8
+        let viewWidth = Int(UIScreen.main.bounds.width) - ((sponsor.tier.countPerRow) + 1) * margin
+        let cellWidth = viewWidth / sponsor.tier.countPerRow
+        return CGSize(width: cellWidth, height: cellWidth)
     }
 
     func setup(sponsor: Sponsor) {
