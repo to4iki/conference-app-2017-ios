@@ -17,7 +17,7 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J8N-Tg-Ww4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J8N-Tg-Ww4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -32,7 +32,7 @@
         <!--Timetable-->
         <scene sceneID="sT9-Vj-wmf">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="liP-Dv-rMe" customClass="ReloadableViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vWl-zM-LnP"/>
                         <viewControllerLayoutGuide type="bottom" id="mdp-Xz-tgG"/>
@@ -47,17 +47,31 @@
                                     <segue destination="B7m-Z6-Ezf" kind="embed" id="bCe-Kp-Jjg"/>
                                 </connections>
                             </containerView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mFC-dD-nep">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mFC-dD-nep" firstAttribute="centerY" secondItem="BI9-4d-gZn" secondAttribute="centerY" id="0qP-ok-DD7"/>
                             <constraint firstAttribute="trailing" secondItem="Zix-pZ-YkV" secondAttribute="trailing" id="5BP-T7-FLC"/>
                             <constraint firstItem="mdp-Xz-tgG" firstAttribute="top" secondItem="Zix-pZ-YkV" secondAttribute="bottom" id="72x-MW-fBW"/>
+                            <constraint firstItem="mFC-dD-nep" firstAttribute="centerX" secondItem="BI9-4d-gZn" secondAttribute="centerX" id="dhO-Di-kx9"/>
                             <constraint firstItem="Zix-pZ-YkV" firstAttribute="top" secondItem="vWl-zM-LnP" secondAttribute="bottom" id="t66-K3-LuQ"/>
                             <constraint firstItem="Zix-pZ-YkV" firstAttribute="leading" secondItem="BI9-4d-gZn" secondAttribute="leading" id="tIy-Ul-Mgl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Timetable" id="HwK-Hd-Jgb"/>
+                    <navigationItem key="navigationItem" title="Timetable" id="HwK-Hd-Jgb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="IcY-ck-laW">
+                            <connections>
+                                <action selector="didTapRefreshButton:" destination="liP-Dv-rMe" id="bHi-gU-i0O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="indicatorView" destination="mFC-dD-nep" id="Rrs-e2-2LO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nz-aK-w5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
