@@ -20,7 +20,7 @@ extension InformationViewController {
         guard let identifier = segue.identifier else { return }
         if identifier == "\(SponsorViewController.className)Segue" {
             let viewController = segue.destination as! SponsorViewController
-            viewController.sponsors = DummyData.shared.conference.sponsors.groping()
+            viewController.sponsors = OnMemoryStorage.shared.sponsors.groping()
         }
     }
 }

@@ -21,6 +21,8 @@
 		1E3BC1D61F1931390010FCC1 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BC1D51F1931390010FCC1 /* UICollectionViewExtension.swift */; };
 		1E3BC1D81F1935880010FCC1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BC1D71F1935880010FCC1 /* UIViewExtension.swift */; };
 		1E3D99F41F124CF6003035F8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E3D99F31F124CF6003035F8 /* Settings.bundle */; };
+		1E4F439F1F1FC58B00BAF375 /* ReloadableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F439E1F1FC58B00BAF375 /* ReloadableViewController.swift */; };
+		1E4F43A41F1FCB7400BAF375 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F43A31F1FCB7400BAF375 /* Config.swift */; };
 		1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5B94E81E92A84B0013BB8A /* Then.framework */; };
 		1E5C14E81F12389E00AEB4F7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */; };
 		1E6949E31F140DB00060697A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6949E21F140DB00060697A /* Track.swift */; };
@@ -50,6 +52,7 @@
 		1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EED32B41E90F4A60033FA18 /* SessionViewController.swift */; };
 		37BBF31C1F1D0BAC00AB9F24 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BBF31B1F1D0BAC00AB9F24 /* FloorMapViewController.swift */; };
 		37C87A131F1B171B003AF90E /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C87A121F1B171B003AF90E /* QRCodeReader.framework */; };
+		4411EC961F1FA0A400FC03A3 /* EnumEnumerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411EC951F1FA0A400FC03A3 /* EnumEnumerable.swift */; };
 		445913A71F11EA5B001083D7 /* DummyDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913A61F11EA5B001083D7 /* DummyDataFactory.swift */; };
 		445913AA1F11EA6B001083D7 /* sessions.json in Resources */ = {isa = PBXBuildFile; fileRef = 445913A91F11EA6B001083D7 /* sessions.json */; };
 		445913AC1F11EAB6001083D7 /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913AB1F11EAB6001083D7 /* Timetable.swift */; };
@@ -59,6 +62,7 @@
 		445913B91F1222E0001083D7 /* SpreadsheetViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */; };
 		4487EC821F163B0E005ACF36 /* MarkdownView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4487EC811F163B0E005ACF36 /* MarkdownView.framework */; };
 		448DC8F41F19E18400F39A6D /* Session+Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DC8F31F19E18400F39A6D /* Session+Tag.swift */; };
+		4491370E1F1F6C290079B044 /* TimetableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4491370D1F1F6C290079B044 /* TimetableRepository.swift */; };
 		44C18FD11F1A073E0057FB5A /* Sponsor+Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C18FD01F1A073E0057FB5A /* Sponsor+Group.swift */; };
 		44C18FD41F1A08470057FB5A /* SponsorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C18FD31F1A08470057FB5A /* SponsorCollectionViewCell.swift */; };
 		44C4F7091F11E91D00AD6C0D /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C4F7081F11E91D00AD6C0D /* SwiftDate.framework */; };
@@ -92,6 +96,8 @@
 		1E3BC1D51F1931390010FCC1 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		1E3BC1D71F1935880010FCC1 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		1E3D99F31F124CF6003035F8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		1E4F439E1F1FC58B00BAF375 /* ReloadableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReloadableViewController.swift; sourceTree = "<group>"; };
+		1E4F43A31F1FCB7400BAF375 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1E5B94E81E92A84B0013BB8A /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
 		1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		1E6949E21F140DB00060697A /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 		1EED32B41E90F4A60033FA18 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		37BBF31B1F1D0BAC00AB9F24 /* FloorMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
 		37C87A121F1B171B003AF90E /* QRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCodeReader.framework; path = Carthage/Build/iOS/QRCodeReader.framework; sourceTree = "<group>"; };
+		4411EC951F1FA0A400FC03A3 /* EnumEnumerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumEnumerable.swift; sourceTree = "<group>"; };
 		445913A61F11EA5B001083D7 /* DummyDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyDataFactory.swift; sourceTree = "<group>"; };
 		445913A91F11EA6B001083D7 /* sessions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessions.json; sourceTree = "<group>"; };
 		445913AB1F11EAB6001083D7 /* Timetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timetable.swift; sourceTree = "<group>"; };
@@ -134,6 +141,7 @@
 		445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetViewExtension.swift; sourceTree = "<group>"; };
 		4487EC811F163B0E005ACF36 /* MarkdownView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarkdownView.framework; path = Carthage/Build/iOS/MarkdownView.framework; sourceTree = "<group>"; };
 		448DC8F31F19E18400F39A6D /* Session+Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+Tag.swift"; sourceTree = "<group>"; };
+		4491370D1F1F6C290079B044 /* TimetableRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableRepository.swift; sourceTree = "<group>"; };
 		44C18FD01F1A073E0057FB5A /* Sponsor+Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sponsor+Group.swift"; sourceTree = "<group>"; };
 		44C18FD31F1A08470057FB5A /* SponsorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorCollectionViewCell.swift; sourceTree = "<group>"; };
 		44C4F7081F11E91D00AD6C0D /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
@@ -205,6 +213,7 @@
 				37BBF31B1F1D0BAC00AB9F24 /* FloorMapViewController.swift */,
 				1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */,
 				1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */,
+				1E4F439E1F1FC58B00BAF375 /* ReloadableViewController.swift */,
 				1EED32B41E90F4A60033FA18 /* SessionViewController.swift */,
 				1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */,
 				1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */,
@@ -215,6 +224,7 @@
 		1E26F7C71E90D2AB00DF056B /* data */ = {
 			isa = PBXGroup;
 			children = (
+				1E4F43A21F1FCB4E00BAF375 /* configure */,
 				1E26F7C81E90D2AF00DF056B /* extension */,
 				1ECE1F241EE5AD7A0037D149 /* util */,
 			);
@@ -244,6 +254,15 @@
 				1E3BC1D31F1930380010FCC1 /* TagCollectionViewCell.swift */,
 			);
 			path = session;
+			sourceTree = "<group>";
+		};
+		1E4F43A21F1FCB4E00BAF375 /* configure */ = {
+			isa = PBXGroup;
+			children = (
+				1E4F43A31F1FCB7400BAF375 /* Config.swift */,
+			);
+			name = configure;
+			path = configure;
 			sourceTree = "<group>";
 		};
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
@@ -277,6 +296,7 @@
 		1ECE1F241EE5AD7A0037D149 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				4411EC951F1FA0A400FC03A3 /* EnumEnumerable.swift */,
 				1ECE1F251EE5AD910037D149 /* Logger.swift */,
 				1E26E4A61F1CEE8B00A94A75 /* Regex.swift */,
 			);
@@ -328,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				445913A51F11EA3D001083D7 /* dummy */,
+				4491370C1F1F6BAA0079B044 /* repository */,
 				448DC8F31F19E18400F39A6D /* Session+Tag.swift */,
 				44C18FD01F1A073E0057FB5A /* Sponsor+Group.swift */,
 				445913AB1F11EAB6001083D7 /* Timetable.swift */,
@@ -358,6 +379,14 @@
 				445913B41F121CCD001083D7 /* TrackTitleCell.swift */,
 			);
 			path = timetable;
+			sourceTree = "<group>";
+		};
+		4491370C1F1F6BAA0079B044 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				4491370D1F1F6C290079B044 /* TimetableRepository.swift */,
+			);
+			path = repository;
 			sourceTree = "<group>";
 		};
 		44C18FD21F1A08170057FB5A /* sponsor */ = {
@@ -531,12 +560,14 @@
 				1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */,
 				1E26E4A71F1CEE8B00A94A75 /* Regex.swift in Sources */,
 				1EE930E51F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift in Sources */,
+				1E4F439F1F1FC58B00BAF375 /* ReloadableViewController.swift in Sources */,
 				1E9CCA921EF6D2CA0012AFA9 /* ConferenceViewController.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				448DC8F41F19E18400F39A6D /* Session+Tag.swift in Sources */,
 				44C18FD11F1A073E0057FB5A /* Sponsor+Group.swift in Sources */,
 				1E26E4A91F1CEF3D00A94A75 /* URLExtension.swift in Sources */,
 				445913B31F121CAB001083D7 /* SessionCell.swift in Sources */,
+				4491370E1F1F6C290079B044 /* TimetableRepository.swift in Sources */,
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */,
 				1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */,
@@ -545,9 +576,11 @@
 				1E1A39671F128DF5005456A3 /* BlankCell.swift in Sources */,
 				1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */,
 				1E08D4381F1CBB6A0076A67A /* CircleImageView.swift in Sources */,
+				1E4F43A41F1FCB7400BAF375 /* Config.swift in Sources */,
 				1E9EB7001F1BD95F004216E5 /* Alert.swift in Sources */,
 				445913B51F121CCD001083D7 /* TrackTitleCell.swift in Sources */,
 				1E6949E51F140E1B0060697A /* SequenceExtension.swift in Sources */,
+				4411EC961F1FA0A400FC03A3 /* EnumEnumerable.swift in Sources */,
 				1E6949E71F1410320060697A /* DateFormatterExtension.swift in Sources */,
 				445913B71F121D43001083D7 /* DateTitleCell.swift in Sources */,
 				1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */,

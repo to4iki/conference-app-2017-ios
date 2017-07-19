@@ -7,8 +7,14 @@ import XLPagerTabStrip
 final class TimetableViewController: UIViewController {
     @IBOutlet fileprivate weak var spreadsheetView: SpreadsheetView!
 
-    fileprivate(set) var timetable: Timetable!
+    fileprivate(set) var day: ConferenceDay!
+    fileprivate(set) var tracks: [Track] = []
+    fileprivate(set) var schedule: Conference.Schedule!
     fileprivate(set) var sessionHolder: [IndexPath: Session] = [:]
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,37 +22,61 @@ final class TimetableViewController: UIViewController {
         spreadsheetView.delegate = self
         spreadsheetView.registerNib(types: [SessionCell.self, ShortSessionCell.self])
         spreadsheetView.register(types: [BlankCell.self, TrackTitleCell.self, DateTitleCell.self])
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(TimetableViewController.refreshNotification(_:)),
+            name: NSNotification.Name("test"),
+            object: nil
+        )
+
+        refresh()
+    }
+
+    func refreshNotification(_ notification: Notification) {
+        refresh()
+    }
+
+    func refresh() {
+        if !OnMemoryStorage.shared.timetables.isEmpty {
+            let timetable = OnMemoryStorage.shared.timetables[self.day.rawValue]
+            self.tracks = timetable.tracks
+            self.schedule = timetable.schedule
+            DispatchQueue.main.async {
+                self.spreadsheetView.reloadData()
+            }
+        } else {
+
+        }
     }
 }
 
 extension TimetableViewController {
-    static func instantiate(timetable: Timetable) -> TimetableViewController {
-        return instantiate(withStoryboard: "Conference").then {
-            $0.timetable = timetable
-        }
+    static func instantiate(day: ConferenceDay) -> TimetableViewController {
+        return instantiate(withStoryboard: "Conference").then { $0.day = day }
     }
 }
 
 // MARK: - IndicatorInfoProvider
 extension TimetableViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        let title = DateFormatter.day.string(from: timetable.schedule.open)
-        return IndicatorInfo(title: title)
+        return IndicatorInfo(title: day.rawDate)
     }
 }
 
 // MARK: - SpreadsheetViewDataSource
 extension TimetableViewController: SpreadsheetViewDataSource {
     func numberOfColumns(in spreadsheetView: SpreadsheetView) -> Int {
-        return timetable.tracks.count + CellSetting.Header.numberOfColumns
+        return tracks.count + CellSetting.Header.numberOfColumns
     }
 
     func numberOfRows(in spreadsheetView: SpreadsheetView) -> Int {
-        return (Int(timetable.schedule.duration) / DateTitleCell.IntervalMinutes) + CellSetting.Header.numberOfRows
+        guard let schedule = schedule else { return 0 }
+        return (Int(schedule.duration) / DateTitleCell.IntervalMinutes) + CellSetting.Header.numberOfRows
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, widthForColumn column: Int) -> CGFloat {
-        if column != CellSetting.Header.columnIndex && timetable.tracks.count == CellSetting.requiredAdjustmentTrackCount {
+        if column != CellSetting.Header.columnIndex && tracks.count == CellSetting.requiredAdjustmentTrackCount {
             return UIScreen.main.bounds.width - CellSetting.Width.header.rawValue
         } else {
             return CellSetting.Width(for: column).rawValue
@@ -58,22 +88,24 @@ extension TimetableViewController: SpreadsheetViewDataSource {
     }
 
     func frozenColumns(in spreadsheetView: SpreadsheetView) -> Int {
+        guard !tracks.isEmpty else { return 0 }
         return CellSetting.Header.numberOfColumns
     }
 
     func frozenRows(in spreadsheetView: SpreadsheetView) -> Int {
+        guard !tracks.isEmpty else { return 0 }
         return CellSetting.Header.numberOfRows
     }
 
     // TODO: refactoring
     func mergedCells(in spreadsheetView: SpreadsheetView) -> [CellRange] {
         var mergedCells: [CellRange] = []
-        for (index, track) in timetable.tracks.enumerated() {
+        for (index, track) in tracks.enumerated() {
             let columnIndex = index + 1
             var rowIndex = 0
             for i in (0..<track.sessions.count) {
                 if i == 0 {
-                    let blankFrame = Int(track.sessions[i].startsOn - timetable.schedule.open) / DateTitleCell.IntervalMinutes
+                    let blankFrame = Int(track.sessions[i].startsOn - schedule.open) / DateTitleCell.IntervalMinutes
                     if blankFrame != 0 {
                         let blankCellRange = CellRange(
                             from: (row: rowIndex + 1, column: columnIndex),
@@ -95,7 +127,7 @@ extension TimetableViewController: SpreadsheetViewDataSource {
 
                 var nextDate: Date!
                 if i == track.sessions.count - 1 {
-                    nextDate = timetable.schedule.close
+                    nextDate = schedule.close
                 } else {
                     nextDate = track.sessions[i + 1].startsOn
                 }
@@ -121,12 +153,12 @@ extension TimetableViewController: SpreadsheetViewDataSource {
             return nil
         case (true, false):
             let elapsedSecond = (DateTitleCell.IntervalMinutes * (indexPath.row - CellSetting.Header.numberOfRows)).second
-            let date = timetable.schedule.open + elapsedSecond
+            let date = schedule.open + elapsedSecond
             return spreadsheetView.dequeueReusableCell(with: DateTitleCell.self, for: indexPath).then {
                 $0.setup(date: date)
             }
         case (false, true):
-            let track = timetable.tracks[indexPath.column - CellSetting.Header.numberOfColumns]
+            let track = tracks[indexPath.column - CellSetting.Header.numberOfColumns]
             return spreadsheetView.dequeueReusableCell(with: TrackTitleCell.self, for: indexPath).then {
                 $0.setup(name: track.name)
             }

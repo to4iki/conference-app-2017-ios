@@ -2,13 +2,6 @@ import UIKit
 import XLPagerTabStrip
 
 final class ConferenceViewController: ButtonBarPagerTabStripViewController {
-    // TODO: fetch real datas
-    /// dummy
-    private let timetables: [Timetable] = TimetableFactory.create(
-        conference: DummyData.shared.conference,
-        sessions: DummyData.shared.sessions
-    )
-
     override func viewDidLoad() {
         super.viewDidLoad()
         containerView.isScrollEnabled = false
@@ -16,7 +9,7 @@ final class ConferenceViewController: ButtonBarPagerTabStripViewController {
     }
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return timetables.map(TimetableViewController.instantiate)
+        return ConferenceDay.cases.map(TimetableViewController.instantiate)
     }
 }
 
@@ -26,5 +19,22 @@ extension ConferenceViewController {
         buttonBarView.selectedBar.backgroundColor = UIColor.Builderscon.themeBlue
         settings.style.buttonBarItemBackgroundColor = .white
         settings.style.buttonBarItemTitleColor = .black
+    }
+}
+
+enum ConferenceDay: Int, EnumEnumerable {
+    case first
+    case second
+    case third
+
+    var rawDate: String {
+        switch self {
+        case .first:
+            return "8/3"
+        case .second:
+            return "8/4"
+        case .third:
+            return "8/5"
+        }
     }
 }
