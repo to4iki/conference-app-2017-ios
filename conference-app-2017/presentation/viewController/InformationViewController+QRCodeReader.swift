@@ -31,7 +31,11 @@ extension InformationViewController {
             case -11852:
                 let action = UIAlertAction(title: "設定", style: .default, handler: { _ in
                     DispatchQueue.main.async {
-                        UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
+                        if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
+                        } else {
+                            UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
+                        }
                     }
                 })
                 alert = alert
