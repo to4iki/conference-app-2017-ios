@@ -6,6 +6,7 @@ import XLPagerTabStrip
 
 final class TimetableViewController: UIViewController {
     @IBOutlet fileprivate weak var spreadsheetView: SpreadsheetView!
+    @IBOutlet fileprivate weak var indicatorView: UIActivityIndicatorView!
 
     fileprivate(set) var day: ConferenceDay!
     fileprivate(set) var tracks: [Track] = []
@@ -22,17 +23,35 @@ final class TimetableViewController: UIViewController {
     }
 
     private func setupTimetable() {
+        hideLayout()
         TimetableService.shared.read { [weak self] result in
             guard let strongSelf = self else { return }
-            if case .success(let value) = result {
+            switch result {
+            case .success(let value):
                 let timetable = value[strongSelf.day.rawValue]
                 strongSelf.tracks = timetable.tracks
                 strongSelf.schedule = timetable.schedule
                 DispatchQueue.main.async {
+                    strongSelf.showLayout()
                     strongSelf.spreadsheetView.reloadData()
                 }
+            case .failure(let error):
+                // TODO: Error Handling
+                log.error(error.localizedDescription)
             }
         }
+    }
+
+    private func showLayout() {
+        indicatorView.stopAnimating()
+        indicatorView.isHidden = true
+        spreadsheetView.isHidden = false
+    }
+
+    private func hideLayout() {
+        indicatorView.startAnimating()
+        indicatorView.isHidden = false
+        spreadsheetView.isHidden = true
     }
 }
 

@@ -79,17 +79,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jTJ-cQ-W7s">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jTJ-cQ-W7s" firstAttribute="centerY" secondItem="X1n-03-EHb" secondAttribute="centerY" id="97g-CB-ybP"/>
                             <constraint firstAttribute="trailing" secondItem="9NL-bB-R2E" secondAttribute="trailing" id="9F8-Ix-AwB"/>
                             <constraint firstItem="9NL-bB-R2E" firstAttribute="leading" secondItem="X1n-03-EHb" secondAttribute="leading" id="Eie-rQ-RmB"/>
                             <constraint firstItem="ba2-rw-Mur" firstAttribute="top" secondItem="9NL-bB-R2E" secondAttribute="bottom" id="Mw9-2k-VEE"/>
+                            <constraint firstItem="jTJ-cQ-W7s" firstAttribute="centerX" secondItem="X1n-03-EHb" secondAttribute="centerX" id="gxN-8X-aPU"/>
                             <constraint firstItem="9NL-bB-R2E" firstAttribute="top" secondItem="znY-x4-F6n" secondAttribute="bottom" id="lXj-yu-7ac"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="indicatorView" destination="jTJ-cQ-W7s" id="wNL-nt-WtI"/>
                         <outlet property="spreadsheetView" destination="9NL-bB-R2E" id="WUV-n5-3n0"/>
                     </connections>
                 </viewController>
