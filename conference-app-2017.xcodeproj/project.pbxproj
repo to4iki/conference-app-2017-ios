@@ -69,6 +69,8 @@
 		44C740601F0CFAAC00C1B7C4 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C7405D1F0CFAAC00C1B7C4 /* Himotoki.framework */; };
 		44C740611F0CFAAC00C1B7C4 /* OctavKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C7405E1F0CFAAC00C1B7C4 /* OctavKit.framework */; };
 		44C740621F0CFAAC00C1B7C4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C7405F1F0CFAAC00C1B7C4 /* Result.framework */; };
+		44C99D221F20932C00E4C956 /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C99D201F20932C00E4C956 /* Cache.framework */; };
+		44C99D231F20932C00E4C956 /* SwiftHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C99D211F20932C00E4C956 /* SwiftHash.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,8 @@
 		44C7405D1F0CFAAC00C1B7C4 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		44C7405E1F0CFAAC00C1B7C4 /* OctavKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OctavKit.framework; path = Carthage/Build/iOS/OctavKit.framework; sourceTree = "<group>"; };
 		44C7405F1F0CFAAC00C1B7C4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		44C99D201F20932C00E4C956 /* Cache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cache.framework; path = Carthage/Build/iOS/Cache.framework; sourceTree = "<group>"; };
+		44C99D211F20932C00E4C956 /* SwiftHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHash.framework; path = Carthage/Build/iOS/SwiftHash.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C99D221F20932C00E4C956 /* Cache.framework in Frameworks */,
+				44C99D231F20932C00E4C956 /* SwiftHash.framework in Frameworks */,
 				37C87A131F1B171B003AF90E /* QRCodeReader.framework in Frameworks */,
 				4487EC821F163B0E005ACF36 /* MarkdownView.framework in Frameworks */,
 				1E5C14E81F12389E00AEB4F7 /* Kingfisher.framework in Frameworks */,
@@ -261,13 +267,14 @@
 			children = (
 				1E4F43A31F1FCB7400BAF375 /* Config.swift */,
 			);
-			name = configure;
 			path = configure;
 			sourceTree = "<group>";
 		};
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44C99D201F20932C00E4C956 /* Cache.framework */,
+				44C99D211F20932C00E4C956 /* SwiftHash.framework */,
 				37C87A121F1B171B003AF90E /* QRCodeReader.framework */,
 				4487EC811F163B0E005ACF36 /* MarkdownView.framework */,
 				1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */,
@@ -524,6 +531,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MarkdownView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/QRCodeReader.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cache.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftHash.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (
