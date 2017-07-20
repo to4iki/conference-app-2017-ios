@@ -1,6 +1,8 @@
 import UIKit
 import AVFoundation
+import Kingfisher
 import OctavKit
+import Result
 import Then
 import QRCodeReader
 
@@ -35,8 +37,13 @@ extension InformationViewController {
 
 extension InformationViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 1, indexPath.row == 0 {
+        switch (indexPath.section, indexPath.row) {
+        case (1, 0):
             presentQRCodeReader(animated: true, completion: nil)
+        case (2, 0):
+            presentClearCacheDialog(animated: true, completion: nil)
+        default:
+            break
         }
     }
 }
@@ -48,5 +55,26 @@ extension InformationViewController {
                 self?.sponsors = value
             }
         }
+    }
+
+    fileprivate func presentClearCacheDialog(animated: Bool, completion: (() -> Void)?) {
+        let alert = UIAlertController(title: nil, message: "端末に保存されているキャッシュをクリアしますか?", preferredStyle: .alert)
+        let clearAction = UIAlertAction(title: "クリア", style: .default) { [weak self] _ in
+            self?.clearCache { result in
+                if case .success(_) = result {
+                    let dialog = UIAlertController(title: nil, message: "キャッシュをクリアしました", preferredStyle: .alert)
+                    dialog.addAction(UIAlertAction(title: "閉じる", style: .default, handler: nil))
+                    self?.present(dialog, animated: true, completion: nil)
+                }
+            }
+        }
+        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+        alert.addAction(clearAction)
+        present(alert, animated: animated, completion: completion)
+    }
+
+    private func clearCache(completion: @escaping (Result<Void, DiskCacheError>) -> Void) {
+        ImageCache.default.clearDiskCache()
+        DiskCache.shared.removeAll(completion: completion)
     }
 }
