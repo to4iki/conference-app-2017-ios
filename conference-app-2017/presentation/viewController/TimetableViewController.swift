@@ -12,41 +12,26 @@ final class TimetableViewController: UIViewController {
     fileprivate(set) var schedule: Conference.Schedule!
     fileprivate(set) var sessionHolder: [IndexPath: Session] = [:]
 
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         spreadsheetView.dataSource = self
         spreadsheetView.delegate = self
         spreadsheetView.registerNib(types: [SessionCell.self, ShortSessionCell.self])
         spreadsheetView.register(types: [BlankCell.self, TrackTitleCell.self, DateTitleCell.self])
-
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(TimetableViewController.refreshNotification(_:)),
-            name: NSNotification.Name("test"),
-            object: nil
-        )
-
-        refresh()
+        setupTimetable()
     }
 
-    func refreshNotification(_ notification: Notification) {
-        refresh()
-    }
-
-    func refresh() {
-        if !OnMemoryStorage.shared.timetables.isEmpty {
-            let timetable = OnMemoryStorage.shared.timetables[self.day.rawValue]
-            self.tracks = timetable.tracks
-            self.schedule = timetable.schedule
-            DispatchQueue.main.async {
-                self.spreadsheetView.reloadData()
+    private func setupTimetable() {
+        TimetableService.shared.read { [weak self] result in
+            guard let strongSelf = self else { return }
+            if case .success(let value) = result {
+                let timetable = value[strongSelf.day.rawValue]
+                strongSelf.tracks = timetable.tracks
+                strongSelf.schedule = timetable.schedule
+                DispatchQueue.main.async {
+                    strongSelf.spreadsheetView.reloadData()
+                }
             }
-        } else {
-
         }
     }
 }

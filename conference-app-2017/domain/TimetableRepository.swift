@@ -2,6 +2,7 @@ import Foundation
 import OctavKit
 import Result
 
+
 class OnMemoryStorage {
     static let shared = OnMemoryStorage()
     private init() { self.setup() }

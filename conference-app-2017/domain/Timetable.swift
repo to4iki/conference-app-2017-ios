@@ -17,12 +17,3 @@ extension Timetable: CustomStringConvertible {
         return "Timetable(schedule: \(schedule), tracks: \(tracks))"
     }
 }
-
-// TODO: dummy
-struct TimetableFactory {
-    static func create(conference: Conference, sessions: [Session]) -> [Timetable] {
-        return conference.schedules.map { (schedule: Conference.Schedule) -> Timetable in
-            Timetable(schedule: schedule, tracks: conference.tracks, grouped: sessions.groping())
-        }
-    }
-}
