@@ -6,6 +6,14 @@
 	<array>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/Cache</string>
+			<key>Title</key>
+			<string>Cache</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/Himotoki</string>
 			<key>Title</key>
 			<string>Himotoki</string>
@@ -38,6 +46,14 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/QRCodeReader.swift</string>
+			<key>Title</key>
+			<string>QRCodeReader.swift</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/Result</string>
 			<key>Title</key>
 			<string>Result</string>
@@ -57,6 +73,14 @@
 			<string>com.mono0926.LicensePlist/SwiftDate</string>
 			<key>Title</key>
 			<string>SwiftDate</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/SwiftHash</string>
+			<key>Title</key>
+			<string>SwiftHash</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
