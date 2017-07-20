@@ -40,5 +40,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>Conference Identifier</key>
+	<string></string>
 </dict>
 </plist>
