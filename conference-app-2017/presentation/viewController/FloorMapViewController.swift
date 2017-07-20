@@ -12,6 +12,16 @@ final class FloorMapViewController: UIViewController {
         doubleTapGesture.numberOfTapsRequired = 2
         imageView.addGestureRecognizer(doubleTapGesture)
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        resetScrollView()
+    }
+    
+    private func resetScrollView() {
+        scrollView.setZoomScale(1.0, animated: true)
+        scrollView.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
+    }
 }
 
 extension FloorMapViewController {
