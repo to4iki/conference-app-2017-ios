@@ -1,4 +1,3 @@
-import Foundation
 import OctavKit
 import Result
 
@@ -21,6 +20,21 @@ struct ConferenceRespository: Repository {
                         completion(.failure(.read(error)))
                     }
                 }
+            }
+        }
+    }
+
+    static func warmup() {
+        OctavKitOnAPI.conference { result in
+            switch result {
+            case .success(let value):
+                OctavKitOnDiskCache.shared.writeConference(value) { writed in
+                    if case .failure(let error) = writed {
+                        log.error("disk write error: \(error.localizedDescription)")
+                    }
+                }
+            case .failure(let error):
+                log.error("fetch api error: \(error.localizedDescription)")
             }
         }
     }

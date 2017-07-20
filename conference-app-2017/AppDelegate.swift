@@ -8,7 +8,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupUINavigation()
         setupOctavKit()
-        preload()
         return true
     }
 }
@@ -23,9 +22,11 @@ extension AppDelegate {
     fileprivate func setupOctavKit() {
         OctavKit.setup(conferenceId: Config.conferenceIdentifier)
         OctavKit.setLocale(Locale.current)
+        warmup()
     }
 
-    fileprivate func preload() {
-        OnMemoryStorage.shared.setup()
+    private func warmup() {
+        ConferenceRespository.warmup()
+        SessionRepository.warmup()
     }
 }

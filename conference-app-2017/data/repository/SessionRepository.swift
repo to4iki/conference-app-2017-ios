@@ -1,4 +1,3 @@
-import Foundation
 import OctavKit
 import Result
 
@@ -21,6 +20,21 @@ struct SessionRepository: Repository {
                         completion(.failure(.read(error)))
                     }
                 }
+            }
+        }
+    }
+
+    static func warmup() {
+        OctavKitOnAPI.sessions { result in
+            switch result {
+            case .success(let value):
+                OctavKitOnDiskCache.shared.writeSessions(value) { writed in
+                    if case .failure(let error) = writed {
+                        log.error("disk write error: \(error.localizedDescription)")
+                    }
+                }
+            case .failure(let error):
+                log.error("fetch api error: \(error.localizedDescription)")
             }
         }
     }
