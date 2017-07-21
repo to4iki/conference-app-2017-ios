@@ -58,17 +58,17 @@ extension InformationViewController {
     }
 
     fileprivate func presentClearCacheDialog(animated: Bool, completion: (() -> Void)?) {
-        let alert = UIAlertController(title: nil, message: "端末に保存されているキャッシュをクリアしますか?", preferredStyle: .alert)
-        let clearAction = UIAlertAction(title: "クリア", style: .default) { [weak self] _ in
+        let alert = UIAlertController(title: nil, message: "Clear App's Cache", preferredStyle: .alert)
+        let clearAction = UIAlertAction(title: "Clear", style: .default) { [weak self] _ in
             self?.clearCache { result in
                 if case .success(_) = result {
-                    let dialog = UIAlertController(title: nil, message: "キャッシュをクリアしました", preferredStyle: .alert)
-                    dialog.addAction(UIAlertAction(title: "閉じる", style: .default, handler: nil))
+                    let dialog = UIAlertController(title: nil, message: "Deleted all data from the cache", preferredStyle: .alert)
+                    dialog.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                     self?.present(dialog, animated: true, completion: nil)
                 }
             }
         }
-        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(clearAction)
         present(alert, animated: animated, completion: completion)
     }

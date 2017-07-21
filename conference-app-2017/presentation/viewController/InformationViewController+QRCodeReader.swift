@@ -10,9 +10,9 @@ extension InformationViewController {
     }
 
     fileprivate func presentOpenURLDialog(url: URL) {
-        let alert = UIAlertController(title: "読み取り結果", message: url.absoluteString, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "開く", style: .default, handler: { [weak self] _ in self?.open(url: url) }))
+        let alert = UIAlertController(title: "Result", message: url.absoluteString, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Open", style: .default, handler: { [weak self] _ in self?.open(url: url) }))
         present(alert, animated: true, completion: nil)
     }
 
@@ -26,10 +26,10 @@ extension InformationViewController {
             return try QRCodeReader.supportsMetadataObjectTypes()
         } catch let error as NSError {
             log.error("error: \(error.localizedDescription)")
-            var alert = Alert.Builder().set(title: "エラー")
+            var alert = Alert.Builder().set(title: "Error")
             switch error.code {
             case -11852:
-                let action = UIAlertAction(title: "設定", style: .default, handler: { _ in
+                let action = UIAlertAction(title: "Setting", style: .default, handler: { _ in
                     DispatchQueue.main.async {
                         if #available(iOS 10.0, *) {
                             UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
@@ -41,7 +41,7 @@ extension InformationViewController {
                 alert = alert
                     .set(message: error.localizedDescription)
                     .set(action: action)
-                    .set(action: UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+                    .set(action: UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             case -11814:
                 alert = alert
                     .set(message: error.localizedDescription)
