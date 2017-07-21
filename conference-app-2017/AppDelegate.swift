@@ -26,7 +26,9 @@ extension AppDelegate {
     }
 
     private func warmup() {
-        ConferenceRespository.warmup()
-        SessionRepository.warmup()
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 5) {
+            ConferenceRespository.warmup()
+            SessionRepository.warmup()
+        }
     }
 }
