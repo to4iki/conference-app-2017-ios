@@ -8,9 +8,9 @@ final class FloorMapViewController: UIViewController {
         super.viewDidLoad()
         setNoTitleBackButton()
         scrollView.delegate = self
-        let doubleTapGesture = UITapGestureRecognizer(target: self, action: .didImageDoubleTap)
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: .didScrollViewDoubleTap)
         doubleTapGesture.numberOfTapsRequired = 2
-        imageView.addGestureRecognizer(doubleTapGesture)
+        scrollView.addGestureRecognizer(doubleTapGesture)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -25,7 +25,7 @@ final class FloorMapViewController: UIViewController {
 }
 
 extension FloorMapViewController {
-    func didImageDoubleTap(gesture: UITapGestureRecognizer) {
+    func didScrollViewDoubleTap(gesture: UITapGestureRecognizer) {
         guard gesture.state == UIGestureRecognizerState.ended else { return }
         if scrollView.zoomScale < scrollView.maximumZoomScale {
             let zoomedRect = zoomRectForScale(scrollView.maximumZoomScale, center: gesture.location(in: gesture.view))
@@ -51,5 +51,5 @@ extension FloorMapViewController: UIScrollViewDelegate {
 
 // MARK: - Selector
 private extension Selector {
-    static let didImageDoubleTap = #selector(FloorMapViewController.didImageDoubleTap)
+    static let didScrollViewDoubleTap = #selector(FloorMapViewController.didScrollViewDoubleTap)
 }
