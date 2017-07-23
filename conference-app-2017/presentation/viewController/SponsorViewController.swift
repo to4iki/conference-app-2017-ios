@@ -5,7 +5,7 @@ import OctavKit
 final class SponsorViewController: UIViewController {
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
 
-    var sponsors: [Int: [Sponsor]]!
+    var sponsors: [Int: [Sponsor]] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,8 @@ extension SponsorViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sponsors[section]!.count
+        guard let sectionCount = sponsors[section]?.count else { return 0 }
+        return sectionCount
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
