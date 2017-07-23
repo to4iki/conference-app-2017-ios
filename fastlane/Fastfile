@@ -1,0 +1,52 @@
+fastlane_version '2.47.0'
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+  end
+
+  desc 'Runs all the tests'
+  lane :test do
+    scan
+  end
+
+  desc 'Deploy a new version to the App Store'
+  lane :release do
+    carthage(command: 'bootstrap', platform: 'iOS')
+    increment_build_number
+    commit_version_bump(
+      xcodeproj: 'conference-app-2017.xcodeproj',
+      message: "Bump bundle version to #{Actions.lane_context[Actions::SharedValues::BUILD_NUMBER]}",
+      force: true
+    )
+    update_conference_id
+    gym(scheme: 'conference-app-2017', clean: true)
+    deliver(force: true)
+  end
+
+  private_lane :update_conference_id do |options|
+    load_keys
+    update_info_plist(
+      plist_path: 'conference-app-2017/Info.plist',
+      block: lambda { |plist|
+        plist['Conference Identifier'] = ENV['CONFERENCE_IDENTIFIER']
+      }
+    )
+  end
+
+  def load_keys
+    begin
+      import('keys')
+    rescue => exception
+      UI.error('fastlane/keys file not found. To use this Fastfile, copy fastlane/keys.template into fastlane/keys and fill in the values')
+      raise exception
+    end
+  end
+
+  after_all do |lane|
+  end
+
+  error do |lane, exception|
+  end
+end
