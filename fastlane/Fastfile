@@ -1,25 +1,9 @@
-# Customise this file, documentation can be found here:
-# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
-# All available actions: https://docs.fastlane.tools/actions
-# can also be listed using the `fastlane actions` command
-
-# Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
-
-# This is the minimum version number required.
-# Update this, if you use features of a newer version
 fastlane_version '2.47.0'
 
 default_platform :ios
 
 platform :ios do
   before_all do
-    # ENV['SLACK_URL'] = 'https://hooks.slack.com/services/...'
-
-    carthage
   end
 
   desc 'Runs all the tests'
@@ -27,47 +11,42 @@ platform :ios do
     scan
   end
 
-  desc 'Submit a new Beta Build to Apple TestFlight'
-  desc 'This will also make sure the profile is up to date'
-  lane :beta do
-    # match(type: 'appstore') # more information: https://codesigning.guide
-    gym(scheme: 'conference-app-2017') # Build your app - more options available
-    pilot
-
-    # sh 'your_script.sh'
-    # You can also use other beta testing services here (run `fastlane actions`)
-  end
-
   desc 'Deploy a new version to the App Store'
   lane :release do
-    # match(type: 'appstore')
-    # snapshot
-    gym(scheme: 'conference-app-2017') # Build your app - more options available
+    carthage(command: 'bootstrap', platform: 'iOS')
+    increment_build_number
+    commit_version_bump(
+      xcodeproj: 'conference-app-2017.xcodeproj',
+      message: "Bump bundle version to #{Actions.lane_context[Actions::SharedValues::BUILD_NUMBER]}",
+      force: true
+    )
+    update_conference_id
+    gym(scheme: 'conference-app-2017', clean: true)
     deliver(force: true)
-    # frameit
   end
 
-  # You can define as many lanes as you want
+  private_lane :update_conference_id do |options|
+    load_keys
+    update_info_plist(
+      plist_path: 'conference-app-2017/Info.plist',
+      block: lambda { |plist|
+        plist['Conference Identifier'] = ENV['CONFERENCE_IDENTIFIER']
+      }
+    )
+  end
+
+  def load_keys
+    begin
+      import('keys')
+    rescue => exception
+      UI.error('fastlane/keys file not found. To use this Fastfile, copy fastlane/keys.template into fastlane/keys and fill in the values')
+      raise exception
+    end
+  end
 
   after_all do |lane|
-    # This block is called, only if the executed lane was successful
-
-    # slack(
-    #   message: 'Successfully deployed new App Update.'
-    # )
   end
 
   error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
   end
 end
-
-
-# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
-# All available actions: https://docs.fastlane.tools/actions
-
-# fastlane reports which actions are used. No personal data is recorded.
-# Learn more at https://github.com/fastlane/fastlane#metrics

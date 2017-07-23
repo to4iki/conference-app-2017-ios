@@ -73,6 +73,7 @@ Carthage/Build
 fastlane/*
 !fastlane/README.md
 !fastlane/Fastfile
+!fastlane/keys.template
 
 # End of https://www.gitignore.io/api/macos,swift,ruby
 .gitattributes
