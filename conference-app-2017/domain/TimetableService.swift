@@ -1,5 +1,6 @@
 import Result
 import OctavKit
+import SwiftDate
 
 struct TimetableService {
     private let sessionRepository = SessionRepository()
@@ -30,8 +31,20 @@ struct TimetableService {
 
 struct TimetableFactory {
     static func create(conference: Conference, sessions: [Session]) -> [Timetable] {
-        return conference.schedules.map { (schedule: Conference.Schedule) -> Timetable in
-            Timetable(schedule: schedule, tracks: conference.tracks, grouped: sessions.groping())
+        return conference.schedules.map { (schedule: Conference.Schedule) in
+            let grouped = sessions.filter { (session: Session) in
+                session.startsOn.startOfDay == schedule.open.startOfDay
+            }.groping()
+
+            let tracks = conference.tracks.reduce([]) { (acc: [Track], value: Conference.Track) -> [Track] in
+                if let sessions = grouped[value.roomId] {
+                    return acc + [Track(name: value.name, sessions: sessions)]
+                } else {
+                    return acc
+                }
+            }
+
+            return Timetable(schedule: schedule, tracks: tracks)
         }
     }
 }
