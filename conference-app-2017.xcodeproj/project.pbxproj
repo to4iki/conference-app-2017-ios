@@ -16,6 +16,7 @@
 		1E26E4A71F1CEE8B00A94A75 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26E4A61F1CEE8B00A94A75 /* Regex.swift */; };
 		1E26E4A91F1CEF3D00A94A75 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26E4A81F1CEF3D00A94A75 /* URLExtension.swift */; };
 		1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */; };
+		1E28ED041F264E7A00DB77D3 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28ED031F264E7A00DB77D3 /* CollectionExtension.swift */; };
 		1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BC1D31F1930380010FCC1 /* TagCollectionViewCell.swift */; };
 		1E3BC1D61F1931390010FCC1 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BC1D51F1931390010FCC1 /* UICollectionViewExtension.swift */; };
 		1E3BC1D81F1935880010FCC1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BC1D71F1935880010FCC1 /* UIViewExtension.swift */; };
@@ -95,6 +96,7 @@
 		1E26E4A61F1CEE8B00A94A75 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		1E26E4A81F1CEF3D00A94A75 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		1E28ED031F264E7A00DB77D3 /* CollectionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		1E3BC1D31F1930380010FCC1 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		1E3BC1D51F1931390010FCC1 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		1E3BC1D71F1935880010FCC1 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 		1E26F7C81E90D2AF00DF056B /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				1E28ED031F264E7A00DB77D3 /* CollectionExtension.swift */,
 				1E6949E61F1410320060697A /* DateFormatterExtension.swift */,
 				1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */,
 				1E6949E41F140E1B0060697A /* SequenceExtension.swift */,
@@ -612,6 +615,7 @@
 				1E892C901EF68561002F52C8 /* UIColorExtension.swift in Sources */,
 				1EEAE4ED1E7063E900299809 /* AppDelegate.swift in Sources */,
 				1E3BC1D81F1935880010FCC1 /* UIViewExtension.swift in Sources */,
+				1E28ED041F264E7A00DB77D3 /* CollectionExtension.swift in Sources */,
 				1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */,
 				37BBF31C1F1D0BAC00AB9F24 /* FloorMapViewController.swift in Sources */,
 				44C18FD41F1A08470057FB5A /* SponsorCollectionViewCell.swift in Sources */,

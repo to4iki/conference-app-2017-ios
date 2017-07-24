@@ -71,6 +71,7 @@ extension TimetableViewController: IndicatorInfoProvider {
 // MARK: - SpreadsheetViewDataSource
 extension TimetableViewController: SpreadsheetViewDataSource {
     func numberOfColumns(in spreadsheetView: SpreadsheetView) -> Int {
+        guard tracks.nonEmpty else { return 0 }
         return tracks.count + CellSetting.Header.numberOfColumns
     }
 
@@ -92,12 +93,12 @@ extension TimetableViewController: SpreadsheetViewDataSource {
     }
 
     func frozenColumns(in spreadsheetView: SpreadsheetView) -> Int {
-        guard !tracks.isEmpty else { return 0 }
+        guard tracks.nonEmpty else { return 0 }
         return CellSetting.Header.numberOfColumns
     }
 
     func frozenRows(in spreadsheetView: SpreadsheetView) -> Int {
-        guard !tracks.isEmpty else { return 0 }
+        guard tracks.nonEmpty else { return 0 }
         return CellSetting.Header.numberOfRows
     }
 
@@ -110,7 +111,7 @@ extension TimetableViewController: SpreadsheetViewDataSource {
             for i in (0..<track.sessions.count) {
                 if i == 0 {
                     let blankFrame = Int(track.sessions[i].startsOn - schedule.open) / DateTitleCell.IntervalMinutes
-                    if blankFrame != 0 {
+                    if blankFrame > 0 {
                         let blankCellRange = CellRange(
                             from: (row: rowIndex + 1, column: columnIndex),
                             to: (row: rowIndex + blankFrame, column: columnIndex)
@@ -137,7 +138,7 @@ extension TimetableViewController: SpreadsheetViewDataSource {
                 }
 
                 let blankFrame = Int(nextDate - track.sessions[i].endsOn) / DateTitleCell.IntervalMinutes
-                if blankFrame != 0 {
+                if blankFrame > 0 {
                     let blankCellRange = CellRange(
                         from: (row: rowIndex + 1, column: columnIndex),
                         to: (row: rowIndex + blankFrame, column: columnIndex)
