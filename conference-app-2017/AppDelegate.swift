@@ -1,5 +1,6 @@
 import UIKit
 import OctavKit
+import SwiftDate
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -7,6 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupUINavigation()
+        setupRegion()
         setupOctavKit()
         return true
     }
@@ -17,6 +19,15 @@ extension AppDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.Builderscon.themeRed
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+    }
+
+    fileprivate func setupRegion() {
+        let region = Region(
+            tz: TimeZone(identifier: "JST")!,
+            cal: Calendar(identifier: .gregorian),
+            loc: Locale.current
+        )
+        Date.setDefaultRegion(region)
     }
 
     fileprivate func setupOctavKit() {
