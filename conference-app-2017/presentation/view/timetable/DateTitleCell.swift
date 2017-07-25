@@ -34,6 +34,6 @@ final class DateTitleCell: Cell {
 
 extension DateTitleCell {
     func setup(date: Date) {
-        label.text = DateFormatter.hour.string(from: date)
+        label.text = date.string(format: .custom("HH:mm"))
     }
 }

@@ -39,7 +39,7 @@ extension SessionViewController {
         setNoTitleBackButton()
         hideLayout()
         titleLabel.text = session.title
-        startToEndLabel.text = "\(DateFormatter.year.string(from: session.startsOn))"
+        startToEndLabel.text = session.startsOn.string(format: .custom("yyyy/MM/dd HH:mm"))
         avatarImageView.kf.setImage(with: session.speaker.avatarURL.secure)
         nicknameLabel.text = session.speaker.nickname
         abstractMarkdownView.load(markdown: session.abstract)
