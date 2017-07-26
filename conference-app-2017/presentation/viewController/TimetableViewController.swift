@@ -8,6 +8,7 @@ final class TimetableViewController: UIViewController {
     @IBOutlet fileprivate weak var spreadsheetView: SpreadsheetView!
     @IBOutlet fileprivate weak var indicatorView: UIActivityIndicatorView!
 
+    private let timetableUseCase = TimetableUseCase()
     fileprivate(set) var day: ConferenceDay!
     fileprivate(set) var tracks: [Track] = []
     fileprivate(set) var schedule: Conference.Schedule!
@@ -24,7 +25,7 @@ final class TimetableViewController: UIViewController {
 
     private func setupTimetable() {
         hideLayout()
-        TimetableService.shared.read { [weak self] result in
+        timetableUseCase.findAll { [weak self] result in
             guard let strongSelf = self else { return }
             switch result {
             case .success(let value):

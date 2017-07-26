@@ -7,7 +7,8 @@ import Then
 import QRCodeReader
 
 final class InformationViewController: UITableViewController {
-    fileprivate var sponsors: [Sponsor] = []
+    fileprivate var sponsorUseCase = SponsorUseCase()
+    fileprivate var sponsors: [Int: [Sponsor]] = [:]
 
     lazy var readerViewController: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
@@ -30,7 +31,7 @@ extension InformationViewController {
         guard let identifier = segue.identifier else { return }
         if identifier == "\(SponsorViewController.className)Segue" {
             let viewController = segue.destination as! SponsorViewController
-            viewController.sponsors = sponsors.groping()
+            viewController.sponsors = sponsors
         }
     }
 }
@@ -72,7 +73,7 @@ extension InformationViewController {
 
 extension InformationViewController {
     fileprivate func setupSponsor() {
-        SponsorService.shared.read { [weak self] result in
+        sponsorUseCase.findAll { [weak self] result in
             if case .success(let value) = result {
                 self?.sponsors = value
             }
