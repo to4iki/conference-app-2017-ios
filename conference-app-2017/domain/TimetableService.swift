@@ -10,10 +10,10 @@ struct TimetableService {
     private init() {}
 
     func read(completion: @escaping (Result<[Timetable], RepositoryError>) -> Void) {
-        conferenceRepository.read { result1 in
+        conferenceRepository.find { result1 in
             switch result1 {
             case .success(let conference):
-                self.sessionRepository.read { result2 in
+                self.sessionRepository.findAll { result2 in
                     switch result2 {
                     case .success(let sessions):
                         let timetables = TimetableFactory.make(conference: conference, sessions: sessions)

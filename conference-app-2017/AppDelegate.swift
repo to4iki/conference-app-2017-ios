@@ -33,13 +33,13 @@ extension AppDelegate {
     fileprivate func setupOctavKit() {
         OctavKit.setup(conferenceId: Config.conferenceIdentifier)
         OctavKit.setLocale(Locale.current)
-        warmup()
+        updateLocalData()
     }
 
-    private func warmup() {
+    private func updateLocalData() {
         DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 5) {
-            ConferenceRespository.warmup()
-            SessionRepository.warmup()
+            ConferenceRespository().update()
+            SessionRepository().update()
         }
     }
 }

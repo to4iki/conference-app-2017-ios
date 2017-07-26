@@ -8,7 +8,7 @@ struct SponsorService {
     private init() {}
 
     func read(completion: @escaping (Result<[Sponsor], RepositoryError>) -> Void) {
-        conferenceRepository.read { result in
+        conferenceRepository.find { result in
             switch result {
             case .success(let conference):
                 completion(.success(conference.sponsors))
