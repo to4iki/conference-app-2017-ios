@@ -195,6 +195,7 @@
 			children = (
 				1E25C0A11E87AE03008C4C65 /* view */,
 				1E25C0A21E87AE11008C4C65 /* viewController */,
+				1E4308621F29156A00F64EE0 /* viewModel */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -266,12 +267,15 @@
 			path = session;
 			sourceTree = "<group>";
 		};
-		1E4308601F29118600F64EE0 /* usecase */ = {
+		1E4308621F29156A00F64EE0 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				448DC8F31F19E18400F39A6D /* Session+Tag.swift */,
+				44C18FD01F1A073E0057FB5A /* Sponsor+Group.swift */,
+				445913AB1F11EAB6001083D7 /* Timetable.swift */,
+				1E6949E21F140DB00060697A /* Track.swift */,
 			);
-			name = usecase;
-			path = usecase;
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
@@ -368,13 +372,8 @@
 			isa = PBXGroup;
 			children = (
 				4491370C1F1F6BAA0079B044 /* repository */,
-				1E4308601F29118600F64EE0 /* usecase */,
-				448DC8F31F19E18400F39A6D /* Session+Tag.swift */,
-				44C18FD01F1A073E0057FB5A /* Sponsor+Group.swift */,
 				44C99D341F20C33100E4C956 /* SponsorService.swift */,
-				445913AB1F11EAB6001083D7 /* Timetable.swift */,
 				44C99D301F20BDD400E4C956 /* TimetableService.swift */,
-				1E6949E21F140DB00060697A /* Track.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -399,7 +398,6 @@
 				44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */,
 				44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */,
 			);
-			name = repository;
 			path = repository;
 			sourceTree = "<group>";
 		};
