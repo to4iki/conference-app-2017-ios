@@ -30,7 +30,7 @@ platform :ios do
     update_info_plist(
       plist_path: 'conference-app-2017/Info.plist',
       block: lambda { |plist|
-        plist['Conference Identifier'] = ENV['CONFERENCE_IDENTIFIER']
+        plist['Conference Identifier'] = ENV['CONFERENCE_IDENTIFIER']
       }
     )
   end

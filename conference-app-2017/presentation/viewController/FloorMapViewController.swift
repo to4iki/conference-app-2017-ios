@@ -17,11 +17,6 @@ final class FloorMapViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         resetScrollView()
     }
-    
-    private func resetScrollView() {
-        scrollView.setZoomScale(1.0, animated: true)
-        scrollView.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
-    }
 }
 
 extension FloorMapViewController {
@@ -33,6 +28,11 @@ extension FloorMapViewController {
         } else {
             scrollView.setZoomScale(1.0, animated: true)
         }
+    }
+
+    fileprivate func resetScrollView() {
+        scrollView.setZoomScale(1.0, animated: true)
+        scrollView.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
     }
 
     private func zoomRectForScale(_ scale: CGFloat, center: CGPoint) -> CGRect {

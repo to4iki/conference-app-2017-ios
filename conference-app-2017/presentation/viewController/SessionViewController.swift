@@ -56,7 +56,7 @@ extension SessionViewController {
             case "file":
                 return true
             case "http", "https":
-                self?.open(url: url)
+                self?.presentSafariViewController(url: url)
                 return false
             default:
                 return false
@@ -76,7 +76,7 @@ extension SessionViewController {
         contentView.isHidden = true
     }
 
-    private func open(url: URL) {
+    private func presentSafariViewController(url: URL) {
         let safariViewController = SFSafariViewController(url: url)
         present(safariViewController, animated: true, completion: nil)
     }

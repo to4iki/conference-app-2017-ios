@@ -36,11 +36,33 @@ extension InformationViewController {
 }
 
 extension InformationViewController {
+    private enum CellType {
+        case sponsor
+        case floorMap
+        case qrCodeReader
+        case clearCache
+
+        init(rawValue: IndexPath) {
+            switch (rawValue.section, rawValue.row) {
+            case (0, 0):
+                self = .sponsor
+            case (0, 1):
+                self = .floorMap
+            case (1, 0):
+                self = .qrCodeReader
+            case (2, 0):
+                self = .clearCache
+            default:
+                fatalError("non reachable")
+            }
+        }
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch (indexPath.section, indexPath.row) {
-        case (1, 0):
+        switch CellType(rawValue: indexPath) {
+        case .qrCodeReader:
             presentQRCodeReader(animated: true, completion: nil)
-        case (2, 0):
+        case .clearCache:
             presentClearCacheDialog(animated: true, completion: nil)
         default:
             break
