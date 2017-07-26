@@ -114,7 +114,7 @@
 		1E9EB6FC1F1BD93B004216E5 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		1E9EB6FF1F1BD95F004216E5 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		1ECE1F221EE5AD320037D149 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
-		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
 		1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
 		1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
@@ -235,7 +235,6 @@
 			children = (
 				44C99D241F20A13700E4C956 /* api */,
 				44C99D271F20A4C000E4C956 /* cache */,
-				1E4F43A21F1FCB4E00BAF375 /* configure */,
 				1E26F7C81E90D2AF00DF056B /* extension */,
 				4491370C1F1F6BAA0079B044 /* repository */,
 				1ECE1F241EE5AD7A0037D149 /* util */,
@@ -268,14 +267,6 @@
 			path = session;
 			sourceTree = "<group>";
 		};
-		1E4F43A21F1FCB4E00BAF375 /* configure */ = {
-			isa = PBXGroup;
-			children = (
-				1E4F43A31F1FCB7400BAF375 /* Config.swift */,
-			);
-			path = configure;
-			sourceTree = "<group>";
-		};
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,11 +297,19 @@
 			path = common;
 			sourceTree = "<group>";
 		};
+		1EBBFD3C1F28E266004305AE /* environment */ = {
+			isa = PBXGroup;
+			children = (
+				1E4F43A31F1FCB7400BAF375 /* Config.swift */,
+				1ECE1F251EE5AD910037D149 /* Logger.swift */,
+			);
+			path = environment;
+			sourceTree = "<group>";
+		};
 		1ECE1F241EE5AD7A0037D149 /* util */ = {
 			isa = PBXGroup;
 			children = (
 				4411EC951F1FA0A400FC03A3 /* EnumEnumerable.swift */,
-				1ECE1F251EE5AD910037D149 /* Logger.swift */,
 				1E26E4A61F1CEE8B00A94A75 /* Regex.swift */,
 			);
 			path = util;
@@ -340,6 +339,7 @@
 			children = (
 				1E26F7C71E90D2AB00DF056B /* data */,
 				445913A41F11EA31001083D7 /* domain */,
+				1EBBFD3C1F28E266004305AE /* environment */,
 				1E25C0A01E87AB88008C4C65 /* presentation */,
 				1EEAE4EC1E7063E900299809 /* AppDelegate.swift */,
 				1EEAE4F81E7063E900299809 /* Info.plist */,
