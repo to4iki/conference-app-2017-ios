@@ -73,37 +73,36 @@ extension TimetableViewController: IndicatorInfoProvider {
 extension TimetableViewController: SpreadsheetViewDataSource {
     func numberOfColumns(in spreadsheetView: SpreadsheetView) -> Int {
         guard tracks.nonEmpty else { return 0 }
-        return tracks.count + CellSetting.Header.numberOfColumns
+        return tracks.count + TimetableCell.Header.numberOfColumns
     }
 
     func numberOfRows(in spreadsheetView: SpreadsheetView) -> Int {
         guard let schedule = schedule else { return 0 }
-        return (Int(schedule.duration) / DateTitleCell.IntervalMinutes) + CellSetting.Header.numberOfRows
+        return (Int(schedule.duration) / DateTitleCell.IntervalMinutes) + TimetableCell.Header.numberOfRows
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, widthForColumn column: Int) -> CGFloat {
-        if column != CellSetting.Header.columnIndex && tracks.count == CellSetting.requiredAdjustmentTrackCount {
-            return UIScreen.main.bounds.width - CellSetting.Width.header.rawValue
+        if column != TimetableCell.Header.columnIndex && tracks.count == TimetableCell.requiredAdjustmentTrackCount {
+            return UIScreen.main.bounds.width - TimetableCell.Width.header.rawValue
         } else {
-            return CellSetting.Width(for: column).rawValue
+            return TimetableCell.Width(for: column).rawValue
         }
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, heightForRow row: Int) -> CGFloat {
-        return CellSetting.Height(for: row).rawValue
+        return TimetableCell.Height(for: row).rawValue
     }
 
     func frozenColumns(in spreadsheetView: SpreadsheetView) -> Int {
         guard tracks.nonEmpty else { return 0 }
-        return CellSetting.Header.numberOfColumns
+        return TimetableCell.Header.numberOfColumns
     }
 
     func frozenRows(in spreadsheetView: SpreadsheetView) -> Int {
         guard tracks.nonEmpty else { return 0 }
-        return CellSetting.Header.numberOfRows
+        return TimetableCell.Header.numberOfRows
     }
 
-    // TODO: refactoring
     func mergedCells(in spreadsheetView: SpreadsheetView) -> [CellRange] {
         var mergedCells: [CellRange] = []
         for (index, track) in tracks.enumerated() {
@@ -154,17 +153,17 @@ extension TimetableViewController: SpreadsheetViewDataSource {
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, cellForItemAt indexPath: IndexPath) -> Cell? {
-        switch (indexPath.column == CellSetting.Header.columnIndex, indexPath.row == CellSetting.Header.rowIndex) {
+        switch (indexPath.column == TimetableCell.Header.columnIndex, indexPath.row == TimetableCell.Header.rowIndex) {
         case (true, true):
             return nil
         case (true, false):
-            let elapsedSecond = (DateTitleCell.IntervalMinutes * (indexPath.row - CellSetting.Header.numberOfRows)).second
+            let elapsedSecond = (DateTitleCell.IntervalMinutes * (indexPath.row - TimetableCell.Header.numberOfRows)).second
             let date = schedule.open + elapsedSecond
             return spreadsheetView.dequeueReusableCell(with: DateTitleCell.self, for: indexPath).then {
                 $0.setup(date: date)
             }
         case (false, true):
-            let track = tracks[indexPath.column - CellSetting.Header.numberOfColumns]
+            let track = tracks[indexPath.column - TimetableCell.Header.numberOfColumns]
             return spreadsheetView.dequeueReusableCell(with: TrackTitleCell.self, for: indexPath).then {
                 $0.setup(name: track.name)
             }

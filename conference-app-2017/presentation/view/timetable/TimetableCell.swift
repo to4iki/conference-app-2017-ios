@@ -1,6 +1,6 @@
 import UIKit
 
-struct CellSetting {
+struct TimetableCell {
     enum Width: CGFloat {
         case header = 44
         case `default` = 132

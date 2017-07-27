@@ -11,7 +11,7 @@
 		1E1556B41F1CB403005271AC /* ShortSessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1556B31F1CB403005271AC /* ShortSessionCell.xib */; };
 		1E1A39651F1287A1005456A3 /* SessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1A39641F1287A1005456A3 /* SessionCell.xib */; };
 		1E1A39671F128DF5005456A3 /* BlankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39661F128DF5005456A3 /* BlankCell.swift */; };
-		1E1A39691F129D9D005456A3 /* CellSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39681F129D9D005456A3 /* CellSetting.swift */; };
+		1E1A39691F129D9D005456A3 /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A39681F129D9D005456A3 /* TimetableCell.swift */; };
 		1E25C0A41E87AF47008C4C65 /* Conference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E25C0A31E87AF47008C4C65 /* Conference.storyboard */; };
 		1E26E4A71F1CEE8B00A94A75 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26E4A61F1CEE8B00A94A75 /* Regex.swift */; };
 		1E26E4A91F1CEF3D00A94A75 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26E4A81F1CEF3D00A94A75 /* URLExtension.swift */; };
@@ -92,7 +92,7 @@
 		1E1556B31F1CB403005271AC /* ShortSessionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortSessionCell.xib; sourceTree = "<group>"; };
 		1E1A39641F1287A1005456A3 /* SessionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionCell.xib; sourceTree = "<group>"; };
 		1E1A39661F128DF5005456A3 /* BlankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankCell.swift; sourceTree = "<group>"; };
-		1E1A39681F129D9D005456A3 /* CellSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSetting.swift; sourceTree = "<group>"; };
+		1E1A39681F129D9D005456A3 /* TimetableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
 		1E25C0A31E87AF47008C4C65 /* Conference.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conference.storyboard; sourceTree = "<group>"; };
 		1E26E4A61F1CEE8B00A94A75 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		1E26E4A81F1CEF3D00A94A75 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
@@ -297,7 +297,6 @@
 				1E4308701F2919DC00F64EE0 /* SponsorUseCase.swift */,
 				1E43086E1F2919BD00F64EE0 /* TimetableUseCase.swift */,
 			);
-			name = usecase;
 			path = usecase;
 			sourceTree = "<group>";
 		};
@@ -405,11 +404,11 @@
 			isa = PBXGroup;
 			children = (
 				1E1A39661F128DF5005456A3 /* BlankCell.swift */,
-				1E1A39681F129D9D005456A3 /* CellSetting.swift */,
 				445913B61F121D43001083D7 /* DateTitleCell.swift */,
 				445913B21F121CAB001083D7 /* SessionCell.swift */,
 				1E1A39641F1287A1005456A3 /* SessionCell.xib */,
 				1E1556B31F1CB403005271AC /* ShortSessionCell.xib */,
+				1E1A39681F129D9D005456A3 /* TimetableCell.swift */,
 				445913B41F121CCD001083D7 /* TrackTitleCell.swift */,
 			);
 			path = timetable;
@@ -608,7 +607,7 @@
 			files = (
 				1E3BC1D61F1931390010FCC1 /* UICollectionViewExtension.swift in Sources */,
 				445913B91F1222E0001083D7 /* SpreadsheetViewExtension.swift in Sources */,
-				1E1A39691F129D9D005456A3 /* CellSetting.swift in Sources */,
+				1E1A39691F129D9D005456A3 /* TimetableCell.swift in Sources */,
 				1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */,
 				1E26E4A71F1CEE8B00A94A75 /* Regex.swift in Sources */,
 				1E4308711F2919DC00F64EE0 /* SponsorUseCase.swift in Sources */,
