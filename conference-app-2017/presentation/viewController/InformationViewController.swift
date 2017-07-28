@@ -96,7 +96,7 @@ extension InformationViewController {
         present(alert, animated: animated, completion: completion)
     }
 
-    private func clearCache(completion: @escaping (Result<Void, DiskCacheError>) -> Void) {
+    private func clearCache(completion: @escaping (Result<Void, StorageError>) -> Void) {
         ImageCache.default.clearDiskCache()
         DiskCache.shared.removeAll(completion: completion)
     }

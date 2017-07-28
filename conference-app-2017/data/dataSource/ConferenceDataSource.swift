@@ -18,11 +18,11 @@ struct ConferenceLocalDataSource {
     static let shared = ConferenceLocalDataSource()
     private init() {}
 
-    func find(completion: @escaping (Result<Conference, DiskCacheError>) -> Void) {
+    func find(completion: @escaping (Result<Conference, StorageError>) -> Void) {
         cache.read(key: key, completion: completion)
     }
 
-    func store(_ value: Conference, completion: @escaping (Result<Void, DiskCacheError>) -> Void) {
+    func store(_ value: Conference, completion: @escaping (Result<Void, StorageError>) -> Void) {
         let json = JSON.dictionary(value.encodeJSON())
         cache.write(json, key: key, completion: completion)
     }

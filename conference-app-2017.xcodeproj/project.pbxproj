@@ -76,6 +76,7 @@
 		44C99D2D1F20B5AB00E4C956 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */; };
 		44C99D2F1F20BC9100E4C956 /* ConferenceRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */; };
 		44FDA0241F2B32E40085D675 /* resource in Resources */ = {isa = PBXBuildFile; fileRef = 44FDA0231F2B32E40085D675 /* resource */; };
+		44FDA0281F2B34FD0085D675 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDA0271F2B34FD0085D675 /* Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
 		44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceRespository.swift; sourceTree = "<group>"; };
 		44FDA0231F2B32E40085D675 /* resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resource; sourceTree = "<group>"; };
+		44FDA0271F2B34FD0085D675 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				44C99D281F20A4C900E4C956 /* DiskCache.swift */,
+				44FDA0271F2B34FD0085D675 /* Storage.swift */,
 			);
 			path = storage;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				448DC8F41F19E18400F39A6D /* Session+Tag.swift in Sources */,
 				44C18FD11F1A073E0057FB5A /* Sponsor+Group.swift in Sources */,
 				1E26E4A91F1CEF3D00A94A75 /* URLExtension.swift in Sources */,
+				44FDA0281F2B34FD0085D675 /* Storage.swift in Sources */,
 				445913B31F121CAB001083D7 /* SessionCell.swift in Sources */,
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */,

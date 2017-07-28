@@ -18,11 +18,11 @@ struct SessionLocalDataSource {
     static let shared = SessionLocalDataSource()
     private init() {}
 
-    func findAll(completion: @escaping (Result<[Session], DiskCacheError>) -> Void) {
+    func findAll(completion: @escaping (Result<[Session], StorageError>) -> Void) {
         cache.read(key: key, completion: completion)
     }
 
-    func store(_ value: [Session], completion: @escaping (Result<Void, DiskCacheError>) -> Void) {
+    func store(_ value: [Session], completion: @escaping (Result<Void, StorageError>) -> Void) {
         let json = JSON.array(value.map({ $0.encodeJSON() }))
         cache.write(json, key: key, completion: completion)
     }
