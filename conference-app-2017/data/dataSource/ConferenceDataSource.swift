@@ -12,18 +12,24 @@ struct ConferenceRemoteDataSource {
 }
 
 struct ConferenceLocalDataSource {
-    private let cache = DiskCache.shared
     private let key = "conference"
+    private let storage: Storage = {
+        #if DEBUG
+            return LocalFile.shared
+        #else
+            return DiskCache.shared
+        #endif
+    }()
 
     static let shared = ConferenceLocalDataSource()
     private init() {}
 
     func find(completion: @escaping (Result<Conference, StorageError>) -> Void) {
-        cache.read(key: key, completion: completion)
+        storage.read(key: key, completion: completion)
     }
 
     func store(_ value: Conference, completion: @escaping (Result<Void, StorageError>) -> Void) {
         let json = JSON.dictionary(value.encodeJSON())
-        cache.write(json, key: key, completion: completion)
+        storage.write(json, key: key, completion: completion)
     }
 }

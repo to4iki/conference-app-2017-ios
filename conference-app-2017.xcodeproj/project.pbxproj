@@ -812,7 +812,7 @@
 				INFOPLIST_FILE = "conference-app-2017/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = io.builderscon.conference2017;
 				PRODUCT_NAME = builderscon;
 				SWIFT_VERSION = 3.0;
