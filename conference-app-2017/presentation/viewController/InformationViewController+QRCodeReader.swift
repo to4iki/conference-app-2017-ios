@@ -12,13 +12,23 @@ extension InformationViewController {
     fileprivate func presentOpenURLDialog(url: URL) {
         let alert = UIAlertController(title: "Result", message: url.absoluteString, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Open", style: .default, handler: { [weak self] _ in self?.open(url: url) }))
+        alert.addAction(UIAlertAction(title: "Open", style: .default, handler: { [weak self] _ in
+            self?.presentSafariViewController(url: url) })
+        )
         present(alert, animated: true, completion: nil)
     }
 
-    private func open(url: URL) {
+    private func presentSafariViewController(url: URL) {
         let safariViewController = SFSafariViewController(url: url)
         present(safariViewController, animated: true, completion: nil)
+    }
+
+    private func openSettingApp() {
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
+        } else {
+            UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
+        }
     }
 
     private func checkScanPermissions() -> Bool {
@@ -31,11 +41,7 @@ extension InformationViewController {
             case -11852:
                 let action = UIAlertAction(title: "Setting", style: .default, handler: { _ in
                     DispatchQueue.main.async {
-                        if #available(iOS 10.0, *) {
-                            UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
-                        } else {
-                            UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
-                        }
+                        self.openSettingApp()
                     }
                 })
                 alert = alert

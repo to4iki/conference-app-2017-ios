@@ -39,7 +39,7 @@ extension SessionViewController {
         setNoTitleBackButton()
         hideLayout()
         titleLabel.text = session.title
-        startToEndLabel.text = "\(DateFormatter.year.string(from: session.startsOn))"
+        startToEndLabel.text = session.startsOn.string(format: .custom("yyyy/MM/dd HH:mm"))
         avatarImageView.kf.setImage(with: session.speaker.avatarURL.secure)
         nicknameLabel.text = session.speaker.nickname
         abstractMarkdownView.load(markdown: session.abstract)
@@ -56,7 +56,7 @@ extension SessionViewController {
             case "file":
                 return true
             case "http", "https":
-                self?.open(url: url)
+                self?.presentSafariViewController(url: url)
                 return false
             default:
                 return false
@@ -76,7 +76,7 @@ extension SessionViewController {
         contentView.isHidden = true
     }
 
-    private func open(url: URL) {
+    private func presentSafariViewController(url: URL) {
         let safariViewController = SFSafariViewController(url: url)
         present(safariViewController, animated: true, completion: nil)
     }

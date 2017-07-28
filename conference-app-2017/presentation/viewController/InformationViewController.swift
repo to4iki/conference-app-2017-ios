@@ -7,7 +7,8 @@ import Then
 import QRCodeReader
 
 final class InformationViewController: UITableViewController {
-    fileprivate var sponsors: [Sponsor] = []
+    fileprivate var sponsorUseCase = SponsorUseCase()
+    fileprivate var sponsors: [Int: [Sponsor]] = [:]
 
     lazy var readerViewController: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
@@ -30,17 +31,39 @@ extension InformationViewController {
         guard let identifier = segue.identifier else { return }
         if identifier == "\(SponsorViewController.className)Segue" {
             let viewController = segue.destination as! SponsorViewController
-            viewController.sponsors = sponsors.groping()
+            viewController.sponsors = sponsors
         }
     }
 }
 
 extension InformationViewController {
+    private enum CellType {
+        case sponsor
+        case floorMap
+        case qrCodeReader
+        case clearCache
+
+        init(rawValue: IndexPath) {
+            switch (rawValue.section, rawValue.row) {
+            case (0, 0):
+                self = .sponsor
+            case (0, 1):
+                self = .floorMap
+            case (1, 0):
+                self = .qrCodeReader
+            case (2, 0):
+                self = .clearCache
+            default:
+                fatalError("non reachable")
+            }
+        }
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch (indexPath.section, indexPath.row) {
-        case (1, 0):
+        switch CellType(rawValue: indexPath) {
+        case .qrCodeReader:
             presentQRCodeReader(animated: true, completion: nil)
-        case (2, 0):
+        case .clearCache:
             presentClearCacheDialog(animated: true, completion: nil)
         default:
             break
@@ -50,7 +73,7 @@ extension InformationViewController {
 
 extension InformationViewController {
     fileprivate func setupSponsor() {
-        SponsorService.shared.read { [weak self] result in
+        sponsorUseCase.findAll { [weak self] result in
             if case .success(let value) = result {
                 self?.sponsors = value
             }

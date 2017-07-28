@@ -6,6 +6,7 @@ struct Timetable {
     let tracks: [Track]
 }
 
+// MARK: - CustomStringConvertible
 extension Timetable: CustomStringConvertible {
     var description: String {
         return "Timetable(schedule: \(schedule), tracks: \(tracks))"
