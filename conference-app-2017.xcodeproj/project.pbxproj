@@ -75,6 +75,7 @@
 		44C99D291F20A4C900E4C956 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C99D281F20A4C900E4C956 /* DiskCache.swift */; };
 		44C99D2D1F20B5AB00E4C956 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */; };
 		44C99D2F1F20BC9100E4C956 /* ConferenceRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */; };
+		44FDA0241F2B32E40085D675 /* resource in Resources */ = {isa = PBXBuildFile; fileRef = 44FDA0231F2B32E40085D675 /* resource */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		44C99D281F20A4C900E4C956 /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
 		44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
 		44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceRespository.swift; sourceTree = "<group>"; };
+		44FDA0231F2B32E40085D675 /* resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resource; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 			children = (
 				1E4F43A31F1FCB7400BAF375 /* Config.swift */,
 				1ECE1F251EE5AD910037D149 /* Logger.swift */,
+				44FDA0231F2B32E40085D675 /* resource */,
 			);
 			path = environment;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FDA0241F2B32E40085D675 /* resource in Resources */,
 				1E1556B41F1CB403005271AC /* ShortSessionCell.xib in Resources */,
 				1EEAE4F71E7063E900299809 /* LaunchScreen.storyboard in Resources */,
 				1EED32B31E90F49C0033FA18 /* Session.storyboard in Resources */,
