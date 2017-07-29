@@ -12,18 +12,24 @@ struct SessionRemoteDataSource {
 }
 
 struct SessionLocalDataSource {
-    private let cache = DiskCache.shared
     private let key = "sessions"
+    private let storage: Storage = {
+        #if DEBUG
+            return LocalFile.shared
+        #else
+            return DiskCache.shared
+        #endif
+    }()
 
     static let shared = SessionLocalDataSource()
     private init() {}
 
-    func findAll(completion: @escaping (Result<[Session], DiskCacheError>) -> Void) {
-        cache.read(key: key, completion: completion)
+    func findAll(completion: @escaping (Result<[Session], StorageError>) -> Void) {
+        storage.read(key: key, completion: completion)
     }
 
-    func store(_ value: [Session], completion: @escaping (Result<Void, DiskCacheError>) -> Void) {
+    func store(_ value: [Session], completion: @escaping (Result<Void, StorageError>) -> Void) {
         let json = JSON.array(value.map({ $0.encodeJSON() }))
-        cache.write(json, key: key, completion: completion)
+        storage.write(json, key: key, completion: completion)
     }
 }
