@@ -1,6 +1,5 @@
 import UIKit
 import AVFoundation
-import SafariServices
 import QRCodeReader
 
 extension InformationViewController {
@@ -13,14 +12,9 @@ extension InformationViewController {
         let alert = UIAlertController(title: "Result", message: url.absoluteString, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Open", style: .default, handler: { [weak self] _ in
-            self?.presentSafariViewController(url: url) })
+            self?.presentSafariViewController(url: url, animated: true) })
         )
         present(alert, animated: true, completion: nil)
-    }
-
-    private func presentSafariViewController(url: URL) {
-        let safariViewController = SFSafariViewController(url: url)
-        present(safariViewController, animated: true, completion: nil)
     }
 
     private func openSettingApp() {
