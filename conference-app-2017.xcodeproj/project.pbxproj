@@ -54,6 +54,7 @@
 		1EEAE5021E7063E900299809 /* conference_app_2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAE5011E7063E900299809 /* conference_app_2017Tests.swift */; };
 		1EED32B31E90F49C0033FA18 /* Session.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EED32B21E90F49C0033FA18 /* Session.storyboard */; };
 		1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EED32B41E90F4A60033FA18 /* SessionViewController.swift */; };
+		1EFA842B1F2C773300F1EEF5 /* UIViewController+SafariServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA842A1F2C773300F1EEF5 /* UIViewController+SafariServices.swift */; };
 		37BBF31C1F1D0BAC00AB9F24 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BBF31B1F1D0BAC00AB9F24 /* FloorMapViewController.swift */; };
 		37C87A131F1B171B003AF90E /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C87A121F1B171B003AF90E /* QRCodeReader.framework */; };
 		4411EC961F1FA0A400FC03A3 /* EnumEnumerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411EC951F1FA0A400FC03A3 /* EnumEnumerable.swift */; };
@@ -143,6 +144,7 @@
 		1EEAE5031E7063E900299809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EED32B21E90F49C0033FA18 /* Session.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Session.storyboard; sourceTree = "<group>"; };
 		1EED32B41E90F4A60033FA18 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		1EFA842A1F2C773300F1EEF5 /* UIViewController+SafariServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafariServices.swift"; sourceTree = "<group>"; };
 		37BBF31B1F1D0BAC00AB9F24 /* FloorMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
 		37C87A121F1B171B003AF90E /* QRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCodeReader.framework; path = Carthage/Build/iOS/QRCodeReader.framework; sourceTree = "<group>"; };
 		4411EC951F1FA0A400FC03A3 /* EnumEnumerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumEnumerable.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			children = (
 				1E9EB6FF1F1BD95F004216E5 /* Alert.swift */,
 				1E08D4371F1CBB6A0076A67A /* CircleImageView.swift */,
+				1EFA842A1F2C773300F1EEF5 /* UIViewController+SafariServices.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				1EE930E51F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift in Sources */,
 				44FDA02A1F2B37170085D675 /* LocalFile.swift in Sources */,
 				1E9CCA921EF6D2CA0012AFA9 /* ConferenceViewController.swift in Sources */,
+				1EFA842B1F2C773300F1EEF5 /* UIViewController+SafariServices.swift in Sources */,
 				44C99D291F20A4C900E4C956 /* DiskCache.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				44C99D2F1F20BC9100E4C956 /* ConferenceRespository.swift in Sources */,

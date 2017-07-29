@@ -1,5 +1,4 @@
 import UIKit
-import SafariServices
 import Kingfisher
 import MarkdownView
 import OctavKit
@@ -56,7 +55,7 @@ extension SessionViewController {
             case "file":
                 return true
             case "http", "https":
-                self?.presentSafariViewController(url: url)
+                self?.presentSafariViewController(url: url, animated: true)
                 return false
             default:
                 return false
@@ -74,11 +73,6 @@ extension SessionViewController {
         indicatorView.startAnimating()
         indicatorView.isHidden = false
         contentView.isHidden = true
-    }
-
-    private func presentSafariViewController(url: URL) {
-        let safariViewController = SFSafariViewController(url: url)
-        present(safariViewController, animated: true, completion: nil)
     }
 }
 

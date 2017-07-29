@@ -1,5 +1,4 @@
 import UIKit
-import SafariServices
 import OctavKit
 
 final class SponsorViewController: UIViewController {
@@ -37,8 +36,7 @@ extension SponsorViewController: UICollectionViewDataSource {
 extension SponsorViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sponsor = sponsors[indexPath.section]![indexPath.row]
-        let safariViewController = SFSafariViewController(url: sponsor.linkURL)
-        present(safariViewController, animated: true, completion: nil)
+        presentSafariViewController(url: sponsor.linkURL, animated: true)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
