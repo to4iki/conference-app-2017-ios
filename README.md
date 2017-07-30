@@ -4,7 +4,7 @@
 
 ## Features
 - View timetable and details of each session
-- View a foloor map
+- View a floor map
 - Use QR code reader
 
 ## Requirements
@@ -37,6 +37,6 @@ $ brew install swiftlint
 - ReleaseBuild: load from DiskCache([Cache](https://github.com/hyperoslo/Cache) adapter)
 
 ## License
-[conference-app-2017-ios](https://github.com/to4iki/conference-app-2017-ios) is released under the [MIT License][license-url]
+[conference-app-2017-ios](https://github.com/to4iki/conference-app-2017-ios) is released under the [Apache License 2.0][license-url]
 
 [license-url]: https://github.com/to4iki/conference-app-2017-ios/blob/master/LICENSE
