@@ -90,7 +90,13 @@ extension TimetableViewController: SpreadsheetViewDataSource {
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, heightForRow row: Int) -> CGFloat {
-        return TimetableCell.Height(for: row).rawValue
+        let height = TimetableCell.Height(for: row).rawValue
+        for indexPath in (1...tracks.count).lazy.map({ IndexPath(row: row, column: $0) }) {
+            if let session = sessionHolder[indexPath], session.duration <= DateTitleCell.IntervalMinutes {
+                return height * 2
+            }
+        }
+        return height
     }
 
     func frozenColumns(in spreadsheetView: SpreadsheetView) -> Int {
@@ -169,7 +175,7 @@ extension TimetableViewController: SpreadsheetViewDataSource {
             }
         case (false, false):
             switch sessionHolder[indexPath] {
-            case .some(let session) where session.duration == ShortSessionCell.requiredDuration:
+            case .some(let session) where session.duration <= ShortSessionCell.requiredDuration:
                 return spreadsheetView.dequeueReusableCell(with: ShortSessionCell.self, for: indexPath).then {
                     $0.setup(session: session)
                 }
