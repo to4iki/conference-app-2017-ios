@@ -5,7 +5,7 @@ import OctavKit
 final class DateTitleCell: Cell {
     fileprivate let label = UILabel()
 
-    static let IntervalMinutes: Int = 5 * 60
+    static let IntervalMinutes: Int = 300
 
     override init(frame: CGRect) {
         super.init(frame: frame)

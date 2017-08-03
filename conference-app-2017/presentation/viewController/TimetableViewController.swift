@@ -169,7 +169,7 @@ extension TimetableViewController: SpreadsheetViewDataSource {
             }
         case (false, false):
             switch sessionHolder[indexPath] {
-            case .some(let session) where session.duration == ShortSessionCell.requiredDuration:
+            case .some(let session) where session.duration <= ShortSessionCell.requiredDuration:
                 return spreadsheetView.dequeueReusableCell(with: ShortSessionCell.self, for: indexPath).then {
                     $0.setup(session: session)
                 }
