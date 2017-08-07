@@ -12,7 +12,7 @@ type_body_length:
 function_body_length:
   - 30 # warning
   - 50 # error
-variable_name:
+identifier_name:
   max_length:
     warning: 60
     error: 80
