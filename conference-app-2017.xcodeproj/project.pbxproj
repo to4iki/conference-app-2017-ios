@@ -27,6 +27,7 @@
 		1E4308731F291E3500F64EE0 /* SponsorTranslater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4308721F291E3500F64EE0 /* SponsorTranslater.swift */; };
 		1E4308751F291F7800F64EE0 /* Translater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4308741F291F7800F64EE0 /* Translater.swift */; };
 		1E4F43A41F1FCB7400BAF375 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F43A31F1FCB7400BAF375 /* Config.swift */; };
+		1E5AA25D1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AA25C1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift */; };
 		1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5B94E81E92A84B0013BB8A /* Then.framework */; };
 		1E5C14E81F12389E00AEB4F7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */; };
 		1E6949E31F140DB00060697A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6949E21F140DB00060697A /* Track.swift */; };
@@ -113,6 +114,7 @@
 		1E4308721F291E3500F64EE0 /* SponsorTranslater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTranslater.swift; sourceTree = "<group>"; };
 		1E4308741F291F7800F64EE0 /* Translater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translater.swift; sourceTree = "<group>"; };
 		1E4F43A31F1FCB7400BAF375 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		1E5AA25C1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreviewable.swift; sourceTree = "<group>"; };
 		1E5B94E81E92A84B0013BB8A /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
 		1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		1E6949E21F140DB00060697A /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				1E9EB6FF1F1BD95F004216E5 /* Alert.swift */,
 				1E08D4371F1CBB6A0076A67A /* CircleImageView.swift */,
 				1EFA842A1F2C773300F1EEF5 /* UIViewController+SafariServices.swift */,
+				1E5AA25C1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
 				44C99D2F1F20BC9100E4C956 /* ConferenceRespository.swift in Sources */,
 				448DC8F41F19E18400F39A6D /* Session+Tag.swift in Sources */,
+				1E5AA25D1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift in Sources */,
 				44C18FD11F1A073E0057FB5A /* Sponsor+Group.swift in Sources */,
 				1E26E4A91F1CEF3D00A94A75 /* URLExtension.swift in Sources */,
 				44FDA0281F2B34FD0085D675 /* Storage.swift in Sources */,

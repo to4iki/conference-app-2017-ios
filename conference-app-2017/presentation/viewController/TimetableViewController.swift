@@ -18,6 +18,7 @@ final class TimetableViewController: UIViewController {
         super.viewDidLoad()
         spreadsheetView.dataSource = self
         spreadsheetView.delegate = self
+        registerForPreviewing(with: self, sourceView: spreadsheetView)
         spreadsheetView.registerNib(types: [SessionCell.self, ShortSessionCell.self])
         spreadsheetView.register(types: [BlankCell.self, TrackTitleCell.self, DateTitleCell.self])
         setupTimetable()
@@ -196,5 +197,29 @@ extension TimetableViewController: SpreadsheetViewDelegate {
         guard let session = sessionHolder[indexPath] else { return }
         let viewController = SessionViewController.instantiate(session: session)
         navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - UIViewControllerPreviewingDelegate
+extension TimetableViewController: UIViewControllerPreviewingDelegate {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let content = previewingContent(viewControllerForLocation: location) else { return nil }
+        return previewingViewController(content: content)
+    }
+
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    }
+}
+
+// MARK: - UIViewControllerPreviewable
+extension TimetableViewController: UIViewControllerPreviewable {
+    func previewingContent(viewControllerForLocation location: CGPoint) -> Session? {
+        guard let indexPath = spreadsheetView.indexPathForItem(at: location) else { return nil }
+        return sessionHolder[indexPath]
+    }
+
+    func previewingViewController(content: Session) -> UIViewController? {
+        return SessionViewController.instantiate(session: content)
     }
 }
