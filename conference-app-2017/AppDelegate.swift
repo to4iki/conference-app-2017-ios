@@ -12,6 +12,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupOctavKit()
         return true
     }
+
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        completionHandler(ApplicationShortcut.handleShortcutItem(with: shortcutItem))
+    }
 }
 
 extension AppDelegate {
