@@ -256,6 +256,7 @@
 			children = (
 				44C99D241F20A13700E4C956 /* dataStore */,
 				1E26F7C81E90D2AF00DF056B /* extension */,
+				4491370C1F1F6BAA0079B044 /* repository */,
 				44C99D271F20A4C000E4C956 /* storage */,
 				1ECE1F241EE5AD7A0037D149 /* util */,
 			);
@@ -415,7 +416,6 @@
 		445913A41F11EA31001083D7 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				4491370C1F1F6BAA0079B044 /* repository */,
 				1E43086A1F2918C000F64EE0 /* translater */,
 				1E43086D1F29196000F64EE0 /* usecase */,
 			);
@@ -442,6 +442,7 @@
 				44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */,
 				44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */,
 			);
+			name = repository;
 			path = repository;
 			sourceTree = "<group>";
 		};
@@ -459,7 +460,6 @@
 				1EBD28F21F28FB470085F9D5 /* ConferenceDataStore.swift */,
 				1EBD28F01F28FB350085F9D5 /* SessionDataStore.swift */,
 			);
-			name = dataStore;
 			path = dataStore;
 			sourceTree = "<group>";
 		};
