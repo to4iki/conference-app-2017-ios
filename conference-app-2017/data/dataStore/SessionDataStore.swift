@@ -2,8 +2,8 @@ import Cache
 import OctavKit
 import Result
 
-struct SessionRemoteDataSource {
-    static let shared = SessionRemoteDataSource()
+struct SessionRemoteDataStore {
+    static let shared = SessionRemoteDataStore()
     private init() {}
 
     func findAll(completion: @escaping (Result<[Session], OctavAPIError>) -> Void) {
@@ -11,7 +11,7 @@ struct SessionRemoteDataSource {
     }
 }
 
-struct SessionLocalDataSource {
+struct SessionLocalDataStore {
     private let key = "sessions"
     private let storage: Storage = {
         #if DEBUG
@@ -21,7 +21,7 @@ struct SessionLocalDataSource {
         #endif
     }()
 
-    static let shared = SessionLocalDataSource()
+    static let shared = SessionLocalDataStore()
     private init() {}
 
     func findAll(completion: @escaping (Result<[Session], StorageError>) -> Void) {

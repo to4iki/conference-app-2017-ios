@@ -6,27 +6,27 @@ enum RepositoryError: Error {
 }
 
 struct SessionRepository {
-    private let localDataSource: SessionLocalDataSource
-    private let remoteDataSource: SessionRemoteDataSource
+    private let localDataStore: SessionLocalDataStore
+    private let remoteDataStore: SessionRemoteDataStore
 
     init(
-        localDataSource: SessionLocalDataSource = SessionLocalDataSource.shared,
-        remoteDataSource: SessionRemoteDataSource = SessionRemoteDataSource.shared)
+        localDataStore: SessionLocalDataStore = SessionLocalDataStore.shared,
+        remoteDataStore: SessionRemoteDataStore = SessionRemoteDataStore.shared)
     {
-        self.localDataSource = localDataSource
-        self.remoteDataSource = remoteDataSource
+        self.localDataStore = localDataStore
+        self.remoteDataStore = remoteDataStore
     }
 
     func findAll(completion: @escaping (Result<[Session], RepositoryError>) -> Void) {
-        localDataSource.findAll { localResult in
+        localDataStore.findAll { localResult in
             if case .success(let value) = localResult {
                 completion(.success(value))
             } else {
-                self.remoteDataSource.findAll { remoteResult in
+                self.remoteDataStore.findAll { remoteResult in
                     switch remoteResult {
                     case .success(let value):
                         completion(.success(value))
-                        self.localDataSource.store(value) { writed in
+                        self.localDataStore.store(value) { writed in
                             if case .failure(let error) = writed {
                                 log.error("store error: \(error.localizedDescription)")
                             }
@@ -40,10 +40,10 @@ struct SessionRepository {
     }
 
     func update() {
-        remoteDataSource.findAll { result in
+        remoteDataStore.findAll { result in
             switch result {
             case .success(let value):
-                self.localDataSource.store(value) { writed in
+                self.localDataStore.store(value) { writed in
                     if case .failure(let error) = writed {
                         log.error("store error: \(error.localizedDescription)")
                     }

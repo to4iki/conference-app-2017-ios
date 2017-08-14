@@ -2,8 +2,8 @@ import Cache
 import OctavKit
 import Result
 
-struct ConferenceRemoteDataSource {
-    static let shared = ConferenceRemoteDataSource()
+struct ConferenceRemoteDataStore {
+    static let shared = ConferenceRemoteDataStore()
     private init() {}
 
     func find(completion: @escaping (Result<Conference, OctavAPIError>) -> Void) {
@@ -11,7 +11,7 @@ struct ConferenceRemoteDataSource {
     }
 }
 
-struct ConferenceLocalDataSource {
+struct ConferenceLocalDataStore {
     private let key = "conference"
     private let storage: Storage = {
         #if DEBUG
@@ -21,7 +21,7 @@ struct ConferenceLocalDataSource {
         #endif
     }()
 
-    static let shared = ConferenceLocalDataSource()
+    static let shared = ConferenceLocalDataStore()
     private init() {}
 
     func find(completion: @escaping (Result<Conference, StorageError>) -> Void) {
