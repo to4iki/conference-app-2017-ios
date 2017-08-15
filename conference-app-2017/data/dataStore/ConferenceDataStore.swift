@@ -49,11 +49,6 @@ struct ConferenceLocalDataStore {
         }
     }
 
-    func store(_ value: Conference, completion: @escaping (Result<Void, StorageError>) -> Void) {
-        let json = JSON.dictionary(value.encodeJSON())
-        storage.write(json, key: key, completion: completion)
-    }
-
     func store(_ value: Conference) -> Completable {
         return Completable.create { event in
             let json = JSON.dictionary(value.encodeJSON())
