@@ -1,5 +1,5 @@
-import Result
 import OctavKit
+import RxSwift
 
 struct SponsorUseCase {
     private let conferenceRepository: ConferenceRespository
@@ -8,14 +8,9 @@ struct SponsorUseCase {
         self.conferenceRepository = conferenceRepository
     }
 
-    func findAll(completion: @escaping (Result<[Int: [Sponsor]], RepositoryError>) -> Void) {
-        conferenceRepository.find { result in
-            switch result {
-            case .success(let conference):
-                completion(.success(SponsorTranslater.translate(conference)))
-            case .failure(let error):
-                completion(.failure(error))
-            }
+    func findAll() -> Single<[Int: [Sponsor]]> {
+        return conferenceRepository.find().map { conference in
+            SponsorTranslater.translate(conference)
         }
     }
 }
