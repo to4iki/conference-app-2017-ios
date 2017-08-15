@@ -2,11 +2,13 @@ import UIKit
 import AVFoundation
 import Kingfisher
 import OctavKit
-import Result
+import enum Result.Result
+import RxSwift
 import Then
 import QRCodeReader
 
 final class InformationViewController: UITableViewController {
+    fileprivate let disposeBag = DisposeBag()
     fileprivate var sponsorUseCase = SponsorUseCase()
     fileprivate var sponsors: [Int: [Sponsor]] = [:]
 
@@ -73,11 +75,9 @@ extension InformationViewController {
 
 extension InformationViewController {
     fileprivate func setupSponsor() {
-        sponsorUseCase.findAll { [weak self] result in
-            if case .success(let value) = result {
-                self?.sponsors = value
-            }
-        }
+        sponsorUseCase.findAll().subscribe(onSuccess: { [unowned self] sponsors in
+            self.sponsors = sponsors
+        }).disposed(by: disposeBag)
     }
 
     fileprivate func presentClearCacheDialog(animated: Bool, completion: (() -> Void)?) {
@@ -96,6 +96,7 @@ extension InformationViewController {
         present(alert, animated: animated, completion: completion)
     }
 
+    // TODO: display loding-indicator
     private func clearCache(completion: @escaping (Result<Void, StorageError>) -> Void) {
         ImageCache.default.clearDiskCache()
         DiskCache.shared.removeAll(completion: completion)

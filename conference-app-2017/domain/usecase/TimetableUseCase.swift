@@ -1,34 +1,21 @@
-import Result
 import OctavKit
+import RxSwift
 
 struct TimetableUseCase {
-    private let sessionRepository: SessionRepository
     private let conferenceRepository: ConferenceRespository
+    private let sessionRepository: SessionRepository
 
     init(
-        sessionRepository: SessionRepository = SessionRepository(),
-        conferenceRepository: ConferenceRespository = ConferenceRespository())
+        conferenceRepository: ConferenceRespository = ConferenceRespository(),
+        sessionRepository: SessionRepository = SessionRepository())
     {
+    self.conferenceRepository = conferenceRepository
         self.sessionRepository = sessionRepository
-        self.conferenceRepository = conferenceRepository
     }
 
-    func findAll(completion: @escaping (Result<[Timetable], RepositoryError>) -> Void) {
-        conferenceRepository.find { result1 in
-            switch result1 {
-            case .success(let conference):
-                self.sessionRepository.findAll { result2 in
-                    switch result2 {
-                    case .success(let sessions):
-                        let timetables = TimetableTranslater.translate(conference: conference, sessions: sessions)
-                        completion(.success(timetables))
-                    case .failure(let error):
-                        completion(.failure(error))
-                    }
-                }
-            case .failure(let error):
-                completion(.failure(error))
-            }
+    func findAll() -> Single<[Timetable]> {
+        return Single.zip(conferenceRepository.find(), sessionRepository.findAll()) { result in
+            TimetableTranslater.translate((conference: result.0, sessions: result.1))
         }
     }
 }

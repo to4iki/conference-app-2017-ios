@@ -1,9 +1,10 @@
 import OctavKit
-import Result
+import RxSwift
 
 struct ConferenceRespository {
     private let localDataStore: ConferenceLocalDataStore
     private let remoteDataStore: ConferenceRemoteDataStore
+    private let disposeBag = DisposeBag()
 
     init(
         localDataStore: ConferenceLocalDataStore = ConferenceLocalDataStore.shared,
@@ -13,40 +14,31 @@ struct ConferenceRespository {
         self.remoteDataStore = remoteDataStore
     }
 
-    func find(completion: @escaping (Result<Conference, RepositoryError>) -> Void) {
-        localDataStore.find { localResult in
-            if case .success(let value) = localResult {
-                completion(.success(value))
-            } else {
-                self.remoteDataStore.find { remoteResult in
-                    switch remoteResult {
-                    case .success(let value):
-                        completion(.success(value))
-                        self.localDataStore.store(value) { writed in
-                            if case .failure(let error) = writed {
-                                log.error("store error: \(error.localizedDescription)")
-                            }
-                        }
-                    case .failure(let error):
-                        completion(.failure(.find(error)))
-                    }
-                }
+    func find() -> Single<Conference> {
+        return localDataStore.find().catchError { _ in
+            self.remoteDataStore.find().map { conference in
+                self.storeToLocalDataStore(conference)
+                return conference
             }
         }
     }
 
     func update() {
-        remoteDataStore.find { result in
-            switch result {
-            case .success(let value):
-                self.localDataStore.store(value) { writed in
-                    if case .failure(let error) = writed {
-                        log.error("store error: \(error.localizedDescription)")
-                    }
-                }
-            case .failure(let error):
-                log.error("find error: \(error.localizedDescription)")
+        remoteDataStore.find().subscribe { observer in
+            switch observer {
+            case .success(let conference):
+                self.storeToLocalDataStore(conference)
+            case .error(let error):
+                log.error("remoteDataStore error: \(error.localizedDescription)")
             }
         }
+        .disposed(by: disposeBag)
+    }
+
+    private func storeToLocalDataStore(_ value: Conference) {
+        self.localDataStore.store(value).subscribe(
+            onCompleted: { _ in log.debug("localDataStore store completed") },
+            onError: { error in log.error("localDataStore error: \(error.localizedDescription)") }
+        ).disposed(by: self.disposeBag)
     }
 }

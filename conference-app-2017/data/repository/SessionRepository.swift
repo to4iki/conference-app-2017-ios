@@ -1,5 +1,5 @@
 import OctavKit
-import Result
+import RxSwift
 
 enum RepositoryError: Error {
     case find(Error)
@@ -8,6 +8,7 @@ enum RepositoryError: Error {
 struct SessionRepository {
     private let localDataStore: SessionLocalDataStore
     private let remoteDataStore: SessionRemoteDataStore
+    private let disposeBag = DisposeBag()
 
     init(
         localDataStore: SessionLocalDataStore = SessionLocalDataStore.shared,
@@ -17,40 +18,31 @@ struct SessionRepository {
         self.remoteDataStore = remoteDataStore
     }
 
-    func findAll(completion: @escaping (Result<[Session], RepositoryError>) -> Void) {
-        localDataStore.findAll { localResult in
-            if case .success(let value) = localResult {
-                completion(.success(value))
-            } else {
-                self.remoteDataStore.findAll { remoteResult in
-                    switch remoteResult {
-                    case .success(let value):
-                        completion(.success(value))
-                        self.localDataStore.store(value) { writed in
-                            if case .failure(let error) = writed {
-                                log.error("store error: \(error.localizedDescription)")
-                            }
-                        }
-                    case .failure(let error):
-                        completion(.failure(.find(error)))
-                    }
-                }
+    func findAll() -> Single<[Session]> {
+        return localDataStore.findAll().catchError { _ in
+            self.remoteDataStore.findAll().map { sessions in
+                self.storeToLocalDataStore(sessions)
+                return sessions
             }
         }
     }
 
     func update() {
-        remoteDataStore.findAll { result in
-            switch result {
-            case .success(let value):
-                self.localDataStore.store(value) { writed in
-                    if case .failure(let error) = writed {
-                        log.error("store error: \(error.localizedDescription)")
-                    }
-                }
-            case .failure(let error):
-                log.error("find error: \(error.localizedDescription)")
+        remoteDataStore.findAll().subscribe { observer in
+            switch observer {
+            case .success(let sessions):
+                self.storeToLocalDataStore(sessions)
+            case .error(let error):
+                log.error("remoteDataStore error: \(error.localizedDescription)")
             }
         }
+        .disposed(by: disposeBag)
+    }
+
+    private func storeToLocalDataStore(_ value: [Session]) {
+        self.localDataStore.store(value).subscribe(
+            onCompleted: { _ in log.debug("localDataStore store completed") },
+            onError: { error in log.error("localDataStore error: \(error.localizedDescription)") }
+        ).disposed(by: self.disposeBag)
     }
 }

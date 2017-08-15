@@ -1,5 +1,6 @@
 import UIKit
 import OctavKit
+import RxSwift
 import SpreadsheetView
 import SwiftDate
 import XLPagerTabStrip
@@ -8,6 +9,7 @@ final class TimetableViewController: UIViewController {
     @IBOutlet fileprivate weak var spreadsheetView: SpreadsheetView!
     @IBOutlet fileprivate weak var indicatorView: UIActivityIndicatorView!
 
+    private let disposeBag = DisposeBag()
     private let timetableUseCase = TimetableUseCase()
     fileprivate(set) var day: ConferenceDay!
     fileprivate(set) var tracks: [Track] = []
@@ -26,22 +28,21 @@ final class TimetableViewController: UIViewController {
 
     private func setupTimetable() {
         hideLayout()
-        timetableUseCase.findAll { [weak self] result in
-            guard let strongSelf = self else { return }
-            switch result {
-            case .success(let value):
-                let timetable = value[strongSelf.day.rawValue]
-                strongSelf.tracks = timetable.tracks
-                strongSelf.schedule = timetable.schedule
+        timetableUseCase.findAll().subscribe { [unowned self] observer in
+            switch observer {
+            case .success(let timetable):
+                let timetable = timetable[self.day.rawValue]
+                self.tracks = timetable.tracks
+                self.schedule = timetable.schedule
                 DispatchQueue.main.async {
-                    strongSelf.showLayout()
-                    strongSelf.spreadsheetView.reloadData()
+                    self.showLayout()
+                    self.spreadsheetView.reloadData()
                 }
-            case .failure(let error):
+            case .error(let error):
                 // TODO: Error Handling
                 log.error(error.localizedDescription)
             }
-        }
+        }.disposed(by: disposeBag)
     }
 
     private func showLayout() {
@@ -110,6 +111,7 @@ extension TimetableViewController: SpreadsheetViewDataSource {
         return TimetableCell.Header.numberOfRows
     }
 
+    // TODO: refactoring
     func mergedCells(in spreadsheetView: SpreadsheetView) -> [CellRange] {
         var mergedCells: [CellRange] = []
         for (index, track) in tracks.enumerated() {
