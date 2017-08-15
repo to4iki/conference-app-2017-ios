@@ -45,6 +45,8 @@
 		1ECE1F231EE5AD320037D149 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F221EE5AD320037D149 /* XCGLogger.framework */; };
 		1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECE1F251EE5AD910037D149 /* Logger.swift */; };
 		1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */; };
+		1ECE73821F42ED7D00F645B0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE73801F42ED7D00F645B0 /* RxCocoa.framework */; };
+		1ECE73831F42ED7D00F645B0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE73811F42ED7D00F645B0 /* RxSwift.framework */; };
 		1EE0B9DD1EF6497400377DE7 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */; };
 		1EE3480F1F19FB3300B86751 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */; };
 		1EE930E51F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */; };
@@ -134,6 +136,8 @@
 		1ECE1F221EE5AD320037D149 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
+		1ECE73801F42ED7D00F645B0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		1ECE73811F42ED7D00F645B0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
 		1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
 		1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformationViewController+QRCodeReader.swift"; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECE73821F42ED7D00F645B0 /* RxCocoa.framework in Frameworks */,
+				1ECE73831F42ED7D00F645B0 /* RxSwift.framework in Frameworks */,
 				44C99D221F20932C00E4C956 /* Cache.framework in Frameworks */,
 				44C99D231F20932C00E4C956 /* SwiftHash.framework in Frameworks */,
 				37C87A131F1B171B003AF90E /* QRCodeReader.framework in Frameworks */,
@@ -321,6 +327,8 @@
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1ECE73801F42ED7D00F645B0 /* RxCocoa.framework */,
+				1ECE73811F42ED7D00F645B0 /* RxSwift.framework */,
 				44C99D201F20932C00E4C956 /* Cache.framework */,
 				44C99D211F20932C00E4C956 /* SwiftHash.framework */,
 				37C87A121F1B171B003AF90E /* QRCodeReader.framework */,
@@ -442,7 +450,6 @@
 				44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */,
 				44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */,
 			);
-			name = repository;
 			path = repository;
 			sourceTree = "<group>";
 		};
@@ -602,6 +609,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/QRCodeReader.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Cache.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftHash.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (
