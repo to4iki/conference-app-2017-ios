@@ -79,7 +79,7 @@
 		44C99D231F20932C00E4C956 /* SwiftHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C99D211F20932C00E4C956 /* SwiftHash.framework */; };
 		44C99D291F20A4C900E4C956 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C99D281F20A4C900E4C956 /* DiskCache.swift */; };
 		44C99D2D1F20B5AB00E4C956 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */; };
-		44C99D2F1F20BC9100E4C956 /* ConferenceRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */; };
+		44C99D2F1F20BC9100E4C956 /* ConferenceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C99D2E1F20BC9100E4C956 /* ConferenceRepository.swift */; };
 		44F2836F1F3B2404006B062C /* ApplicationShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F2836E1F3B2404006B062C /* ApplicationShortcut.swift */; };
 		44FDA0241F2B32E40085D675 /* resource in Resources */ = {isa = PBXBuildFile; fileRef = 44FDA0231F2B32E40085D675 /* resource */; };
 		44FDA0281F2B34FD0085D675 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDA0271F2B34FD0085D675 /* Storage.swift */; };
@@ -174,7 +174,7 @@
 		44C99D211F20932C00E4C956 /* SwiftHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHash.framework; path = Carthage/Build/iOS/SwiftHash.framework; sourceTree = "<group>"; };
 		44C99D281F20A4C900E4C956 /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
 		44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
-		44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceRespository.swift; sourceTree = "<group>"; };
+		44C99D2E1F20BC9100E4C956 /* ConferenceRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceRepository.swift; sourceTree = "<group>"; };
 		44F2836E1F3B2404006B062C /* ApplicationShortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationShortcut.swift; sourceTree = "<group>"; };
 		44FDA0231F2B32E40085D675 /* resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resource; sourceTree = "<group>"; };
 		44FDA0271F2B34FD0085D675 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -447,7 +447,7 @@
 		4491370C1F1F6BAA0079B044 /* repository */ = {
 			isa = PBXGroup;
 			children = (
-				44C99D2E1F20BC9100E4C956 /* ConferenceRespository.swift */,
+				44C99D2E1F20BC9100E4C956 /* ConferenceRepository.swift */,
 				44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */,
 			);
 			path = repository;
@@ -652,7 +652,7 @@
 				1EFA842B1F2C773300F1EEF5 /* UIViewController+SafariServices.swift in Sources */,
 				44C99D291F20A4C900E4C956 /* DiskCache.swift in Sources */,
 				1E26F7CA1E90D2BF00DF056B /* NSObjectExtension.swift in Sources */,
-				44C99D2F1F20BC9100E4C956 /* ConferenceRespository.swift in Sources */,
+				44C99D2F1F20BC9100E4C956 /* ConferenceRepository.swift in Sources */,
 				448DC8F41F19E18400F39A6D /* Session+Tag.swift in Sources */,
 				1E5AA25D1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift in Sources */,
 				44C18FD11F1A073E0057FB5A /* Sponsor+Group.swift in Sources */,
