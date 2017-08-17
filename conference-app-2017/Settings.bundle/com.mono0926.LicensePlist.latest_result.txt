@@ -2,6 +2,10 @@ name: XCGLogger, nameSpecified: , owner: DaveWoodCom, version: 5.0.1
 
 name: RxSwift, nameSpecified: , owner: ReactiveX, version: 3.6.1
 
+name: Swinject, nameSpecified: , owner: Swinject, version: 2.1.1
+
+name: SwinjectStoryboard, nameSpecified: , owner: Swinject, version: 1.1.2
+
 name: Result, nameSpecified: , owner: antitypical, version: 3.2.3
 
 name: Then, nameSpecified: , owner: devxoul, version: 2.1.0
@@ -12,11 +16,11 @@ name: Himotoki, nameSpecified: , owner: ikesyo, version: 3.1.0
 
 name: MarkdownView, nameSpecified: , owner: keitaoouchi, version: 1.0.3
 
-name: SpreadsheetView, nameSpecified: , owner: kishikawakatsumi, version: v0.8.0
+name: SpreadsheetView, nameSpecified: , owner: kishikawakatsumi, version: v0.8.3
 
 name: SwiftDate, nameSpecified: , owner: malcommac, version: 4.1.7
 
-name: Kingfisher, nameSpecified: , owner: onevcat, version: 3.10.4
+name: Kingfisher, nameSpecified: , owner: onevcat, version: 3.11.0
 
 name: SwiftHash, nameSpecified: , owner: onmyway133, version: 1.4.0
 

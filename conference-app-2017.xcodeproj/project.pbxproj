@@ -47,6 +47,8 @@
 		1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */; };
 		1ECE73821F42ED7D00F645B0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE73801F42ED7D00F645B0 /* RxCocoa.framework */; };
 		1ECE73831F42ED7D00F645B0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE73811F42ED7D00F645B0 /* RxSwift.framework */; };
+		1EDD72081F466D9400AB8392 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDD72061F466D9400AB8392 /* SwinjectStoryboard.framework */; };
+		1EDD72091F466D9400AB8392 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDD72071F466D9400AB8392 /* Swinject.framework */; };
 		1EE0B9DD1EF6497400377DE7 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */; };
 		1EE3480F1F19FB3300B86751 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */; };
 		1EE930E51F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */; };
@@ -138,6 +140,8 @@
 		1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
 		1ECE73801F42ED7D00F645B0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		1ECE73811F42ED7D00F645B0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		1EDD72061F466D9400AB8392 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
+		1EDD72071F466D9400AB8392 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
 		1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
 		1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformationViewController+QRCodeReader.swift"; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EDD72081F466D9400AB8392 /* SwinjectStoryboard.framework in Frameworks */,
+				1EDD72091F466D9400AB8392 /* Swinject.framework in Frameworks */,
 				1ECE73821F42ED7D00F645B0 /* RxCocoa.framework in Frameworks */,
 				1ECE73831F42ED7D00F645B0 /* RxSwift.framework in Frameworks */,
 				44C99D221F20932C00E4C956 /* Cache.framework in Frameworks */,
@@ -327,6 +333,8 @@
 		1E5B94E71E92A84B0013BB8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EDD72061F466D9400AB8392 /* SwinjectStoryboard.framework */,
+				1EDD72071F466D9400AB8392 /* Swinject.framework */,
 				1ECE73801F42ED7D00F645B0 /* RxCocoa.framework */,
 				1ECE73811F42ED7D00F645B0 /* RxSwift.framework */,
 				44C99D201F20932C00E4C956 /* Cache.framework */,
@@ -611,6 +619,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftHash.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (
