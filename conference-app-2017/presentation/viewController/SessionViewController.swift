@@ -27,7 +27,7 @@ final class SessionViewController: UIViewController {
 
 extension SessionViewController {
     static func instantiate(session: Session) -> SessionViewController {
-        return SessionViewController.instantiate(withStoryboard: "Session").then {
+        return Storyboard.session.instantiate(type: SessionViewController.self).then {
             $0.session = session
         }
     }
