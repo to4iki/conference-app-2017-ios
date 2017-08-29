@@ -8,8 +8,9 @@ import Then
 import QRCodeReader
 
 final class InformationViewController: UITableViewController {
+    var usecase: AnyReadUseCase<[Int: [Sponsor]]>!
+    
     fileprivate let disposeBag = DisposeBag()
-    fileprivate var sponsorUseCase = SponsorUseCase()
     fileprivate var sponsors: [Int: [Sponsor]] = [:]
 
     lazy var readerViewController: QRCodeReaderViewController = {
@@ -75,7 +76,7 @@ extension InformationViewController {
 
 extension InformationViewController {
     fileprivate func setupSponsor() {
-        sponsorUseCase.findAll().subscribe(onSuccess: { [unowned self] sponsors in
+        usecase.execute().subscribe(onSuccess: { [unowned self] sponsors in
             self.sponsors = sponsors
         }).disposed(by: disposeBag)
     }
