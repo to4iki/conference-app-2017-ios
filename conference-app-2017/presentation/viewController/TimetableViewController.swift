@@ -9,8 +9,9 @@ final class TimetableViewController: UIViewController {
     @IBOutlet fileprivate weak var spreadsheetView: SpreadsheetView!
     @IBOutlet fileprivate weak var indicatorView: UIActivityIndicatorView!
 
+    var usecase: AnyReadUseCase<[Timetable]>!
+
     private let disposeBag = DisposeBag()
-    private let timetableUseCase = TimetableUseCase()
     fileprivate(set) var day: ConferenceDay!
     fileprivate(set) var tracks: [Track] = []
     fileprivate(set) var schedule: Conference.Schedule!
@@ -28,7 +29,7 @@ final class TimetableViewController: UIViewController {
 
     private func setupTimetable() {
         hideLayout()
-        timetableUseCase.findAll().subscribe { [unowned self] observer in
+        usecase.execute().subscribe { [unowned self] observer in
             switch observer {
             case .success(let timetable):
                 let timetable = timetable[self.day.rawValue]
