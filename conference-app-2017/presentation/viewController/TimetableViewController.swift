@@ -61,7 +61,9 @@ final class TimetableViewController: UIViewController {
 
 extension TimetableViewController {
     static func instantiate(day: ConferenceDay) -> TimetableViewController {
-        return instantiate(withStoryboard: "Conference").then { $0.day = day }
+        return Storyboard.conference.instantiate(type: TimetableViewController.self).then {
+            $0.day = day
+        }
     }
 }
 

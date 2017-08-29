@@ -53,6 +53,7 @@
 		1ECE1F2A1EE5B0E70037D149 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */; };
 		1ECE73821F42ED7D00F645B0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE73801F42ED7D00F645B0 /* RxCocoa.framework */; };
 		1ECE73831F42ED7D00F645B0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE73811F42ED7D00F645B0 /* RxSwift.framework */; };
+		1ED26CD61F55C8D9008E9C6D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED26CD51F55C8D9008E9C6D /* Storyboard.swift */; };
 		1EDD72081F466D9400AB8392 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDD72061F466D9400AB8392 /* SwinjectStoryboard.framework */; };
 		1EDD72091F466D9400AB8392 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDD72071F466D9400AB8392 /* Swinject.framework */; };
 		1EE0B9DD1EF6497400377DE7 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */; };
@@ -145,13 +146,14 @@
 		1EBEAAA21F3C9DF60088B928 /* SequenceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
 		1EC148041F55551100C8A946 /* DomainContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainContainer.swift; sourceTree = "<group>"; };
 		1EC148061F555A6C00C8A946 /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
-		1EC148081F5565A400C8A946 /* injector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = injector.swift; path = injector.swift; sourceTree = "<group>"; };
+		1EC148081F5565A400C8A946 /* injector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = injector.swift; sourceTree = "<group>"; };
 		1EC1480A1F5566C200C8A946 /* PresentationContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationContainer.swift; sourceTree = "<group>"; };
 		1ECE1F221EE5AD320037D149 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		1ECE1F251EE5AD910037D149 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1ECE1F291EE5B0E70037D149 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
 		1ECE73801F42ED7D00F645B0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		1ECE73811F42ED7D00F645B0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		1ED26CD51F55C8D9008E9C6D /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		1EDD72061F466D9400AB8392 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		1EDD72071F466D9400AB8392 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		1EE0B9DC1EF6497400377DE7 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				1EEAE4F51E7063E900299809 /* LaunchScreen.storyboard */,
 				1EEAE4F01E7063E900299809 /* Main.storyboard */,
 				1EED32B21E90F49C0033FA18 /* Session.storyboard */,
+				1ED26CD51F55C8D9008E9C6D /* Storyboard.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				445913B31F121CAB001083D7 /* SessionCell.swift in Sources */,
 				1EED32B51E90F4A60033FA18 /* SessionViewController.swift in Sources */,
 				1EEAE4EF1E7063E900299809 /* TimetableViewController.swift in Sources */,
+				1ED26CD61F55C8D9008E9C6D /* Storyboard.swift in Sources */,
 				44FDA02C1F2B38C10085D675 /* Resource.swift in Sources */,
 				1ECE1F261EE5AD910037D149 /* Logger.swift in Sources */,
 				1E4308731F291E3500F64EE0 /* SponsorTranslater.swift in Sources */,
