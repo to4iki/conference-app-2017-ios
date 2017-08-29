@@ -1,11 +1,7 @@
 import OctavKit
 import RxSwift
 
-enum RepositoryError: Error {
-    case find(Error)
-}
-
-struct SessionRepository {
+struct SessionRepository: Repository {
     private let localDataStore: SessionLocalDataStore
     private let remoteDataStore: SessionRemoteDataStore
     private let disposeBag = DisposeBag()

@@ -26,6 +26,8 @@
 		1E4308711F2919DC00F64EE0 /* SponsorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4308701F2919DC00F64EE0 /* SponsorUseCase.swift */; };
 		1E4308731F291E3500F64EE0 /* SponsorTranslater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4308721F291E3500F64EE0 /* SponsorTranslater.swift */; };
 		1E4308751F291F7800F64EE0 /* Translater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4308741F291F7800F64EE0 /* Translater.swift */; };
+		1E4C71411F5538BE000D3E44 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C71401F5538BE000D3E44 /* Repository.swift */; };
+		1E4C71431F553948000D3E44 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C71421F553948000D3E44 /* DataContainer.swift */; };
 		1E4F43A41F1FCB7400BAF375 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F43A31F1FCB7400BAF375 /* Config.swift */; };
 		1E5AA25D1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AA25C1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift */; };
 		1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5B94E81E92A84B0013BB8A /* Then.framework */; };
@@ -119,6 +121,8 @@
 		1E4308701F2919DC00F64EE0 /* SponsorUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorUseCase.swift; sourceTree = "<group>"; };
 		1E4308721F291E3500F64EE0 /* SponsorTranslater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTranslater.swift; sourceTree = "<group>"; };
 		1E4308741F291F7800F64EE0 /* Translater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translater.swift; sourceTree = "<group>"; };
+		1E4C71401F5538BE000D3E44 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		1E4C71421F553948000D3E44 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		1E4F43A31F1FCB7400BAF375 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1E5AA25C1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreviewable.swift; sourceTree = "<group>"; };
 		1E5B94E81E92A84B0013BB8A /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 				4491370C1F1F6BAA0079B044 /* repository */,
 				44C99D271F20A4C000E4C956 /* storage */,
 				1ECE1F241EE5AD7A0037D149 /* util */,
+				1E4C71421F553948000D3E44 /* DataContainer.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				44C99D2E1F20BC9100E4C956 /* ConferenceRepository.swift */,
+				1E4C71401F5538BE000D3E44 /* Repository.swift */,
 				44C99D2C1F20B5AB00E4C956 /* SessionRepository.swift */,
 			);
 			path = repository;
@@ -653,6 +659,7 @@
 				1E3BC1D61F1931390010FCC1 /* UICollectionViewExtension.swift in Sources */,
 				445913B91F1222E0001083D7 /* SpreadsheetViewExtension.swift in Sources */,
 				1E1A39691F129D9D005456A3 /* TimetableCell.swift in Sources */,
+				1E4C71411F5538BE000D3E44 /* Repository.swift in Sources */,
 				1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */,
 				1E26E4A71F1CEE8B00A94A75 /* Regex.swift in Sources */,
 				1E4308711F2919DC00F64EE0 /* SponsorUseCase.swift in Sources */,
@@ -680,6 +687,7 @@
 				1E806FFA1E913A9700ED6BD7 /* UIViewControllerExtension.swift in Sources */,
 				44F2836F1F3B2404006B062C /* ApplicationShortcut.swift in Sources */,
 				1EBD28F11F28FB350085F9D5 /* SessionDataStore.swift in Sources */,
+				1E4C71431F553948000D3E44 /* DataContainer.swift in Sources */,
 				1E08D4381F1CBB6A0076A67A /* CircleImageView.swift in Sources */,
 				1E4308751F291F7800F64EE0 /* Translater.swift in Sources */,
 				1E4F43A41F1FCB7400BAF375 /* Config.swift in Sources */,

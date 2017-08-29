@@ -1,7 +1,7 @@
 import OctavKit
 import RxSwift
 
-struct ConferenceRespository {
+struct ConferenceRespository: Repository {
     private let localDataStore: ConferenceLocalDataStore
     private let remoteDataStore: ConferenceRemoteDataStore
     private let disposeBag = DisposeBag()
