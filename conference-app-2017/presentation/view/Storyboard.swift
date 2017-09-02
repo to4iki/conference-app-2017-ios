@@ -4,6 +4,7 @@ enum Storyboard: String {
     case conference
     case session
     case sponsor
+    case venue
     case floorMap
 
     func instantiate<T: UIViewController>(type: T.Type) -> T {

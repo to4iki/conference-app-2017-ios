@@ -35,6 +35,8 @@
 		1E61E1E81F5A9BFF0031493E /* FloorMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E61E1E71F5A9BFF0031493E /* FloorMap.storyboard */; };
 		1E61E1EA1F5A9EB60031493E /* Sponsor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E61E1E91F5A9EB60031493E /* Sponsor.storyboard */; };
 		1E61E1EC1F5AA1A70031493E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61E1EB1F5AA1A70031493E /* StringExtension.swift */; };
+		1E61E1EE1F5AB1EA0031493E /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61E1ED1F5AB1EA0031493E /* VenueViewController.swift */; };
+		1E61E1F01F5AB2920031493E /* Venue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E61E1EF1F5AB2920031493E /* Venue.storyboard */; };
 		1E6949E31F140DB00060697A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6949E21F140DB00060697A /* Track.swift */; };
 		1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB911E87B7950083D43E /* Information.storyboard */; };
 		1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */; };
@@ -138,6 +140,8 @@
 		1E61E1E71F5A9BFF0031493E /* FloorMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FloorMap.storyboard; sourceTree = "<group>"; };
 		1E61E1E91F5A9EB60031493E /* Sponsor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sponsor.storyboard; sourceTree = "<group>"; };
 		1E61E1EB1F5AA1A70031493E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		1E61E1ED1F5AB1EA0031493E /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
+		1E61E1EF1F5AB2920031493E /* Venue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Venue.storyboard; path = Venue.storyboard; sourceTree = "<group>"; };
 		1E6949E21F140DB00060697A /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		1E6ACB911E87B7950083D43E /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
 		1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 				1EED32B21E90F49C0033FA18 /* Session.storyboard */,
 				1E61E1E91F5A9EB60031493E /* Sponsor.storyboard */,
 				1ED26CD51F55C8D9008E9C6D /* Storyboard.swift */,
+				1E61E1EF1F5AB2920031493E /* Venue.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				1EED32B41E90F4A60033FA18 /* SessionViewController.swift */,
 				1EE3480E1F19FB3300B86751 /* SponsorViewController.swift */,
 				1EEAE4EE1E7063E900299809 /* TimetableViewController.swift */,
+				1E61E1ED1F5AB1EA0031493E /* VenueViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -621,6 +627,7 @@
 				1E1A39651F1287A1005456A3 /* SessionCell.xib in Resources */,
 				1EEAE4F41E7063E900299809 /* Assets.xcassets in Resources */,
 				1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */,
+				1E61E1F01F5AB2920031493E /* Venue.storyboard in Resources */,
 				1E61E1EA1F5A9EB60031493E /* Sponsor.storyboard in Resources */,
 				1E3D99F41F124CF6003035F8 /* Settings.bundle in Resources */,
 				1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */,
@@ -696,6 +703,7 @@
 				1E4C71411F5538BE000D3E44 /* Repository.swift in Sources */,
 				1E3BC1D41F1930380010FCC1 /* TagCollectionViewCell.swift in Sources */,
 				1EC148071F555A6C00C8A946 /* UseCase.swift in Sources */,
+				1E61E1EE1F5AB1EA0031493E /* VenueViewController.swift in Sources */,
 				1E26E4A71F1CEE8B00A94A75 /* Regex.swift in Sources */,
 				1E4308711F2919DC00F64EE0 /* FetchSponsorUseCase.swift in Sources */,
 				1EC148051F55551100C8A946 /* DomainContainer.swift in Sources */,

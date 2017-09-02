@@ -32,6 +32,7 @@ final class InformationViewController: UITableViewController {
 extension InformationViewController {
     private enum CellType {
         case sponsor
+        case venue
         case floorMap
         case qrCodeReader
         case clearCache
@@ -41,6 +42,8 @@ extension InformationViewController {
             case (0, 0):
                 self = .sponsor
             case (0, 1):
+                self = .venue
+            case (0, 2):
                 self = .floorMap
             case (1, 0):
                 self = .qrCodeReader
@@ -57,6 +60,9 @@ extension InformationViewController {
         case .sponsor:
             let sponsorViewController = SponsorViewController.instantiate(sponsors: sponsors)
             navigationController?.pushViewController(sponsorViewController, animated: true)
+        case .venue:
+            let venueViewController = VenueViewController.instantiate()
+            navigationController?.pushViewController(venueViewController, animated: true)
         case .floorMap:
             let floorMapViewController = FloorMapViewController.instantiate()
             navigationController?.pushViewController(floorMapViewController, animated: true)
