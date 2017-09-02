@@ -30,16 +30,6 @@ final class InformationViewController: UITableViewController {
 }
 
 extension InformationViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else { return }
-        if identifier == "\(SponsorViewController.className)Segue" {
-            let viewController = segue.destination as! SponsorViewController
-            viewController.sponsors = sponsors
-        }
-    }
-}
-
-extension InformationViewController {
     private enum CellType {
         case sponsor
         case floorMap
@@ -64,12 +54,16 @@ extension InformationViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch CellType(rawValue: indexPath) {
+        case .sponsor:
+            let sponsorViewController = SponsorViewController.instantiate(sponsors: sponsors)
+            navigationController?.pushViewController(sponsorViewController, animated: true)
+        case .floorMap:
+            let floorMapViewController = FloorMapViewController.instantiate()
+            navigationController?.pushViewController(floorMapViewController, animated: true)
         case .qrCodeReader:
             presentQRCodeReader(animated: true, completion: nil)
         case .clearCache:
             presentClearCacheDialog(animated: true, completion: nil)
-        default:
-            break
         }
     }
 }

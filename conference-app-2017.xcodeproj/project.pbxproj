@@ -32,6 +32,9 @@
 		1E5AA25D1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AA25C1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift */; };
 		1E5B94E91E92A84B0013BB8A /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5B94E81E92A84B0013BB8A /* Then.framework */; };
 		1E5C14E81F12389E00AEB4F7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */; };
+		1E61E1E81F5A9BFF0031493E /* FloorMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E61E1E71F5A9BFF0031493E /* FloorMap.storyboard */; };
+		1E61E1EA1F5A9EB60031493E /* Sponsor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E61E1E91F5A9EB60031493E /* Sponsor.storyboard */; };
+		1E61E1EC1F5AA1A70031493E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61E1EB1F5AA1A70031493E /* StringExtension.swift */; };
 		1E6949E31F140DB00060697A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6949E21F140DB00060697A /* Track.swift */; };
 		1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACB911E87B7950083D43E /* Information.storyboard */; };
 		1E6ACB941E87B7ED0083D43E /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */; };
@@ -132,6 +135,9 @@
 		1E5AA25C1F3A0B30002F0B5F /* UIViewControllerPreviewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreviewable.swift; sourceTree = "<group>"; };
 		1E5B94E81E92A84B0013BB8A /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
 		1E5C14E61F12376B00AEB4F7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		1E61E1E71F5A9BFF0031493E /* FloorMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FloorMap.storyboard; sourceTree = "<group>"; };
+		1E61E1E91F5A9EB60031493E /* Sponsor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sponsor.storyboard; sourceTree = "<group>"; };
+		1E61E1EB1F5AA1A70031493E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1E6949E21F140DB00060697A /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		1E6ACB911E87B7950083D43E /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
 		1E6ACB931E87B7ED0083D43E /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -255,10 +261,12 @@
 				445913B11F121C94001083D7 /* timetable */,
 				1EEAE4F31E7063E900299809 /* Assets.xcassets */,
 				1E25C0A31E87AF47008C4C65 /* Conference.storyboard */,
+				1E61E1E71F5A9BFF0031493E /* FloorMap.storyboard */,
 				1E6ACB911E87B7950083D43E /* Information.storyboard */,
 				1EEAE4F51E7063E900299809 /* LaunchScreen.storyboard */,
 				1EEAE4F01E7063E900299809 /* Main.storyboard */,
 				1EED32B21E90F49C0033FA18 /* Session.storyboard */,
+				1E61E1E91F5A9EB60031493E /* Sponsor.storyboard */,
 				1ED26CD51F55C8D9008E9C6D /* Storyboard.swift */,
 			);
 			path = view;
@@ -297,6 +305,7 @@
 				1E26F7C91E90D2BF00DF056B /* NSObjectExtension.swift */,
 				1EBEAAA21F3C9DF60088B928 /* SequenceExtension.swift */,
 				445913B81F1222E0001083D7 /* SpreadsheetViewExtension.swift */,
+				1E61E1EB1F5AA1A70031493E /* StringExtension.swift */,
 				1E9EB6FC1F1BD93B004216E5 /* UIApplicationExtension.swift */,
 				1E3BC1D51F1931390010FCC1 /* UICollectionViewExtension.swift */,
 				1E892C8F1EF68561002F52C8 /* UIColorExtension.swift */,
@@ -603,6 +612,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E61E1E81F5A9BFF0031493E /* FloorMap.storyboard in Resources */,
 				44FDA0241F2B32E40085D675 /* resource in Resources */,
 				1E1556B41F1CB403005271AC /* ShortSessionCell.xib in Resources */,
 				1EEAE4F71E7063E900299809 /* LaunchScreen.storyboard in Resources */,
@@ -611,6 +621,7 @@
 				1E1A39651F1287A1005456A3 /* SessionCell.xib in Resources */,
 				1EEAE4F41E7063E900299809 /* Assets.xcassets in Resources */,
 				1EEAE4F21E7063E900299809 /* Main.storyboard in Resources */,
+				1E61E1EA1F5A9EB60031493E /* Sponsor.storyboard in Resources */,
 				1E3D99F41F124CF6003035F8 /* Settings.bundle in Resources */,
 				1E6ACB921E87B7950083D43E /* Information.storyboard in Resources */,
 			);
@@ -737,6 +748,7 @@
 				1EBEAAA31F3C9DF60088B928 /* SequenceExtension.swift in Sources */,
 				1E6949E31F140DB00060697A /* Track.swift in Sources */,
 				1EBD28F31F28FB470085F9D5 /* ConferenceDataStore.swift in Sources */,
+				1E61E1EC1F5AA1A70031493E /* StringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
