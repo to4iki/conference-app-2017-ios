@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y9D-Wl-PmU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FloorMap-->
+        <scene sceneID="oOa-EC-hNB">
+            <objects>
+                <viewController storyboardIdentifier="FloorMapViewController" title="FloorMap" automaticallyAdjustsScrollViewInsets="NO" id="Y9D-Wl-PmU" customClass="FloorMapViewController" customModule="builderscon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ARh-u7-SjK"/>
+                        <viewControllerLayoutGuide type="bottom" id="fW9-Mz-IMa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5sj-Q0-OtC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="gY2-Kc-CMi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpr-UM-MOu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FloorMap" translatesAutoresizingMaskIntoConstraints="NO" id="4iU-Ay-5HL">
+                                                <rect key="frame" x="0.0" y="8" width="375" height="538"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4iU-Ay-5HL" secondAttribute="height" multiplier="375:538" id="8x1-hf-Zv6"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="4iU-Ay-5HL" firstAttribute="leading" secondItem="Bpr-UM-MOu" secondAttribute="leading" id="1Ei-X0-Biq"/>
+                                            <constraint firstAttribute="bottom" secondItem="4iU-Ay-5HL" secondAttribute="bottom" priority="750" constant="8" id="Dhe-mt-jSH"/>
+                                            <constraint firstItem="4iU-Ay-5HL" firstAttribute="top" secondItem="Bpr-UM-MOu" secondAttribute="top" constant="8" id="vPl-Nl-SgK"/>
+                                            <constraint firstAttribute="trailing" secondItem="4iU-Ay-5HL" secondAttribute="trailing" id="x1S-Oh-PST"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Bpr-UM-MOu" firstAttribute="leading" secondItem="gY2-Kc-CMi" secondAttribute="leading" id="1aS-JO-2NP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bpr-UM-MOu" secondAttribute="bottom" id="Eu7-OJ-EUl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bpr-UM-MOu" secondAttribute="trailing" id="FAD-3F-f5G"/>
+                                    <constraint firstItem="Bpr-UM-MOu" firstAttribute="width" secondItem="gY2-Kc-CMi" secondAttribute="width" id="blH-5S-YZb"/>
+                                    <constraint firstItem="Bpr-UM-MOu" firstAttribute="top" secondItem="gY2-Kc-CMi" secondAttribute="top" id="wMc-z3-lnI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gY2-Kc-CMi" firstAttribute="top" secondItem="ARh-u7-SjK" secondAttribute="bottom" id="bAh-nD-Rrh"/>
+                            <constraint firstItem="fW9-Mz-IMa" firstAttribute="top" secondItem="gY2-Kc-CMi" secondAttribute="bottom" id="ggf-f6-Uen"/>
+                            <constraint firstItem="gY2-Kc-CMi" firstAttribute="leading" secondItem="5sj-Q0-OtC" secondAttribute="leading" id="oof-yT-mfm"/>
+                            <constraint firstAttribute="trailing" secondItem="gY2-Kc-CMi" secondAttribute="trailing" id="pFh-ZN-PZK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FloorMap" id="Z3w-2H-TiP"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView" destination="4iU-Ay-5HL" id="2Sx-gY-kEe"/>
+                        <outlet property="scrollView" destination="gY2-Kc-CMi" id="PGG-ul-FfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUx-Cv-f3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="360"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FloorMap" width="375" height="413"/>
+    </resources>
+</document>

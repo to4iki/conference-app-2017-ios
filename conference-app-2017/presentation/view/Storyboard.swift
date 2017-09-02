@@ -3,9 +3,11 @@ import UIKit
 enum Storyboard: String {
     case conference
     case session
+    case sponsor
+    case floorMap
 
     func instantiate<T: UIViewController>(type: T.Type) -> T {
-        let storyboard = UIStoryboard(name: rawValue.capitalized, bundle: nil)
+        let storyboard = UIStoryboard(name: rawValue.capitalizedFirst, bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: T.className) as! T
     }
 }

@@ -4,13 +4,21 @@ import OctavKit
 final class SponsorViewController: UIViewController {
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
 
-    var sponsors: [Int: [Sponsor]] = [:]
+    fileprivate var sponsors: [Int: [Sponsor]] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setNoTitleBackButton()
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+}
+
+extension SponsorViewController {
+    static func instantiate(sponsors: [Int: [Sponsor]]) -> SponsorViewController {
+        return Storyboard.sponsor.instantiate(type: SponsorViewController.self).then {
+            $0.sponsors = sponsors
+        }
     }
 }
 
