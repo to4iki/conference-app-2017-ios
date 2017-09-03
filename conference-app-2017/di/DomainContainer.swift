@@ -14,5 +14,9 @@ struct DomainContainer {
             let usecase = FetchSponsorUseCase(repository: r.resolve(AnyRepository<Conference>.self)!)
             return AnyReadUseCase(usecase)
         }
+        container.register(AnyReadUseCase<Venue>.self) { r in
+            let usecase = FetchVenueUseCase(repository: r.resolve(AnyRepository<Conference>.self)!)
+            return AnyReadUseCase(usecase)
+        }
     }
 }
