@@ -8,10 +8,12 @@ import Then
 import QRCodeReader
 
 final class InformationViewController: UITableViewController {
-    var usecase: AnyReadUseCase<[Int: [Sponsor]]>!
+    var sponsorUsecase: AnyReadUseCase<[Int: [Sponsor]]>!
+    var venueUsecase: AnyReadUseCase<Venue>!
     
     fileprivate let disposeBag = DisposeBag()
     fileprivate var sponsors: [Int: [Sponsor]] = [:]
+    fileprivate var venue: Venue!
 
     lazy var readerViewController: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
@@ -26,6 +28,7 @@ final class InformationViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSponsor()
+        setupVenue()
     }
 }
 
@@ -61,7 +64,7 @@ extension InformationViewController {
             let sponsorViewController = SponsorViewController.instantiate(sponsors: sponsors)
             navigationController?.pushViewController(sponsorViewController, animated: true)
         case .venue:
-            let venueViewController = VenueViewController.instantiate()
+            let venueViewController = VenueViewController.instantiate(venue: venue)
             navigationController?.pushViewController(venueViewController, animated: true)
         case .floorMap:
             let floorMapViewController = FloorMapViewController.instantiate()
@@ -76,8 +79,14 @@ extension InformationViewController {
 
 extension InformationViewController {
     fileprivate func setupSponsor() {
-        usecase.execute().subscribe(onSuccess: { [unowned self] sponsors in
+        sponsorUsecase.execute().subscribe(onSuccess: { [unowned self] sponsors in
             self.sponsors = sponsors
+        }).disposed(by: disposeBag)
+    }
+
+    fileprivate func setupVenue() {
+        venueUsecase.execute().subscribe(onSuccess: { [unowned self] venue in
+            self.venue = venue
         }).disposed(by: disposeBag)
     }
 

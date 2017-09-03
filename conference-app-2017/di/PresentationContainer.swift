@@ -7,7 +7,8 @@ struct PresentationContainer {
             c.usecase = r.resolve(AnyReadUseCase<[Timetable]>.self)
         }
         container.storyboardInitCompleted(InformationViewController.self) { (r, c) in
-            c.usecase = r.resolve(AnyReadUseCase<[Int: [Sponsor]]>.self)
+            c.sponsorUsecase = r.resolve(AnyReadUseCase<[Int: [Sponsor]]>.self)
+            c.venueUsecase = r.resolve(AnyReadUseCase<Venue>.self)
         }
     }
 }

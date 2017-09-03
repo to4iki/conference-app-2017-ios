@@ -11,7 +11,7 @@ struct FetchVenueUseCase: ReadUseCase {
 
     func execute() -> Single<Venue> {
         return repository.find().map { conference in
-            assert(conference.venues.isEmpty, "Set conference.venue!")
+            assert(!conference.venues.isEmpty, "Set conference.venue!")
             return VenueTranslater.translate(conference.venues.first!)
         }
     }
