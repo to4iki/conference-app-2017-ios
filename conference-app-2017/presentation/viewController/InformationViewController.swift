@@ -8,10 +8,12 @@ import Then
 import QRCodeReader
 
 final class InformationViewController: UITableViewController {
-    var usecase: AnyReadUseCase<[Int: [Sponsor]]>!
+    var sponsorUsecase: AnyReadUseCase<[Int: [Sponsor]]>!
+    var venueUsecase: AnyReadUseCase<Venue>!
     
     fileprivate let disposeBag = DisposeBag()
     fileprivate var sponsors: [Int: [Sponsor]] = [:]
+    fileprivate var venue: Venue!
 
     lazy var readerViewController: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
@@ -26,12 +28,14 @@ final class InformationViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSponsor()
+        setupVenue()
     }
 }
 
 extension InformationViewController {
     private enum CellType {
         case sponsor
+        case venue
         case floorMap
         case qrCodeReader
         case clearCache
@@ -41,6 +45,8 @@ extension InformationViewController {
             case (0, 0):
                 self = .sponsor
             case (0, 1):
+                self = .venue
+            case (0, 2):
                 self = .floorMap
             case (1, 0):
                 self = .qrCodeReader
@@ -57,6 +63,9 @@ extension InformationViewController {
         case .sponsor:
             let sponsorViewController = SponsorViewController.instantiate(sponsors: sponsors)
             navigationController?.pushViewController(sponsorViewController, animated: true)
+        case .venue:
+            let venueViewController = VenueViewController.instantiate(venue: venue)
+            navigationController?.pushViewController(venueViewController, animated: true)
         case .floorMap:
             let floorMapViewController = FloorMapViewController.instantiate()
             navigationController?.pushViewController(floorMapViewController, animated: true)
@@ -70,8 +79,14 @@ extension InformationViewController {
 
 extension InformationViewController {
     fileprivate func setupSponsor() {
-        usecase.execute().subscribe(onSuccess: { [unowned self] sponsors in
+        sponsorUsecase.execute().subscribe(onSuccess: { [unowned self] sponsors in
             self.sponsors = sponsors
+        }).disposed(by: disposeBag)
+    }
+
+    fileprivate func setupVenue() {
+        venueUsecase.execute().subscribe(onSuccess: { [unowned self] venue in
+            self.venue = venue
         }).disposed(by: disposeBag)
     }
 
