@@ -20,60 +20,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXc-VP-fn4">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXc-VP-fn4">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSt-B8-KBt" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="452.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="526.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Lfn-Tw-tyC">
-                                                <rect key="frame" x="8" y="8" width="359" height="436.5"/>
+                                                <rect key="frame" x="8" y="8" width="359" height="510.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7qW-d2-wjO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="70.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="53.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOO-zk-Ve6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="https://www.google.co.jp" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mVJ-Mo-QEg">
-                                                                <rect key="frame" x="0.0" y="20.5" width="359" height="50"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="https://www.google.co.jp" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mVJ-Mo-QEg">
+                                                                <rect key="frame" x="0.0" y="20.5" width="171.5" height="33"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                             </textView>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="TOO-zk-Ve6" firstAttribute="leading" secondItem="7qW-d2-wjO" secondAttribute="leading" id="Qfl-xN-6eb"/>
-                                                            <constraint firstAttribute="trailing" secondItem="TOO-zk-Ve6" secondAttribute="trailing" id="W8D-0o-Iuh"/>
-                                                            <constraint firstItem="mVJ-Mo-QEg" firstAttribute="leading" secondItem="7qW-d2-wjO" secondAttribute="leading" id="cSZ-hT-2ZV"/>
-                                                            <constraint firstAttribute="trailing" secondItem="mVJ-Mo-QEg" secondAttribute="trailing" id="ge4-ew-Fnl"/>
-                                                        </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tJs-zh-Rlc">
-                                                        <rect key="frame" x="0.0" y="86.5" width="359" height="350"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="tJs-zh-Rlc">
+                                                        <rect key="frame" x="0.0" y="69.5" width="359" height="441"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S9h-Vw-ZxB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S9h-Vw-ZxB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="32"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 <dataDetectorType key="dataDetectorTypes" address="YES"/>
                                                             </textView>
                                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-c7-mic">
-                                                                <rect key="frame" x="0.0" y="50" width="359" height="300"/>
+                                                                <rect key="frame" x="0.0" y="41" width="359" height="400"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="300" id="AKT-fE-bQQ"/>
+                                                                    <constraint firstAttribute="height" constant="400" id="AKT-fE-bQQ"/>
                                                                 </constraints>
                                                             </mapView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="QQo-c7-mic" secondAttribute="trailing" id="EZ7-0b-cNU"/>
-                                                            <constraint firstAttribute="trailing" secondItem="S9h-Vw-ZxB" secondAttribute="trailing" id="ihG-8x-E5B"/>
-                                                            <constraint firstItem="S9h-Vw-ZxB" firstAttribute="leading" secondItem="tJs-zh-Rlc" secondAttribute="leading" id="kVS-v0-rOj"/>
                                                             <constraint firstItem="QQo-c7-mic" firstAttribute="leading" secondItem="tJs-zh-Rlc" secondAttribute="leading" id="mXc-7A-rZD"/>
                                                         </constraints>
                                                     </stackView>

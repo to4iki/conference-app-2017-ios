@@ -6,7 +6,10 @@ struct VenueTranslater: Translator {
             name: input.name,
             url: input.url,
             address: input.address,
-            location: input.location
+            location: Venue.Location(
+                latitude: input.location.latitude,
+                longitude: input.location.longitude
+            )
         )
     }
 }
