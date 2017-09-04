@@ -50,6 +50,8 @@
 		1EA75DD11F5BCBAF000152EB /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA75DD01F5BCBAF000152EB /* Venue.swift */; };
 		1EA75DD31F5BCD28000152EB /* VenueTranslater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA75DD21F5BCD28000152EB /* VenueTranslater.swift */; };
 		1EA75DD51F5BCED6000152EB /* FetchVenueUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA75DD41F5BCED6000152EB /* FetchVenueUseCase.swift */; };
+		1EA9E2A61F5EFC53000F67E9 /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA9E2A51F5EFC53000F67E9 /* AboutUs.storyboard */; };
+		1EA9E2A81F5EFC6C000F67E9 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9E2A71F5EFC6C000F67E9 /* AboutUsViewController.swift */; };
 		1EBD28F11F28FB350085F9D5 /* SessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBD28F01F28FB350085F9D5 /* SessionDataStore.swift */; };
 		1EBD28F31F28FB470085F9D5 /* ConferenceDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBD28F21F28FB470085F9D5 /* ConferenceDataStore.swift */; };
 		1EBEAAA31F3C9DF60088B928 /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEAAA21F3C9DF60088B928 /* SequenceExtension.swift */; };
@@ -159,6 +161,8 @@
 		1EA75DD01F5BCBAF000152EB /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		1EA75DD21F5BCD28000152EB /* VenueTranslater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTranslater.swift; sourceTree = "<group>"; };
 		1EA75DD41F5BCED6000152EB /* FetchVenueUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchVenueUseCase.swift; sourceTree = "<group>"; };
+		1EA9E2A51F5EFC53000F67E9 /* AboutUs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutUs.storyboard; sourceTree = "<group>"; };
+		1EA9E2A71F5EFC6C000F67E9 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		1EBD28F01F28FB350085F9D5 /* SessionDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataStore.swift; sourceTree = "<group>"; };
 		1EBD28F21F28FB470085F9D5 /* ConferenceDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDataStore.swift; sourceTree = "<group>"; };
 		1EBEAAA21F3C9DF60088B928 /* SequenceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 				1E3BC1D21F192FF00010FCC1 /* session */,
 				44C18FD21F1A08170057FB5A /* sponsor */,
 				445913B11F121C94001083D7 /* timetable */,
+				1EA9E2A51F5EFC53000F67E9 /* AboutUs.storyboard */,
 				1EEAE4F31E7063E900299809 /* Assets.xcassets */,
 				1E25C0A31E87AF47008C4C65 /* Conference.storyboard */,
 				1E61E1E71F5A9BFF0031493E /* FloorMap.storyboard */,
@@ -289,6 +294,7 @@
 		1E25C0A21E87AE11008C4C65 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				1EA9E2A71F5EFC6C000F67E9 /* AboutUsViewController.swift */,
 				1E9CCA911EF6D2CA0012AFA9 /* ConferenceViewController.swift */,
 				37BBF31B1F1D0BAC00AB9F24 /* FloorMapViewController.swift */,
 				1EE930E41F1B5D5500CB92E3 /* InformationViewController+QRCodeReader.swift */,
@@ -631,6 +637,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA9E2A61F5EFC53000F67E9 /* AboutUs.storyboard in Resources */,
 				1E61E1E81F5A9BFF0031493E /* FloorMap.storyboard in Resources */,
 				44FDA0241F2B32E40085D675 /* resource in Resources */,
 				1E1556B41F1CB403005271AC /* ShortSessionCell.xib in Resources */,
@@ -766,6 +773,7 @@
 				1E43086C1F2918FD00F64EE0 /* TimetableTranslater.swift in Sources */,
 				37BBF31C1F1D0BAC00AB9F24 /* FloorMapViewController.swift in Sources */,
 				44C18FD41F1A08470057FB5A /* SponsorCollectionViewCell.swift in Sources */,
+				1EA9E2A81F5EFC6C000F67E9 /* AboutUsViewController.swift in Sources */,
 				445913AC1F11EAB6001083D7 /* Timetable.swift in Sources */,
 				1E43086F1F2919BD00F64EE0 /* FetchTimetableUseCase.swift in Sources */,
 				1EBEAAA31F3C9DF60088B928 /* SequenceExtension.swift in Sources */,

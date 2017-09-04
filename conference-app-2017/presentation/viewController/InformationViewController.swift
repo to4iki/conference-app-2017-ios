@@ -34,6 +34,7 @@ final class InformationViewController: UITableViewController {
 
 extension InformationViewController {
     private enum CellType {
+        case aboutAs
         case sponsor
         case venue
         case floorMap
@@ -43,14 +44,16 @@ extension InformationViewController {
         init(rawValue: IndexPath) {
             switch (rawValue.section, rawValue.row) {
             case (0, 0):
-                self = .sponsor
-            case (0, 1):
-                self = .venue
-            case (0, 2):
-                self = .floorMap
+                self = .aboutAs
             case (1, 0):
-                self = .qrCodeReader
+                self = .sponsor
+            case (1, 1):
+                self = .venue
+            case (1, 2):
+                self = .floorMap
             case (2, 0):
+                self = .qrCodeReader
+            case (3, 0):
                 self = .clearCache
             default:
                 fatalError("non reachable")
@@ -60,6 +63,9 @@ extension InformationViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch CellType(rawValue: indexPath) {
+        case .aboutAs:
+            let aboutUsViewController = AboutUsViewController.instantiate()
+            navigationController?.pushViewController(aboutUsViewController, animated: true)
         case .sponsor:
             let sponsorViewController = SponsorViewController.instantiate(sponsors: sponsors)
             navigationController?.pushViewController(sponsorViewController, animated: true)

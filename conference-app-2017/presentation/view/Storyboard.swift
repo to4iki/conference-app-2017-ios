@@ -6,6 +6,7 @@ enum Storyboard: String {
     case sponsor
     case venue
     case floorMap
+    case aboutUs
 
     func instantiate<T: UIViewController>(type: T.Type) -> T {
         let storyboard = UIStoryboard(name: rawValue.capitalizedFirst, bundle: nil)
